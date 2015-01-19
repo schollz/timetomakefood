@@ -14,7 +14,7 @@ drain ( ingredient )
 
 # Grammar rules
 
-If the ```<food>``` does not exist in this grammar table, find the closest thing in the SR27 database. I.e. "```<olive-oil>```" does not exist in the examples below, so those recipes will search for anything that has "olive" and "oil" in SR27 and use that.
+If the ```<food>``` does not exist in this grammar table, find the closest thing in the SR27 database. I.e. "```<olive-oil>```" does not exist in the examples below, so those recipes will search for anything that has "olive" and "oil" in SR27 and use that. Things from the SR27 have time of ZERO since they are assumed to be already purchased/premade.
 
 Total times are calculated by adding all the operation times.
 
