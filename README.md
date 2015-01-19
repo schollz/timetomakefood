@@ -11,7 +11,7 @@ chop (item, time )
 
 # Recipe grammar
 
-If the entry does not exist in this grammar table, find the closest thing in the SR27 database. I.e. "<olive-oil>" does not exist, so search for anything that has "olive" and "oil" in SR27 and use that.
+If the entry does not exist in this grammar table, find the closest thing in the SR27 database. I.e. "```<olive-oil>```" does not exist, so search for anything that has "olive" and "oil" in SR27 and use that.
 
 Total times are calculated by adding all the operation times.
 
