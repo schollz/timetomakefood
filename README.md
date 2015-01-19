@@ -1,17 +1,11 @@
 # Formatting
 ```bash
 ingredient = ^NUMBER^UNIT^<food>
-
 heat = ^NUMBER^UNIT^
-
 chill ( item, time )
-
 mix ( item1, item2, .... itemN )
-
 nuke (item, time )
-
-cook (item, time, heat ) -> this is a little bit of a catch-all. I'm assuming if you mix something with a ton of water you want to boil it, if you mix it with a little oil then you want to saute it, otherwise its your discretion/common-sense.
-
+cook (item, time, heat ) 
 chop (item, time )
 ```
 
@@ -20,6 +14,8 @@ chop (item, time )
 If the entry does not exist in this grammar table, find the closest thing in the SR27 database. I.e. "<olive-oil>" does not exist, so search for anything that has "olive" and "oil" in SR27 and use that.
 
 Total times are calculated by adding all the operation times.
+
+Also note that ```cook``` is a little bit of a catch-all. I'm assuming if you mix something with a ton of water you want to boil it, if you mix it with a little oil then you want to saute it, otherwise its your discretion/common-sense.
 
 ## Oatmeal recipe
 ```bash
