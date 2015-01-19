@@ -22,11 +22,9 @@ Total nutrition is calculated by adding all the ingredients nutritions.
 
 Also note that ```cook``` is a little bit of a catch-all. I'm assuming if you mix something with a ton of water you want to boil it, if you mix it with a little oil then you want to saute it, otherwise its your discretion/common-sense.
 
-## Oatmeal recipe
 ```bash
 <cooked-oatmeal> = chill ( nuke ( mix ( ^1^cup^<oatmeal>, ^1^cup^<milk>, chop(^1^whole^<banana>, ^1^minute^) ), ^3^minute^ ), ^1^minute^)
 ```
-## Spaghetti recipe with alternate sauces
 
 ```bash
 <spaghetti> = mix( drain ( cook ( mix ( ^1^pound^<pasta>, ^500^ml^<water> ), ^10^minute^, ^200^F^ ), <sauce> )
