@@ -12,7 +12,7 @@ set ( ingredient, time )
 drain ( ingredient )
 ```
 
-# Recipe grammar
+# Grammar rules
 
 If the ```<food>``` does not exist in this grammar table, find the closest thing in the SR27 database. I.e. "```<olive-oil>```" does not exist in the examples below, so those recipes will search for anything that has "olive" and "oil" in SR27 and use that.
 
@@ -21,6 +21,8 @@ Total times are calculated by adding all the operation times.
 Total nutrition is calculated by adding all the ingredients nutritions.
 
 Also note that ```cook``` is a little bit of a catch-all. I'm assuming if you mix something with a ton of water you want to boil it, if you mix it with a little oil then you want to saute it, otherwise its your discretion/common-sense.
+
+# Examples
 
 ```bash
 <cooked-oatmeal> = chill ( nuke ( mix ( ^1^cup^<oatmeal>, ^1^cup^<milk>, chop(^1^whole^<banana>, ^1^minute^) ), ^3^minute^ ), ^1^minute^)
