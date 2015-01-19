@@ -8,6 +8,7 @@ mix ( ingredient1, ingredient2, .... ingredientN )
 nuke ( ingredient, time )
 cook ( ingredient, time, heat ) 
 chop ( ingredient, time )
+set ( ingredient, time )
 drain ( ingredient )
 ```
 
@@ -37,4 +38,7 @@ Also note that ```cook``` is a little bit of a catch-all. I'm assuming if you mi
 ```bash
 <hard-boiled-egg> = chill ( drain ( cook ( mix ( ^1^whole^<raw-egg>, ^500^ml^<water> ), ^10^minute^, ^212^F^ ) ), ^10^minute^ )
 ```
+```bash
+<bread> = cook ( set ( mix ( set ( mix ( ^1000^g^<white-flour>, cook ( ^720^g^<water>, ^1^minute^, ^95^F^ ) ), ^30^minute^ ), ^21^g^<salt>, ^4^g^<yeast> ), ^4^hour^ ), ^40^minute^, ^475^F^ )
+````
 ```
