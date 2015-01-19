@@ -28,6 +28,7 @@ The unit type ```whole``` is usually prefaced by the percentage to be taken from
 
 # Examples
 
+BACKUS-NAUR:
 ```bash
 <grilled-cheese-sandwich> = cook ( mix ( ^1^whole^<sandwich>, ^2^tbl^<oil> ), ^5^minute^, ^400^F^ )
 <cheese-sandwich> = mix ( cut ( ^1/5^whole^<bread>, 2 ), <cheese> )
@@ -40,6 +41,8 @@ The unit type ```whole``` is usually prefaced by the percentage to be taken from
 <flour-tortilla> = cook ( chop ( set ( mix ( mix ( ^3^cup^<white-flour>, ^5^tbl^<oil> ), ^3/4^cup^<water> ), ^30^minute^ ), 12 ), ^20^minute^)
 <cooked-oatmeal> = chill ( nuke ( mix ( ^1^cup^<oatmeal>, ^1^cup^<milk>, chop(^1^whole^<banana>, 6) ), ^3^minute^ ), ^1^minute^)
 ```
+
+YAML: 
 
 ```yaml
 grilled cheese sandwich:
