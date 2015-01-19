@@ -40,3 +40,26 @@ The unit type ```whole``` is usually prefaced by the percentage to be taken from
 <flour-tortilla> = cook ( chop ( set ( mix ( mix ( ^3^cup^<white-flour>, ^5^tbl^<oil> ), ^3/4^cup^<water> ), ^30^minute^ ), 12 ), ^20^minute^)
 <cooked-oatmeal> = chill ( nuke ( mix ( ^1^cup^<oatmeal>, ^1^cup^<milk>, chop(^1^whole^<banana>, 6) ), ^3^minute^ ), ^1^minute^)
 ```
+
+```yaml
+grilled cheese sandwich:
+ cook: 
+  type: fry
+  time: 1 minute
+  heat: high
+  mix:
+   cheese sandwich:
+    amount: 1 whole
+   oil:
+    amount: 2 tbl
+  
+cheese sandwich:
+ mix:
+  cut:
+   type: slice
+   pieces: 2
+   bread:
+    amount: 1/5 whole
+  cheese:
+   amount: 1 slice
+```
