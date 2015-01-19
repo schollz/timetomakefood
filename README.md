@@ -11,6 +11,7 @@ chop ( ingredient, time )
 set ( ingredient, time )
 drain ( ingredient )
 ```
+QUESTION: Should ```mix(...)``` allow only two ingredients? That would make things more cumbersome but it would also preserve an order to the mixing (if there is any). 
 
 # Grammar rules
 
