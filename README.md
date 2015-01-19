@@ -64,7 +64,7 @@ cheese sandwich:
  mix:
   cut:
    type: slice
-   pieces: 2
+   pieces: 2 slices
    bread:
     amount: 1/5 whole
   cheese:
