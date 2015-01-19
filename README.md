@@ -2,11 +2,11 @@
 ```bash
 ingredient = ^NUMBER^UNIT^<food>
 heat = ^NUMBER^UNIT^
-chill ( item, time )
-mix ( item1, item2, .... itemN )
-nuke (item, time )
-cook (item, time, heat ) 
-chop (item, time )
+chill ( ingredient, time )
+mix ( ingredient1, ingredient2, .... ingredientN )
+nuke ( ingredient, time )
+cook ( ingredient, time, heat ) 
+chop ( ingredient, time )
 ```
 
 # Recipe grammar
