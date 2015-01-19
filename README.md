@@ -5,9 +5,10 @@ Recipes are collections of ingredients and operations.
 Ingredient/recipe:
 
 ```yaml
-specific name:
- amount: number unit
- class: general type (optional, used on ingredient leafs)
+ingredient:
+ name: NAME
+ amount: NUMBER UNIT
+ class: GENERAL NAME (optional, used on ingredient leafs)
 ```
 
 Operations act on encapsulated ingredient or operation:
@@ -15,8 +16,8 @@ Operations act on encapsulated ingredient or operation:
 ```yaml
 cook:
  type: (nuke, saute, fry, bake, boil, bake)
- temp: number unit OR setting (optional)
- time: number unit
+ temp: NUMBER UNIT OR setting (optional)
+ time: NUMBER UNIT
  (ingredient)
  
 mix:
@@ -27,12 +28,12 @@ mix:
 
 cut:
  type: (chop, slice, grate)
- pieces: number unit (optional)
+ pieces: NUMBER UNIT (optional)
  (ingredient)
 
 set:
  type: (drain, cool) (optional)
- time: number unit
+ time: NUMBER UNIT
  (ingredient)
 ```
 
@@ -57,10 +58,9 @@ grilled cheese sandwich:
   time: 1 minute
   heat: high
   mix:
-   cheese sandwich:
-    amount: 1 whole
-   oil:
-    amount: 2 tbl
+   ingredient:
+    - {name: cheese sandwich, amount: 1 whole}
+    - {name: oil, amount: 2 tbl}
   
 cheese sandwich:
  amount: 1 whole
@@ -68,11 +68,11 @@ cheese sandwich:
   cut:
    type: slice
    pieces: 2 slices
-   bread:
-    amount: 1/5 whole
-  cheese:
-   amount: 1 slice
-   
+   ingredient:
+    - {name: bread, amount: 1/5 whole}
+  ingredient:
+   - {name: cheese, amount: 1 slice}
+  
 white bread:
  class: bread
  amount: 2 whole
@@ -83,18 +83,38 @@ white bread:
    set:
     time: 4 hour
     mix:
-     yeast:
-      amount: 4 g
-     salt:
-      amount: 21 g
+     ingredient:
+      - { name: yeast, amount: 4 g}
+      - { name: salt, amount: 21 g}
      set:
       time: 30 minute
       mix:
-       white flour:
-        amount: 1000 g
-       water:
-        amount: 720 g
+       ingredient:
+        - {name: white flour, amount: 1000 g}
+        - {name: water, amount: 720 g}
         
+grilled cheese sandwich:
+ amount: 1 whole
+ cook: 
+  type: fry
+  time: 1 minute
+  heat: high
+  mix:
+   ingredient:
+    - {name: cheese sandwich, amount: 1 whole}
+    - {name: oil, amount: 2 tbl}
+  
+cheese sandwich:
+ amount: 1 whole
+ mix:
+  cut:
+   type: slice
+   pieces: 2 slices
+   ingredient:
+    - {name: bread, amount: 1/5 whole}
+  ingredient:
+   - {name: cheese, amount: 1 slice}
+  
 wheat bread:
  class: bread
  amount: 2 whole
@@ -105,19 +125,16 @@ wheat bread:
    set:
     time: 4 hour
     mix:
-     yeast:
-      amount: 4 g
-     salt:
-      amount: 21 g
+     ingredient:
+      - { name: yeast, amount: 4 g}
+      - { name: salt, amount: 21 g}
      set:
       time: 30 minute
       mix:
-       white flour:
-        amount: 700 g
-       wheat flour:
-        amount: 300 g
-       water:
-        amount: 720 g
+       ingredient:
+        - {name: white flour, amount: 600 g}
+        - {name: wheat flour, amount: 400 g}
+        - {name: water, amount: 720 g}
 ```
 
 OLD:
