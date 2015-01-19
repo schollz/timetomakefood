@@ -1,0 +1,41 @@
+grilled cheese sandwich:
+ amount: 1 whole
+ cook: 
+  type: fry
+  time: 1 minute
+  heat: high
+  mix:
+   ingredient:
+    - {name: cheese sandwich, amount: 1 whole}
+    - {name: oil, amount: 2 tbl}
+
+cheese sandwich:
+ amount: 1 whole
+ mix:
+  cut:
+   type: slice
+   pieces: 2 slices
+   ingredient:
+    - {name: white bread, amount: 1/5 whole}
+  ingredient:
+   - {name: cheese, amount: 1 slice}
+
+white bread:
+ class: bread
+ amount: 2 whole
+ cook:
+   type: bake
+   time: 40 minute
+   heat: 475 F
+   set:
+    time: 4 hour
+    mix:
+     ingredient:
+      - { name: yeast, amount: 4 g}
+      - { name: salt, amount: 21 g}
+     set:
+      time: 30 minute
+      mix:
+       ingredient:
+        - {name: white flour, amount: 1000 g}
+        - {name: water, amount: 720 g}
