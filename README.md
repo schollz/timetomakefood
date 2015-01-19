@@ -8,6 +8,7 @@ mix ( ingredient1, ingredient2, .... ingredientN )
 nuke ( ingredient, time )
 cook ( ingredient, time, heat ) 
 chop ( ingredient, time )
+drain ( ingredient )
 ```
 
 # Recipe grammar
