@@ -37,7 +37,7 @@ set:
 
 # Grammar rules
 
-If the ```ingredient``` does not exist in this grammar table, find the closest thing in the SR27 database. Things from the SR27 have time of 0 since they are assumed to be already purchased/premade.
+If the ```ingredient``` does not exist in this grammar table, first search to see if the ```ingredient.class``` exists and use one of those at random. If that doesn't exist, then find the closest thing in the SR27 database. Things from the SR27 have time of 0 since they are assumed to be already purchased/premade.
 
 Total times are calculated by adding all the operation times.
 
@@ -70,7 +70,8 @@ cheese sandwich:
   cheese:
    amount: 1 slice
    
-bread:
+white bread:
+ class: bread
  cook:
    type: bake
    time: 40 minute
@@ -87,6 +88,29 @@ bread:
       mix:
        white flour:
         amount: 1000 g
+       water:
+        amount: 720 g
+        
+wheat bread:
+ class: bread
+ cook:
+   type: bake
+   time: 40 minute
+   temp: 475 F
+   set:
+    time: 4 hour
+    mix:
+     yeast:
+      amount: 4 g
+     salt:
+      amount: 21 g
+     set:
+      time: 30 minute
+      mix:
+       white flour:
+        amount: 700 g
+       wheat flour:
+        amount: 300 g
        water:
         amount: 720 g
 ```
