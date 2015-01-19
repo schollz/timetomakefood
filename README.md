@@ -33,3 +33,8 @@ Also note that ```cook``` is a little bit of a catch-all. I'm assuming if you mi
 <tomato-cream-sauce> = mix( ^2^tbl^<olive-oil>, nuke(^2^tbl^<butter>, ^1^minute), chop(^1^whole^<onion>, ^1^minute^) ,  chop(^1^whole^<tomato>, ^1^minute^) )
 <roasted-red-pepper-sauce> = mix ( ^1^can^<tomato-sauce>, cook ( mix( chop( ^3^whole^<pepper>, ^1^minute^), ^2^tbl^<olive-oil>), ^6^minute^, ^200^F^ ) )
 ```
+
+```bash
+<hard-boiled-egg> = chill ( drain ( cook ( mix ( ^1^whole^<raw-egg>, ^500^ml^<water> ), ^10^minute^, ^212^F^ ) ), ^10^minute^ )
+```
+```
