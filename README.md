@@ -37,7 +37,7 @@ set:
 
 # Grammar rules
 
-If the ```ingredient``` does not exist in this grammar table, first search to see if the ```ingredient.class``` exists and use one of those at random. If that doesn't exist, then find the closest thing in the SR27 database. Things from the SR27 have time of 0 since they are assumed to be already purchased/premade.
+If the ```ingredient``` does not exist in YAML list, then first search to see if the ```ingredient.class``` exists and use one of those at random from YAML list. If that doesn't exist either, then find the closest thing in the SR27 database. Things from the SR27 have time of 0 since they are assumed to be already purchased/premade.
 
 Total times are calculated by adding all the operation times.
 
@@ -46,7 +46,7 @@ Total nutrition is calculated by adding all the ingredients nutritions.
 # Examples
 
 
-YAML: 
+YAML list: 
 
 ```yaml
 grilled cheese sandwich:
