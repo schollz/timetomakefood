@@ -2,11 +2,12 @@
 
 Recipes are collections of ingredients and operations.
 
-Ingredients are defined by name and amount:
+Ingredient/recipe:
 
 ```yaml
-name:
+specific name:
  amount: number unit
+ class: general type (optional, used on ingredient leafs)
 ```
 
 Operations act on encapsulated ingredient or operation:
@@ -50,6 +51,7 @@ YAML list:
 
 ```yaml
 grilled cheese sandwich:
+ amount: 1 whole
  cook: 
   type: fry
   time: 1 minute
@@ -61,6 +63,7 @@ grilled cheese sandwich:
     amount: 2 tbl
   
 cheese sandwich:
+ amount: 1 whole
  mix:
   cut:
    type: slice
@@ -72,6 +75,7 @@ cheese sandwich:
    
 white bread:
  class: bread
+ amount: 2 whole
  cook:
    type: bake
    time: 40 minute
@@ -93,6 +97,7 @@ white bread:
         
 wheat bread:
  class: bread
+ amount: 2 whole
  cook:
    type: bake
    time: 40 minute
