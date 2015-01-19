@@ -2,6 +2,7 @@
 ```bash
 ingredient = ^NUMBER^UNIT^<food>
 heat = ^NUMBER^UNIT^
+time = ^NUMBER^UNIT^
 chill ( ingredient, time )
 mix ( ingredient1, ingredient2, .... ingredientN )
 nuke ( ingredient, time )
@@ -11,9 +12,11 @@ chop ( ingredient, time )
 
 # Recipe grammar
 
-If the entry does not exist in this grammar table, find the closest thing in the SR27 database. I.e. "```<olive-oil>```" does not exist, so search for anything that has "olive" and "oil" in SR27 and use that.
+If the ```<food>``` does not exist in this grammar table, find the closest thing in the SR27 database. I.e. "```<olive-oil>```" does not exist in the examples below, so those recipes will search for anything that has "olive" and "oil" in SR27 and use that.
 
 Total times are calculated by adding all the operation times.
+
+Total nutrition is calculated by adding all the ingredients nutritions.
 
 Also note that ```cook``` is a little bit of a catch-all. I'm assuming if you mix something with a ton of water you want to boil it, if you mix it with a little oil then you want to saute it, otherwise its your discretion/common-sense.
 
