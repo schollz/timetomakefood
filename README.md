@@ -64,6 +64,7 @@ Basic Ingredient list
 4 gram  yeast
 1000 gram  white flour
 21 gram  salt
+
 Directions:
 Take 1000 g white flour and 720 g water
 Mix them together
