@@ -1,6 +1,7 @@
 import yaml
 from pint import UnitRegistry
 import sys
+import random
 
 ureg = UnitRegistry()
 
@@ -24,7 +25,10 @@ def print_dict(dictionary, string, fullDict):
           string = string + " " + e['amount'] + ' ' + e['name'] + " "
           num = num + 1
           if e['name'] in fullDict.keys():
-            string = start_print_dict(e['name'],fullDict,False,stats) + "\n" + string
+            string = 'Making the ' + e['name'] + '\n' + start_print_dict(e['name'],fullDict,False,stats) + "\n" + string
+          elif e['name'] in stats['classes'].keys():
+            chooseOne = random.choice(stats['classes'][e['name']])
+            string = 'Making the ' + chooseOne + '\n' + start_print_dict(chooseOne,fullDict,False,stats) + "\n" + string
           else:
             # Add it to the basic ingredient list
             try:
@@ -69,6 +73,17 @@ def print_dict(dictionary, string, fullDict):
 stream = open('recipes.yaml','r')
 data = yaml.load(stream, yaml.SafeLoader)
 stats = {}
+stats['classes'] = {}
+for e in data.keys():
+  if "class" in data[e]:
+    if data[e]['class'] in stats['classes']:
+      stats['classes'][data[e]['class']].append(e)
+    else:
+      stats['classes'][data[e]['class']] = []
+      stats['classes'][data[e]['class']].append(e)
+      
+
+
 stats['time']=0*ureg.minute
 try:
   food = sys.argv[1]

@@ -120,7 +120,7 @@ spaghetti with sauce:
   mix:
     ingredient:
       - {name: homemade noodles, amount: 1 serving}
-      - {name: veggie tomato sauce, amount: 0.25 cup}
+      - {name: sauce, amount: 0.25 cup}
 
 homemade noodles:
   class: pasta
@@ -168,5 +168,40 @@ veggie tomato sauce:
           ingredient:
             - {name: oil, amount: 2 tbl}
 
-
+alfredo sauce:
+  class: sauce
+  mix:
+    ingredient:
+      - {name: parmesan cheese, amount: 1.5 cup}
+    cut:
+      type: crush
+      pieces: crushed
+      time: 2 minute
+      ingredient:
+        - {name: garlic, amount: 1 whole}
+    cook:
+      type: saute
+      time: 5 minute
+      heat: low
+      mix:
+        ingredient:
+          - {name: heavy cream, amount: 1 cup}
+        cook:
+          type: saute
+          time: 2 minute
+          heat: low
+          ingredient:
+            - {name: butter, amount: 0.25 cup}
           
+hard boiled egg:
+  set:
+    type: chill
+    time: 10 minute
+    cook:
+      type: boil
+      time: 10 minute
+      heat: high
+      ingredient:
+        - {name: egg, amount: 1 whole}
+
+            
