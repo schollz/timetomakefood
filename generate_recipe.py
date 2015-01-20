@@ -29,22 +29,35 @@ def print_dict(dictionary, string, fullDict):
 						# Add it to the basic ingredient list
 						try:
 							if e['name'] in stats['ingredients']:
-								stats['ingredients'][e['name']] = stats['ingredients'][e['name']] + (int(e['amount'].split()[0])*ureg.parse_expression(e['amount'].split()[1]))
+								stats['ingredients'][e['name']] = stats['ingredients'][e['name']] + (float(e['amount'].split()[0])*ureg.parse_expression(e['amount'].split()[1]))
 							else:
-								stats['ingredients'][e['name']] =(int(e['amount'].split()[0])*ureg.parse_expression(e['amount'].split()[1]))
+								stats['ingredients'][e['name']] =(float(e['amount'].split()[0])*ureg.parse_expression(e['amount'].split()[1]))
 						except:
 							stats['ingredients'][e['name']] = 1
 
 				string = string + "\n"
 		if 'mix' == key:
 			string = string + "Mix them together\n"
-			stats['time'] = stats['time'] + 2*ureg.minute
+			print value.keys()
+			if 'time' in value.keys():
+				print value['time']
+				stats['time'] = stats['time'] + (float(value['time'].split()[0])*ureg.parse_expression(value['time'].split()[1]))
+			else:
+				stats['time'] = stats['time'] + 2*ureg.minute
 		if 'cook' == key:
 			string = string + value['type'] + " at " + value['heat'] + " for " + value['time'] + "\n"
-			stats['time'] = stats['time'] + (int(value['time'].split()[0])*ureg.parse_expression(value['time'].split()[1]))
+			stats['time'] = stats['time'] + (float(value['time'].split()[0])*ureg.parse_expression(value['time'].split()[1]))
 		if 'set' == key:
-			string = string + "Set for " + value['time'] + "\n"
-			stats['time'] = stats['time'] + (int(value['time'].split()[0])*ureg.parse_expression(value['time'].split()[1]))
+			if 'type' in value:
+				string = string + value['type'] + " "
+			else:
+				string = string + "set" + " "			
+			if 'time' in value:
+				string = string + "for " + value['time'] + "\n"
+				stats['time'] = stats['time'] + (float(value['time'].split()[0])*ureg.parse_expression(value['time'].split()[1]))
+			else:
+				string = string + "\n"		
+			
 		if 'cut' == key:
 			string = string + value['type'] + " into " + value['pieces']  + "\n"
 			stats['time'] = stats['time'] + 3*ureg.minute

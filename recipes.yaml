@@ -39,3 +39,70 @@ white bread:
        ingredient:
         - {name: white flour, amount: 1000 g}
         - {name: water, amount: 720 g}
+
+
+flour tortilla:
+ class: tortilla
+ amount: 12 whole
+ cook:
+  type: fry
+  time: 15 minute
+  heat: 400 F
+  set:
+   time: 30 minutes
+   mix:
+    ingredient:
+     - {name: water, amount: 0.66 cup}  
+    mix:
+     time: 3 minute
+     ingredient:
+      - {name: white flour, amount: 3 cup}
+      - {name: oil, amount: 5 tablespoons}
+  
+baked beans:
+ class: beans
+ amount: 6 serving
+ cook:
+  type: bake
+  time: 8 hour
+  heat: 250 F
+  set:
+   type: drain
+   set:
+    type: soak
+    time: 12 hour
+    mix:
+     cut:
+      type: chop
+      pieces: small pieces
+      ingredient:
+       - {name: onion, amount: 1 whole}
+     ingredient:
+      - {name: pinto beans, amount: 6.5 cup}
+      - {name: mustard, amount: 0.25 cup}
+      - {name: ketchup, amount: 0.25 cup}
+      - {name: brown sugar, amount: 0.25 cup}
+      - {name: water, amount: 500 ml}
+
+white rice:
+ class: rice
+ amount: 3 serving
+ set:
+  time: 10 minute
+  cook:
+   type: boil
+   time: 10 minute
+   heat: medium
+   mix:
+    ingredient:
+     - {name: water, amount: 4 cup}
+     - {name: rice, amount: 2 cup}
+     - {name: salt, amount: 1 tsp}  
+
+basic burrito:
+ class: burrito
+ mix:
+  ingredient:
+   - {name: white rice, amount: 0.25 cup}
+   - {name: baked beans, amount: 0.25 cup}
+   - {name: flour tortilla, amount: 1 tortilla}
