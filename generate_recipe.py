@@ -1,11 +1,12 @@
 import yaml
 from pint import UnitRegistry
+import sys
 
 ureg = UnitRegistry()
 
 def start_print_dict(item,fullDict,printOut,stats):
 	if printOut:
-		return 'To make ' + fullDict[item]['amount'] + ' ' + item + ':\n\n' + print_dict(fullDict[item],'',fullDict)
+		return print_dict(fullDict[item],'',fullDict)
 	else:
 		return print_dict(fullDict[item],'',fullDict)
 
@@ -24,6 +25,16 @@ def print_dict(dictionary, string, fullDict):
 					num = num + 1
 					if e['name'] in fullDict.keys():
 						string = start_print_dict(e['name'],fullDict,False,stats) + "\n" + string
+					else:
+						# Add it to the basic ingredient list
+						try:
+							if e['name'] in stats['ingredients']:
+								stats['ingredients'][e['name']] = stats['ingredients'][e['name']] + (int(e['amount'].split()[0])*ureg.parse_expression(e['amount'].split()[1]))
+							else:
+								stats['ingredients'][e['name']] =(int(e['amount'].split()[0])*ureg.parse_expression(e['amount'].split()[1]))
+						except:
+							stats['ingredients'][e['name']] = 1
+
 				string = string + "\n"
 		if 'mix' == key:
 			string = string + "Mix them together\n"
@@ -44,7 +55,26 @@ stream = open('recipes.yaml','r')
 data = yaml.load(stream, yaml.SafeLoader)
 stats = {}
 stats['time']=0*ureg.minute
-print start_print_dict('grilled cheese sandwich',data,True,stats)
-print stats
+food = sys.argv[1]
+stats['ingredients']={}
 
-		
+if food in data.keys():
+	stats['directions'] = start_print_dict(food,data,True,stats)
+	if stats['time'].magnitude > 100:
+		stats['time'] = stats['time'].to(ureg.hour)
+
+	print "How to make a " + food + " from scratch\n"
+
+	print "Time needed: ",
+	print stats['time']
+
+	print "\nBasic Ingredient list"
+	for e in stats['ingredients']:
+		print stats['ingredients'][e],
+		print " " + e 
+
+	print "Directions: "
+	print stats['directions']
+else:
+	print food + " not in recipe database"
+			
