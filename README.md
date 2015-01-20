@@ -84,3 +84,9 @@ Take 1 whole cheese sandwich and 2 tbl oil
 Mix them together
 fry at high for 1 minute
 ```
+
+# Todo
+
+1. Allow user to set "depth" so it doesn't have to be completely from scratch (perhaps user can set "time" constraint instead?)
+2. Add more basic recipes
+3. Support for SR27 nutrients
