@@ -70,7 +70,10 @@ stream = open('recipes.yaml','r')
 data = yaml.load(stream, yaml.SafeLoader)
 stats = {}
 stats['time']=0*ureg.minute
-food = sys.argv[1]
+try:
+  food = sys.argv[1]
+except:
+  food = "none"
 stats['ingredients']={}
 
 if food in data.keys():
@@ -94,4 +97,7 @@ if food in data.keys():
   print stats['directions']
 else:
   print food + " not in recipe database"
-      
+  print "\nAvailable recipes\n--------------------"
+  for e in sorted(data.keys()):
+    print " - " + e
+  print "\n"

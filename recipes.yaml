@@ -149,21 +149,24 @@ veggie tomato sauce:
   cook:
     type: saute
     time: 5 minute
-    heat: medium
+    heat: low
     mix:
-      cut:
-        type: chop
-        pieces: many pieces
-        time: 1 minute
-        ingredient:
-          - {name: garlic, amount: 1 whole}
-      cut:
-        type: chop
-        pieces: many pieces
-        time: 5 minute
-        ingredient:
-          - {name: onion, amount: 1 whole}
       ingredient:
-        - {name: oil, amount: 2 tbl}
+        - {name: canned tomatoes, amount: 1 can}
+      cook:
+        type: saute
+        time: 5 minute
+        heat: medium
+        mix:
+          cut:
+            type: chop
+            pieces: many pieces
+            time: 5 minute
+            ingredient:
+              - {name: onion, amount: 1 whole}
+              - {name: garlic, amount: 1 whole}
+          ingredient:
+            - {name: oil, amount: 2 tbl}
 
-        
+
+          
