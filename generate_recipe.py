@@ -63,15 +63,17 @@ if food in data.keys():
 	if stats['time'].magnitude > 100:
 		stats['time'] = stats['time'].to(ureg.hour)
 
-	print "How to make a " + food + " from scratch\n"
+	print "How to make a " + food + " from scratch"
+	print "------------------------------------------\n"
 
 	print "Time needed: ",
 	print stats['time']
 
-	print "\nBasic Ingredient list"
+	print "\nBasic ingredient list:"
 	for e in stats['ingredients']:
 		print stats['ingredients'][e],
 		print " " + e 
+	print "\n"
 
 	print "Directions: "
 	print stats['directions']
