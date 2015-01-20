@@ -108,3 +108,10 @@ basic burrito:
    - {name: white rice, amount: 0.25 cup}
    - {name: baked beans, amount: 0.25 cup}
    - {name: flour tortilla, amount: 1 tortilla}
+
+spaghetti with sauce:
+ class: spaghetti
+ mix:
+   - {name: pasta, amount: 1 serving}
+   - {name: sauce, amount: 0.25 cup}
+
