@@ -54,10 +54,11 @@ python generate_recipe.py 'grilled cheese sandwich'
 Output:
 ```bash
 How to make a grilled cheese sandwich from scratch
+----------------------------------------------------
 
 Time needed:  5.36666666667 hour
 
-Basic Ingredient list
+Basic Ingredient list:
 720 gram  water
 1  oil
 1  cheese
