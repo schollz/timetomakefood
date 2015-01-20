@@ -47,16 +47,24 @@ Total nutrition is calculated by adding all the ingredients nutritions.
 
 # Examples
 
-```python
-stream = open('recipes.yaml','r')
-data = yaml.load(stream, yaml.SafeLoader)
-print start_print_dict('grilled cheese sandwich',data,True)
+```bash
+python generate_recipe.py 'grilled cheese sandwich'
 ```
 
 Output:
 ```bash
-To make 1 whole grilled cheese sandwich:
+How to make a grilled cheese sandwich from scratch
 
+Time needed:  5.36666666667 hour
+
+Basic Ingredient list
+720 gram  water
+1  oil
+1  cheese
+4 gram  yeast
+1000 gram  white flour
+21 gram  salt
+Directions:
 Take 1000 g white flour and 720 g water
 Mix them together
 Set for 30 minute
