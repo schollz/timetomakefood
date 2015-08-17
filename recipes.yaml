@@ -8,11 +8,11 @@ ingredients:
   -
     name: sliced bread
     operation: slice
-    quantity: 1/8 loaf
     info: two pieces
     ingredients:
       -
         name: bread
+        quantity: 1/8 loaf
 
     
 name: bread
