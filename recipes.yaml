@@ -1,61 +1,172 @@
-name: cheese sandwich
-operation: stack
-time: 3 min
-ingredients:
-  -
-    name: cheese
-    quantity: 1 slice
-  -
-    name: sliced bread
-    operation: slice
-    info: two pieces
-    ingredients:
-      -
-        name: bread
-        quantity: 1/8 loaf
+grilled cheese sandwich:
+  operation: fry
+  info: set grill to medium-high
+  time: 3 minutes
+  ingredients:
+    - 
+      name: cheese sandwich
+    -
+      name: butter
+      quantity: 1 tbl
+
+cheese sandwich:
+  operation: stack
+  time: 3 min
+  ingredients:
+    -
+      name: cheese
+      quantity: 1 slice
+    -
+      name: sliced bread
+      operation: slice
+      info: two pieces
+      ingredients:
+        -
+          name: bread
+          quantity: 1/8 loaf
 
     
-name: bread
-operation: cool
-time: 20 min
-ingredients:
-  -
-    operation: bake
-    time: 30 min
-    info: set oven to 475F
-    ingredients:
+bread:
+  operation: cool
+  time: 20 min
+  ingredients:
+    -
+      operation: bake
+      time: 30 min
+      info: set oven to 475F
+      ingredients:
+        -
+          operation: rise
+          time: 30 min
+          ingredients:
+            -
+              operation: mold
+              time: 5 min
+              ingredients:
+                -
+                  operation: rise
+                  time: 6 hr
+                  ingredients:
+                    -
+                      operation: knead
+                      time: 10 min
+                      ingredients:
+                        -
+                          name: bread sponge
+                        -
+                          name: salt
+                          quantity: 10 g
+                        -
+                          name: yeast
+                          quantity: 4 g
+
+bread sponge:
+  operation: set
+  time: 20 min
+  ingredients:
       -
-        operation: rise
-        time: 30 min
-        ingredients:
+        name: flour
+        quantity: 1000 g
+      -
+        name: water
+        quantity: 720 g
+
+chocolate chip oatmeal cookies:
+  operation: bake
+  notes: 350 F
+  time: 10 min
+  ingredients:
+    -
+      operation: stir
+      ingredients:
+        -
+          name: chocolate chip cookie dough
+        -
+          name: oats
+          quantity: 2.5 cups
+
+
+chocolate chip cookie dough:
+  operation: stir
+  time: 5 min
+  ingredients:
+    -
+      name: chocolate chips
+      quantity: 1 cup
+    -
+      operation: mix
+      time: 5 min
+      ingredients:
           -
-            operation: mold
+            operation: whisk
+            time: 2 min
+            ingredients:
+                -
+                  name: egg
+                  quantity: 3 whole
+          -
+            operation: cream
             time: 5 min
             ingredients:
-              -
-                operation: rise
-                time: 6 hr
-                ingredients:
-                  -
-                    operation: knead
-                    time: 10 min
-                    ingredients:
-                      -
-                        name: bread sponge
-                      -
-                        name: salt
-                        quantity: 10 g
-                      -
-                        name: yeast
-                        quantity: 4 g
+                -
+                  name: butter
+                  quantity: 1 cup
+          -
+            name: brown sugar
+            quantity: 1 cup
+          -
+            name: baking soda
+            quantity: 2 tsp
+          -
+            name: cinnamon
+            quantity: 1 tsp
+          -
+            name: vanilla
+            quantity: 1 tsp
+          -
+            name: flour
+            quantity: 1.5 cups
 
-name: bread sponge
-operation: set
-time: 20 min
-ingredients:
+flour tortilla:
+  operation: fry
+  time: 30 s
+  ingredients:
     -
-      name: flour
-      quantity: 1000 g
+      operation: roll out
+      time: 40 s
+      ingredients:
+        -
+          operation: set
+          time: 30 min
+          ingredients:
+            -
+              name: flour
+              quantity: 2 cups
+            -
+              name: salt
+              quantity: 0.5 tsp
+            -
+              name: baking powder
+              quantity: 1 tsp
+            -
+              name: oil
+              quantity: 0.25 cup
+            -
+              name: water
+              quantity: 0.5 cup
+
+corn tortilla:
+  operation: fry
+  time: 30 s
+  ingredients:
     -
-      name: water
-      quantity: 720 g
+      operation: flatten
+      info: use tortilla press
+      ingredients:
+        -
+          name: masa harina
+          quantity: 2 cups
+        -
+          name: water
+          quantity: 1.75 cups
+          info: warm water
