@@ -53,13 +53,9 @@ name: bread sponge
 operation: set
 time: 20 min
 ingredients:
-  -
-    operation: mix
-    time: 3 min
-    ingredients:
-      -
-        name: flour
-        quantity: 1000 g
-      -
-        name: water
-        quantity: 720 g
+    -
+      name: flour
+      quantity: 1000 g
+    -
+      name: water
+      quantity: 720 g
