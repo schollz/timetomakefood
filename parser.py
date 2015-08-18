@@ -1,33 +1,45 @@
+"""Parser for the recursive recipes
+"""
+
 import json
 import copy
 import yaml
 from pint import UnitRegistry
+
+__author__ = "Zack Scholl"
+__copyright__ = "Copyright 2015"
+__credits__ = ["Zack Scholl","Travis Scholl"]
+__license__ = "MIT"
+__version__ = "0.1"
+__maintainer__ = "Zack Scholl"
+__email__ = "zack@hypercubeplatforms.com"
+__status__ = "Development"
+
 ureg = UnitRegistry()
 ureg.define('whole = 1 * dimensionless')
+
+
 recipes = {}
 with open('recipes.yaml','r') as f:
     recipes = yaml.load(f)
         
-def recurseIngredients(recipe,directions):
-    if 'ingredients' not in recipe:
-        print(recipe)
-        return recipe['quantity'] + ' of ' + recipe['name']
-    else:
-        directions += recipe['operation'] + ' '
-        new_ingredients = []
-        for i in range(len(recipe['ingredients'])):
-            if recipe['ingredients'][i]['name'] in recipes.keys():  
-                new_recipe = copy.deepcopy(recipes[recipe['ingredients'][i]['name']])
-                new_ingredients.append(recurseIngredients(new_recipe,directions))
-            else:
-                new_ingredients.append(recurseIngredients(recipe['ingredients'][i],directions))
-        directions += ' and '.join(new_ingredients) + '\n'
-    return directions
-        
+
 def getPintString(pint):
+    """Stringifying for the units
+    """
     return '{!s}'.format(pint)
         
-def makeYaml(recipe,servings):
+def makeYaml(recipe,servings=1):
+    """Recursively generates a new JSON
+    
+    This JSON contains all the key recipes it can find in the original recipe
+    
+    Input: 
+       
+        recipe = root node of the recipe of interest
+        servings = number of servings
+        
+    """
     if 'makes' in recipe:
         recipe['makes'] = getPintString(ureg.parse_expression(recipe['makes']) * servings)
     if 'time' in recipe:
