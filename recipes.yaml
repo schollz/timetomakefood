@@ -244,3 +244,57 @@ hard-boiled eggs:
     -
       name: boiling water
       quantity: 6 cups
+
+refried beans:
+  operation: mash
+  time: 2 min
+  ingredients:
+    -
+      name: salt and pepper
+      quantity: 1 tsp
+    -
+      operation: saute
+      time: 5 min
+      ingredients:
+        - 
+          name: cooked pinto beans
+          quantity: 15 oz
+        -
+          name: chicken browth
+          quantity: 0.6 cup
+        -
+          operation: saute
+          time: 1 min
+          ingredients:
+            -
+              name: minced garlic
+              quantity: 2 whole
+            - 
+              name: chili powder
+              quantity: 1 tsp
+            -
+              operation: saute
+              time: 3 min
+              ingredients:
+                -
+                  name: chopped onion
+                  quantity: 0.5 whole
+                -
+                  name: olive oil
+                  quantity: 2 tbl
+
+minced garlic:
+  operation: mince
+  time: 3 min
+  ingredients:
+    -
+      name: garlic
+      quantity: 1 whole
+
+chopped onion:
+  operation: chop
+  time: 3 min
+  ingredients:
+    -
+      name: onion
+      quantity: 1 whole
