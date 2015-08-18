@@ -7,42 +7,37 @@ Ingredients at the highest level are template ingredients. Any recipe can use th
 ## Example
 
 ```
-grilled cheese sandwich:
-  operation: fry
-  info: set grill to medium-high
-  time: 3 minutes
-  ingredients:
-    - 
-      name: cheese sandwich
-    -
-      name: butter
-      quantity: 1 tbl
-
-cheese sandwich:
-  operation: stack
+hard-boiled egg:
+  operation: boil
+  time: 10 min
+  makes: 1 whole
   ingredients:
     -
-      name: cheese
-      quantity: 1 slice
+      name: egg
+      quantity: 1 whole
     -
-      name: sliced bread
-      operation: slice
-      info: two pieces
-      ingredients:
-        -
-          name: bread
-          quantity: 1/8 loaf
+      name: boiling water
+      quantity: 6 cups
+      
+boiling water:
+  operation: boil
+  time: 5 min
+  makes: 1 cup
+  ingredients:
+    -
+      name: water
+      quantity: 1 cup
 ```
 
 Which should generate the following:
 
 ```
-Grilled Cheese Sandwich
+Hard-boiled egg
+Makes 1 whole hard-boiled egg.
 
-Take 1/8 loaf of bread. 
-Slice the bread into sliced bread. Two pieces.
-Stack 1 slice of cheese and the sliced bread to make a cheese sandiwch.
-Fry the cheese sandwich with 1 tbl of oil for 3 minutes. Set grill to medium-high.
+Boil 6 cups of water for 5 min to make boiling water. // The boiling recipe was multiplied by 6 cups / 1 cups as it inherited the new quantity
+Mix 1 whole egg and 6 cups of boiling water.  // Mixing is implied when multiple ingredients exist
+Boil for 10 minutes.  // operation
 ```
 
 # Todo
