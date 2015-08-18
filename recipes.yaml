@@ -130,6 +130,7 @@ chocolate chip cookie dough:
 flour tortilla:
   operation: fry
   time: 30 s
+  makes: 8
   ingredients:
     -
       operation: roll out
@@ -158,6 +159,7 @@ flour tortilla:
 corn tortilla:
   operation: fry
   time: 30 s
+  makes: 8
   ingredients:
     -
       operation: flatten
@@ -170,3 +172,44 @@ corn tortilla:
           name: water
           quantity: 1.75 cups
           info: warm water
+
+waffles:
+  operation: fry
+  info: Use a waffle iron
+  makes: 5
+  time: 1 min
+  ingredients:
+    -
+      operation: mix
+      time: 30 s
+      ingredients:
+        -
+          operation: mix
+          ingredients:
+            -
+              name: whole-wheat pastry flour
+              quantity: 4.375 oz
+            -
+              name: all-purpose flour
+              quantity: 4.375 oz
+            -
+              name: kosher salt
+              quantity: 1 tsp
+            -
+              name: sugar
+              quantity: 3 tbl
+            -
+              name: baking soda
+              quantity: 1/2 tsp
+        -
+          operation: mix
+          ingredients:
+            -
+              name: eggs
+              quantity: 3 whole
+            -
+              name: unsalted butter
+              quantity: 4 tbl
+            -
+              name: buttermilk
+              quantity: 2 cups
