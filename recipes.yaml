@@ -2,6 +2,7 @@ grilled cheese sandwich:
   operation: fry
   info: set grill to medium-high
   time: 3 minutes
+  makes: 1 whole
   ingredients:
     - 
       name: cheese sandwich
@@ -12,6 +13,7 @@ grilled cheese sandwich:
 cheese sandwich:
   operation: stack
   time: 3 min
+  makes: 1 whole
   ingredients:
     -
       name: cheese
@@ -29,6 +31,7 @@ cheese sandwich:
 bread:
   operation: cool
   time: 20 min
+  makes: 2 whole
   ingredients:
     -
       operation: bake
@@ -63,6 +66,7 @@ bread:
 bread sponge:
   operation: set
   time: 20 min
+  makes: 2 whole
   ingredients:
       -
         name: flour
@@ -75,6 +79,7 @@ chocolate chip oatmeal cookies:
   operation: bake
   notes: 350 F
   time: 10 min
+  makes: 18 whole
   ingredients:
     -
       operation: stir
@@ -89,6 +94,7 @@ chocolate chip oatmeal cookies:
 chocolate chip cookie dough:
   operation: stir
   time: 5 min
+  makes: 1 whole
   ingredients:
     -
       name: chocolate chips
@@ -129,8 +135,8 @@ chocolate chip cookie dough:
 
 flour tortilla:
   operation: fry
-  time: 30 s
-  makes: 8
+  time: 4 min
+  makes: 8 whole
   ingredients:
     -
       operation: roll out
@@ -158,8 +164,8 @@ flour tortilla:
 
 corn tortilla:
   operation: fry
-  time: 30 s
-  makes: 8
+  time: 5 min
+  makes: 8 whole
   ingredients:
     -
       operation: flatten
@@ -176,7 +182,7 @@ corn tortilla:
 waffles:
   operation: fry
   info: Use a waffle iron
-  makes: 5
+  makes: 5 whole
   time: 1 min
   ingredients:
     -
@@ -218,6 +224,7 @@ rice:
   operation: heat
   info: set stove to medium-high
   time: 10 min
+  makes: 2 cups
   ingredients:
     -
       name: white rice
@@ -229,6 +236,7 @@ rice:
 boiling water:
   operation: boil
   time: 5 min
+  makes: 1 cup
   ingredients:
     -
       name: water
@@ -237,6 +245,7 @@ boiling water:
 hard-boiled eggs:
   operation: boil
   time: 10 min
+  makes: 1 whole
   ingredients:
     -
       name: egg
@@ -248,6 +257,7 @@ hard-boiled eggs:
 refried beans:
   operation: mash
   time: 2 min
+  makes: 15 oz
   ingredients:
     -
       name: salt and pepper
@@ -286,6 +296,7 @@ refried beans:
 minced garlic:
   operation: mince
   time: 3 min
+  makes: 1 whole
   ingredients:
     -
       name: garlic
@@ -294,6 +305,7 @@ minced garlic:
 chopped onion:
   operation: chop
   time: 3 min
+  makes: 1 whole
   ingredients:
     -
       name: onion
