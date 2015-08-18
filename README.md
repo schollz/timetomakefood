@@ -7,32 +7,42 @@ Ingredients at the highest level are template ingredients. Any recipe can use th
 ## Example
 
 ```
-name: grilled cheese sandwich
-operation: fry
-info: set grill to medium-high
-time: 3 minutes
-ingredients:
-  - 
-    name: cheese sandwich
-  -
-    name: butter
-    quantity: 1 tbl
+grilled cheese sandwich:
+  operation: fry
+  info: set grill to medium-high
+  time: 3 minutes
+  ingredients:
+    - 
+      name: cheese sandwich
+    -
+      name: butter
+      quantity: 1 tbl
 
-name: cheese sandwich
-operation: stack
-time: 3 min
-ingredients:
-  -
-    name: cheese
-    quantity: 1 slice
-  -
-    name: sliced bread
-    operation: slice
-    info: two pieces
-    ingredients:
-      -
-        name: bread
-        quantity: 1/8 loaf
+cheese sandwich:
+  operation: stack
+  ingredients:
+    -
+      name: cheese
+      quantity: 1 slice
+    -
+      name: sliced bread
+      operation: slice
+      info: two pieces
+      ingredients:
+        -
+          name: bread
+          quantity: 1/8 loaf
+```
+
+Which should generate the following:
+
+```
+Grilled Cheese Sandwich
+
+Take 1/8 loaf of bread. 
+Slice the bread into sliced bread. Two pieces.
+Stack 1 slice of cheese and the sliced bread to make a cheese sandiwch.
+Fry the cheese sandwich with 1 tbl of oil for 3 minutes. Set grill to medium-high.
 ```
 
 # Todo
