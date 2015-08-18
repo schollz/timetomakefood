@@ -213,3 +213,34 @@ waffles:
             -
               name: buttermilk
               quantity: 2 cups
+
+rice:
+  operation: heat
+  info: set stove to medium-high
+  time: 10 min
+  ingredients:
+    -
+      name: white rice
+      quantity: 2 cups
+    -
+      name: boiling water
+      quantity: 2 cups
+
+boiling water:
+  operation: boil
+  time: 5 min
+  ingredients:
+    -
+      name: water
+      quantity: 1 cup
+
+hard-boiled eggs:
+  operation: boil
+  time: 10 min
+  ingredients:
+    -
+      name: egg
+      quantity: 1 whole
+    -
+      name: boiling water
+      quantity: 6 cups
