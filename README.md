@@ -1,3 +1,13 @@
+# Install
+
+Installing requires Python 3.
+
+To install use:
+
+```
+make
+```
+
 # Formatting
 
 Recipes are collections of ingredients. Any ingredient can be composed of more ingredients using operations. Mix statements are redundant, so don't feel a need to include them as an extra step.
