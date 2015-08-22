@@ -35,6 +35,21 @@ class Tree:
         depth += 1
         for child in children:
             self.display(child, depth)  # recursive call
+            
+
+    def list(self, identifier, arr, depth=_ROOT):
+        children = self[identifier].children
+        if depth == _ROOT:
+            pass
+        else:
+            if depth not in arr:
+                arr[depth] = []
+            arr[depth].append(identifier)
+            
+        depth -= 1
+        for child in children:
+            self.list(child, arr, depth)  # recursive call
+
 
     def traverse(self, identifier, mode=_DEPTH):
         # Python generator. Loosly based on an algorithm from 

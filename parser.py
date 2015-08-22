@@ -75,7 +75,7 @@ class Recipes:
 
     
 book = Recipes()
-recipe = book.getFullJSON('bread', 4)
+recipe = book.getFullJSON('rice', 4)
 
 print(json.dumps(recipe, sort_keys=True, indent=4))
 
@@ -86,52 +86,75 @@ import uuid
 
 tree = Tree()
 
-tree.add_node('Harry')  # root node
-tree.add_node("Bill", "Harry")
-tree.add_node("Jane", "Harry")
-tree.add_node("Joe", "Jane")
-tree.add_node("Diane", "Jane")
-tree.add_node("George", "Diane")
-tree.add_node("Mary", "Diane")
-tree.add_node("Jill", "George")
-tree.add_node("Carol", "Jill")
-tree.add_node("Grace", "Bill")
-tree.add_node("Mark", "Jane")
-tree.add_node("Bob", "Harry")
-
-tree.display("Harry")
-
 def makeTree(r):
     t = Tree()
-    t.add_node('uuidroot')
-    recurseTree(t,r,'uuidroot')
+    root = json.dumps({'node':'uuidroot'})
+    t.add_node(root)
+    recurseTree(t,r,root)
     return t
     
 def recurseTree(t,r,root,):
-    newroot = 'uuid' + str(uuid.uuid4())
+    newroot = json.dumps({'node':'uuid' + str(uuid.uuid4())})
     r2 = copy.deepcopy(r)
+    hasNextIngredient = False
     if 'ingredients' in r.keys():
         t.add_node(newroot,root)
-        hasNextIngredient = False
         for i in range(len(r['ingredients'])):
             if 'ingredients' in r['ingredients'][i].keys():
                 hasNextIngredient = True
         if not hasNextIngredient:
-            t.add_node('uuid' + str(uuid.uuid4()),newroot)
+            newroot2 = json.dumps({'node':'uuid' + str(uuid.uuid4())})
+            t.add_node(newroot2,newroot)
         for i in range(len(r['ingredients'])):
             recurseTree(t,r['ingredients'][i],newroot)  
     r2.pop("ingredients", None)
-    t.add_node(json.dumps(r2),root)
+    if 'operation' in r2.keys():
+        t.add_node(json.dumps(r2),newroot)
+    else:
+        t.add_node(json.dumps(r2),root)
 
 tree = makeTree(recipe)
-tree.display('uuidroot')
+root = json.dumps({'node':'uuidroot'})
+tree.display(root)
 
 print("***** BREADTH-FIRST ITERATION *****")
 traversed = []
-for node in tree.traverse("uuidroot", mode=_BREADTH):
+for node in tree.traverse(root, mode=_BREADTH):
     print(node)
-    if 'uuid' not in node:
-        traversed.append(json.loads(node))
-
+    traversed.append(json.loads(node))
 
     
+
+
+arr = {}
+tree.list(root, arr)
+start = min(arr.keys())
+lastFoods = []
+currentFoods = []
+currentOperation = ""
+makes = ""
+stepNum = 0
+for i in range(start,-1):
+    for item in arr[i]:
+        item = json.loads(item)
+        if 'name' in item.keys() and 'quantity' in item.keys():
+            stepNum += 1
+            if len(currentFoods)>0:
+                print(str(stepNum) + '. Mix ' + item['quantity'] + ' of ' + item['name'] + ' with the ' + ' and '.join(currentFoods))
+            elif len(lastFoods) > 0:
+                print(str(stepNum) + '. Mix ' + item['quantity'] + ' of ' + item['name'] + ' with the ' + ' and '.join(lastFoods))        
+            else:
+                print(str(stepNum) + '. Take ' + item['quantity'] + ' of ' + item['name'])
+            currentFoods.append(item['name'])
+        if 'operation' in item.keys():
+            currentOperation = item['operation'].title()
+            if 'time' in item.keys():
+                currentOperation += ' for ' + item['time']
+        if 'makes' in item.keys() and 'name' in item.keys():
+            makes = 'Makes ' + item['makes'] + ' ' + item['name']
+    lastFoods = currentFoods
+    if len(currentOperation)>0:
+        stepNum += 1
+        print(str(stepNum) + '. ' + currentOperation)
+        currentOperation = ""  
+print(makes)
