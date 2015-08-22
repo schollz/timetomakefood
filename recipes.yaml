@@ -12,7 +12,7 @@ grilled cheese sandwich:
 
 cheese sandwich:
   operation: stack
-  time: 3 min
+  time: 10 seconds
   makes: 1 whole
   ingredients:
     -
@@ -21,7 +21,6 @@ cheese sandwich:
     -
       name: sliced bread
       operation: slice
-      info: two pieces
       ingredients:
         -
           name: bread
@@ -34,19 +33,23 @@ bread:
   makes: 2 whole
   ingredients:
     -
+      name: baked bread
       operation: bake
       time: 30 min
       info: set oven to 475F
       ingredients:
         -
+          name: bread dough after second rise
           operation: rise
           time: 30 min
           ingredients:
             -
+              name: molded bread dough
               operation: mold
               time: 5 min
               ingredients:
                 -
+                  name: dough after first rise
                   operation: rise
                   time: 6 hr
                   ingredients:
@@ -88,6 +91,40 @@ flour:
           name: wheat berries
           quantity: 500 grams
       
+wheat berries:
+  operation: winnow
+  info: pour the contents of the bag between two baskets and let the breeze blow away the chaff
+  time: 20 minutes
+  makes: 1000 g
+  ingredients:
+    -
+      operation: thrash
+      info: beat bag of wheat with a stick
+      time: 3 hours
+      name: wheat heads
+      ingredients:
+        -
+          name: sheaves of wheat
+          operation: harvest
+          info: use sickle to cut wheat
+          time: 2 hours
+          ingredients:
+            - 
+              name: mature wheat
+              time: 6 months
+              operation: set
+              ingredients:
+                -
+                  name: wheat berries seed
+                  quantity: 8 cups
+                -
+                  name: dirt
+                  quantity: 0.5 acre
+                -
+                  name: water
+                  quantity: 2 inches
+                  
+                
 
 chocolate chip oatmeal cookies:
   operation: bake
