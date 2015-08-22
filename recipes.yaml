@@ -74,6 +74,20 @@ bread sponge:
       -
         name: water
         quantity: 720 g
+        
+flour:
+  operation: sift
+  time: 5 minutes
+  makes: 450 grams
+  ingredients:
+    -
+      operation: grind
+      time: 60 seconds
+      ingredients:
+        -
+          name: wheat berries
+          quantity: 500 grams
+      
 
 chocolate chip oatmeal cookies:
   operation: bake

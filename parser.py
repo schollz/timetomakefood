@@ -21,6 +21,8 @@ class Recipes:
         self.recipes = {}
         with open('recipes.yaml', 'r') as f:
             self.recipes = yaml.load(f)
+        for key in self.recipes.keys():
+          self.recipes[key]['name'] = key
         self.ureg = UnitRegistry()
         self.ureg.define('whole = 1 * dimensionless')
         self.constant_time_operations = ['boil','heat','saute','set','rise','bake','cool'] 
@@ -75,7 +77,7 @@ class Recipes:
 
     
 book = Recipes()
-recipe = book.getFullJSON('rice', 4)
+recipe = book.getFullJSON('bread', 1)
 
 print(json.dumps(recipe, sort_keys=True, indent=4))
 
@@ -117,20 +119,12 @@ tree = makeTree(recipe)
 root = json.dumps({'node':'uuidroot'})
 tree.display(root)
 
-print("***** BREADTH-FIRST ITERATION *****")
-traversed = []
-for node in tree.traverse(root, mode=_BREADTH):
-    print(node)
-    traversed.append(json.loads(node))
-
-    
-
-
 arr = {}
 tree.list(root, arr)
 start = min(arr.keys())
 lastFoods = []
 currentFoods = []
+newFood = ""
 currentOperation = ""
 makes = ""
 stepNum = 0
@@ -147,14 +141,22 @@ for i in range(start,-1):
                 print(str(stepNum) + '. Take ' + item['quantity'] + ' of ' + item['name'])
             currentFoods.append(item['name'])
         if 'operation' in item.keys():
-            currentOperation = item['operation'].title()
+            currentOperaiton = ""
+            if 'info' in item.keys():
+              currentOperation = item['info'].title() + '. '
+            currentOperation += item['operation'].title()
             if 'time' in item.keys():
                 currentOperation += ' for ' + item['time']
+                if 'name' in item.keys():
+                  currentOperation += ' to make ' + item['name']
         if 'makes' in item.keys() and 'name' in item.keys():
             makes = 'Makes ' + item['makes'] + ' ' + item['name']
+            newFood = item['name']
     lastFoods = currentFoods
     if len(currentOperation)>0:
         stepNum += 1
         print(str(stepNum) + '. ' + currentOperation)
-        currentOperation = ""  
+        currentOperation = "" 
+        currentFoods = []
+        currentFoods.append(newFood)
 print(makes)
