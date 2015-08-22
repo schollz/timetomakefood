@@ -221,17 +221,21 @@ waffles:
               quantity: 2 cups
 
 rice:
-  operation: heat
-  info: set stove to medium-high
+  operation: set
   time: 10 min
   makes: 2 cups
   ingredients:
     -
-      name: white rice
-      quantity: 2 cups
-    -
-      name: boiling water
-      quantity: 2 cups
+      operation: boil
+      info: set stove to medium-high and keep lid on
+      time: 10 min
+      ingredients:
+        -
+          name: white rice
+          quantity: 2 cups
+        -
+          name: boiling water
+          quantity: 2 cups
 
 boiling water:
   operation: boil
