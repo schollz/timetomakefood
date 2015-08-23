@@ -35,6 +35,12 @@ class Recipes:
         self.ureg.define('tbl = 1 * tablespoon')
         self.constant_time_operations = ['boil','heat','saute','set','rise','bake','cool'] 
 
+    def getRecipes(self):
+        recipe_names = []
+        for r in self.recipes.keys():
+            recipe_names.append(r.title())
+        return sorted(recipe_names)
+        
     def _getPintString(self, pint):
         """Stringifying for the units
         """
@@ -157,7 +163,7 @@ class Recipes:
               finalString += str(round(totalTime.to(self.ureg.days)))
           else:
               finalString += str(round(totalTime.to(self.ureg.hours)))
-        print(finalString)
+        return finalString
         
 
     def _makeTree(self,r):
@@ -188,5 +194,3 @@ class Recipes:
             t.add_node(json.dumps(r2),root)
 
             
-test = Recipes()
-test.makeRecipe(sys.argv[1],sys.argv[2],sys.argv[3])
