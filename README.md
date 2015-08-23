@@ -19,6 +19,8 @@ Ingredients at the highest level are template ingredients. Any recipe can use th
 
 # Todo
 
+- BUG: When recipe returns nothing, tell user to buy ingredient
+- BUG: When time is too short, tell user what ingredients they need to start (Add ingredient list?)
 - Better README
 - Add recipes
 - Web server support (Flask?)
