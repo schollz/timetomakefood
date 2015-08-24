@@ -26,3 +26,7 @@ Ingredients at the highest level are template ingredients. Any recipe can use th
 - Web server support (Flask?)
 - Gnatt chart?
 - Support for SR27 nutrients
+
+# References
+
+- [Interesting article on parsing recipes](http://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/)
