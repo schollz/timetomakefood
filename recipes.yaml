@@ -1,3 +1,28 @@
+peanut butter banana oatmeal:
+  operation: cool
+  time: 5 minutes
+  makes: 1 cup
+  ingredients:
+    -
+      name: peanut butter
+      quantity: 1 tbl
+    -
+      name: cooked oatmeal
+    -
+      name: banana
+      quantity: 0.5 whole
+    
+cooked oatmeal:
+  operation: micorwave
+  time: 3 minutes
+  ingredients:
+    -
+      name: water
+      quantity: 1 cup
+    -
+      name: oatmeal
+      quantity: 0.5 cup
+
 grilled cheese sandwich:
   operation: fry
   info: set grill to medium-high
