@@ -123,5 +123,5 @@ In the case of Challah, there is a `subtypes` array which is an optional declara
 
 Eventually, you can follow every product to the very beginning, in a [large DAG of all recipes](https://gist.github.com/schollz/c3614e5a53e782befd1822ffb4aa15dc):
 
-![](hhttp://i.imgur.com/qDNXaF0.png)
+![](http://i.imgur.com/qDNXaF0.png)
 
