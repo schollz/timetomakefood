@@ -1,0 +1,23 @@
+products = [
+	"grilled_cheese_sandwich"
+]
+
+reactants = [
+	"cheese_sandwich", 
+	"butter", 
+]
+
+ingredients = """
+1 cheese sandwich
+1 tbl. butter
+"""
+
+directions = """
+Heat 1 tablespoon salted butter in a cast-iron or nonstick skillet over medium-low heat. 
+Press the sandwich slightly and place it in the skillet. 
+Cook until golden on the bottom, 3 to 5 minutes. 
+Flip, adding more butter to the pan if needed, and 
+cook until the other side is golden and the cheese melts, 3 to 5 more minutes.
+"""
+
+time = "20m"

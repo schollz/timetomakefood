@@ -1,0 +1,19 @@
+products = [
+	"cheese_sandwich"
+]
+
+reactants = [
+	"cheese", 
+	"bread", 
+]
+
+ingredients = """
+2 slices bread
+2 slices cheese
+"""
+
+directions = """
+Put the slices of cheese between the bread.
+"""
+
+time = "30s"
