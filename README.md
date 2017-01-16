@@ -24,7 +24,10 @@ The recipe reaction would be:
       "cheese_sandwich",
       "butter"
     ],
-    "directions": "Heat 1 tablespoon salted butter in a cast-iron or nonstick skillet over medium-low heat. Press the sandwich slightly and place it in the skillet. Cook until golden on the bottom, 3 to 5 minutes. Flip, adding more butter to the pan if needed, and cook until the other side is golden and the cheese melts, 3 to 5 more minutes.",
+    "directions": {
+      "text":"Heat 1 tablespoon salted butter in a cast-iron or nonstick skillet over medium-low heat. Press the sandwich slightly and place it in the skillet. Cook until golden on the bottom, 3 to 5 minutes. Flip, adding more butter to the pan if needed, and cook until the other side is golden and the cheese melts, 3 to 5 more minutes.",
+      "time":"10m"
+    },
     "products": [
       "grilled_cheese_sandwich"
     ]
@@ -56,7 +59,10 @@ This can be broken into two reactions:
          "salt",
          "water"
       ],
-      "directions":"Mix yeast, salt, water, flour into a dough.",
+      "directions":{
+        "text":"Mix yeast, salt, water, flour into a dough.",
+        "time":"30m"
+      },
       "products":[  
          "bread_dough"
       ]
@@ -65,7 +71,10 @@ This can be broken into two reactions:
       "reactants":[  
          "bread_dough"
       ],
-      "directions":"Let dough rise. Push down and form loaves. Put loaves in oven at 450F for 20 minutes.",
+      "directions":{
+        "text":"Let dough rise. Push down and form loaves. Put loaves in oven at 450F for 20 minutes.",
+        "time":"8h"
+      },
       "products":[  
          "bread"
       ]
@@ -82,6 +91,9 @@ The advantage for this, is that you can then use different kinds of directions /
 ```json
 [  
    {  
+      "subtypes":[
+        "challah"
+      ],
       "reactants":[  
          "yeast",
          "flour",
@@ -90,7 +102,10 @@ The advantage for this, is that you can then use different kinds of directions /
          "egg",
          "sugar",
       ],
-      "directions":"Mix yeast, salt, water, flour, egg and sugar into a dough.",
+      "directions":{
+        "text":"Mix yeast, salt, water, flour, egg and sugar into a dough.",
+        "time:":"20m"
+      },
       "products":[  
          "bread_dough"
       ]
@@ -102,7 +117,7 @@ To which the [DAG for Challah/bread](https://cowyo.com/bread_dag) would look lik
 
 ![](http://i.imgur.com/1hwnBzC.png)
 
-(since colored arrows indicate different directions).
+In the case of Challah, there is a `subtypes` array which is an optional declaration for specifying specific bundles of ingredients. In this case, this product `bread_dough` occurs twice. To distinguish `bread` for `bread_dough` that uses the Challah recipe, you must specify the subtype in the final product. For example, for Challah, you would generate `bread` normally, but then override any products which have subtype `challah` in them.
 
 # Full graph
 
