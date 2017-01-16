@@ -1,0 +1,29 @@
+products = [
+	"salt"
+]
+
+reactants = [
+	"seawater"
+]
+
+ingredients = """
+1 gallon seawater
+"""
+
+directions = """
+Let your seawater sit for a while to allow any sediment and particles to settle.
+Get your stockpot out and ready for the boil. 
+Then siphon or scoop water from the top of the container, careful not to disturb the sediment at the bottom, through a filter into your stockpot.
+Use a dishcloth in a sieve for a filter, which provides a good fine mesh to get out any sand or other particles.
+Start off with a full boil at high heat, until about half of the water had evaporated. 
+Then turn the burner down to the medium-high heat.
+As the water evaporates, turn the heat lower and lower until down to medium-low. 
+This gradual decrease in heat helps prevent scorching without requiring you to stir constantly. 
+It will take longer than boiling the whole time, but it does take less interaction on your part.
+You want to get your salt to a consistency of wet sand. Don't worry if there is still water in the pot; the only thing you're concerned about is the consistency of the salt itself.
+Scoop the result into a pan to dry. Place the pan by the sun or window to dry.
+Wait about two weeks for it to dry. 
+Makes about 1/2 cup of salt.
+"""
+
+time = "346h"
