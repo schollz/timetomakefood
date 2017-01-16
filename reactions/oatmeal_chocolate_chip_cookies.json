@@ -1,0 +1,37 @@
+[  
+   {  
+      "variant":"oatmeal",
+      "reactants":[  
+         "whole_wheat_flour",
+         "flour",
+         "baking_powder",
+         "baking_soda",
+         "salt",
+         "butter",
+         "brown_sugar",
+         "vanilla",
+         "egg",
+         "oatmeal",
+         "chocolate_chips"
+      ],
+      "directions":{  
+         "text":"Cream together 1 stick of butter with 1 c. brown sugar. When blended together added 1 tbs vanilla and 5 beaten eggs. Then mix in 1.5 c whole wheat flour, 1/2 c. flour, 2 tsp. baking powder, 1 tsp. baking soda, 1 tsp. salt. Once that is mixed together, add 5 c. oatemal and 1 package of chocolate chips.",
+         "time":"15m"
+      },
+      "products":[  
+         "cookie_dough"
+      ]
+   },
+   {  
+      "reactants":[  
+         "cookie_dough"
+      ],
+      "directions":{  
+         "text":"Spoon out in balls about 1/2 the size of ping pong balls onto a greased pan or a pan lined with parchment paper. Bake at 375 F until firm - they should feel firm and not soft. remove from oven immediately, and place cookies on a cooling rack. Bake at 375F for about 12 minutes.",
+         "time":"15m"
+      },
+      "products":[  
+         "chocolate_chip_cookies"
+      ]
+   }
+]
