@@ -1,0 +1,27 @@
+products = [
+	"bread_dough"
+]
+
+reactants = [
+	"yeast", 
+	"salt", 
+	"water",
+	"flour"
+]
+
+ingredients = """
+1 tbl. yeast
+760 g. water
+1000 g. flour
+20 g. salt
+"""
+
+directions = """
+Mix warm water and flour together. Let it rest for 20 minutes. 
+For foccia bread, add yeast to warm water seperately. 
+For regular bread, add yeast to the top of the dough after 20 minutes.
+Add the salt to the top of the dough and mix together.
+Wet hands and knead in a big bowl. Cut with fingers several times and then let rest.
+"""
+
+time = "35m"

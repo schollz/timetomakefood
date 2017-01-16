@@ -1,0 +1,21 @@
+products = [
+	"bread"
+]
+
+reactants = [
+	"bread_dough"
+]
+
+ingredients = """
+bread dough
+"""
+
+directions = """
+Let the bread dough rest for 20 minutes. Then knead a little bit.
+Let the bread rise for 4 to 6 hours. Then flour a small bowl and put loaf into bowl.
+Let the bread rise again for 30 minutes, preheat a oven to 450F.
+Bake the bread in a pre-heated dutch oven for 20 minutes. Take off the lid and bake for another 5-10 minutes.
+Take out the bread and let it rest for 20 minutes.
+"""
+
+time = "6h50m"
