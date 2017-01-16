@@ -1,0 +1,13 @@
+[{
+  "reactants": [
+    "cornmeal_polenta",
+    "chicken_stock"
+   ],
+  "directions": {
+    "text": "Mix 1 cup cornmeal polenta and 5 cups chicken stock. Cook, tend frequently. Mix in garlic, cheese. Cool for 15 minutes, then bake. Cool again, and then bake again.",
+    "time": "60m"
+  },
+  "products": [
+    "baked_polenta"
+  ]
+}]
