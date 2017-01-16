@@ -108,5 +108,5 @@ To which the [DAG for Challah/bread](https://cowyo.com/bread_dag) would look lik
 
 Eventually, you can follow every product to the very beginning, in a [large DAG of all recipes](https://cowyo.com/recipe_reactions):
 
-![](http://i.imgur.com/AR26TLX.png)
+![](http://i.imgur.com/HlSDW1n.png)
 
