@@ -121,7 +121,7 @@ In the case of Challah, there is a `subtypes` array which is an optional declara
 
 # Full graph
 
-Eventually, you can follow every product to the very beginning, in a [large DAG of all recipes](https://cowyo.com/recipe_reactions):
+Eventually, you can follow every product to the very beginning, in a [large DAG of all recipes](https://gist.github.com/schollz/c3614e5a53e782befd1822ffb4aa15dc):
 
-![](http://i.imgur.com/HlSDW1n.png)
+![](hhttp://i.imgur.com/qDNXaF0.png)
 
