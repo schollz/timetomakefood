@@ -1,0 +1,39 @@
+products = [
+	"peppercorn"
+]
+
+reactants = [
+	"soil",
+	"sun",
+	"water"
+]
+
+url = "http://archive.is/XpUy7"
+
+ingredients = """
+large pots
+bright lights
+peppercorn seeds
+"""
+
+directions = """
+However, you can grow peppercorns at home with a little extra patience. In addition to its culinary value, pepper makes a lovely houseplant or landscaping plant with its glossy, evergreen leaves and large flowers. Learn how to plant and grow your own peppercorns.
+
+Peppercorn seeds are widely available through online nurseries. Prior to planting the seeds, soak them overnight to soften the seed coats. Plant the seeds Â¼ inch deep in a rich, well-draining potting mix. Space the seeds three inches apart. Spray the seed tray frequently with a mister to keep the starting mix moist and cover the seed tray with plastic wrap. Store it in a warm location, such as the top of the refrigerator or on top of a radiator.
+Peppercorn seeds can take up to thirty days to germinate at temperatures between seventy-five and eighty-five degrees. At lower temperatures, they germinate slowly or not at all.
+
+Once the seeds germinate, seedlings can be replanted when they stand four to six inches tall. If you live in a very warm climate, plant them directly outdoors in a protected location with partial shade. The plants need rich, moist, well-draining soil and warm, humid conditions. Peppers canât tolerate temperatures below sixty degrees. Bring plants indoors or wrap them in a blanket if colder weather threatens.
+In other parts of the country, plant peppercorns in large pots. Grow them outdoors during the summer and move them indoors during the winter, or grow them year-round in a conservatory or greenhouse. Houseplants need bright light and consistent moisture. Spray the foliage regularly with a bottle of water to increase humidity. Donât allow room temperatures to fall below sixty degrees.
+Pepper plants have long, vigorous vines and can reach twelve to fifteen feet high. The plants need a strong trellis or structure to scramble over. Indoors, you can install a trellis in a large pot or even grow them as a hanging plant instead.
+Peppers need moderately fertile soil to perform well. Fertilize them in the spring before new vigorous growth emerges with a balanced organic fertilizer like Protogrowâ¢ and augmented with a mineral solution like SeaMazing. Fertilize outdoor vines according to package directions. Indoors, Protogrowâ¢ and SeaMazing are viable fertilizer options as well. Because nutrients leach more quickly out of potted soil than regular garden soil, fertilize houseplants every three to four weeks during the growing season. Water houseplants more frequently, as well.
+Growth will slow somewhat during the winter as temperatures cool. Continue to water the plants occasionally to keep the soil slightly moist.
+Pests and Problems
+For most gardeners, the biggest challenge is simply providing enough heat and humidity for these tender plants. Peppers have few insect pests. Outdoors, flea beetles or pepper weevils might bother young plants. The damage is rarely severe, although an application of rotenone can dispatch the pests. Indoors, you might notice aphids on the undersides of the leaves. Try spraying the leaves with a steady stream of water or applying an insecticidal soap or oil.
+Root rots can afflict pepper plants, but they are easily prevented by providing well-draining soil. Amend heavy soils with compost or grow peppers in raised beds.
+Harvesting Peppercorns
+Peppers need a long, long growing season to produce peppercorns. Fortunately, the flowers are attractive in their own right and the foliage is glossy and evergreen. The cream, white, or yellow flowers appear from spring through summer, followed by the slow fruit production.
+Peppercorns form in clusters of fruit that slowly ripen from green to red. They are usually harvested just as they reach the red stage. Once harvested, the red peppercorns are separated and dried, either in the sun or in a food dryer for about three days. The process is complete when the peppercorns are blackened and fully dry. At this point, they can be ground as black pepper.
+White peppercorn is made by removing the red hull. The remaining peppercorns are then dried and ground into a mild-tasting form of pepper. Finally, green pepper is made by harvesting the peppercorns while they are still green and drying them.
+"""
+
+time = "35040h" # 4 years
