@@ -1,0 +1,30 @@
+products = [
+	"baked_chicken",
+	"chicken_carcass"
+]
+
+reactants = [
+	"chicken",
+	"onion_powder",
+	"salt",
+	"pepper",
+	"butter",
+	"celery"
+]
+
+ingredients = """
+1 whole chicken
+salt
+pepper
+1 tbl. onion pwoder
+1/2 c. butter
+1 celery
+"""
+
+directions = """
+Preheat oven to 350 degrees F (175 degrees C).
+Place chicken in a roasting pan, and season generously inside and out with salt and pepper. Sprinkle inside and out with onion powder. Place 3 tablespoons butter in the chicken cavity. Arrange dollops of the remaining butter around the chicken's exterior. Cut the celery into 3 or 4 pieces, and place in the chicken cavity.
+Bake uncovered 1 hour and 15 minutes in the preheated oven, to a minimum internal temperature of 180 degrees F (82 degrees C). Remove from heat, and baste with melted butter and drippings. Cover with aluminum foil, and allow to rest about 30 minutes before serving.
+"""
+
+time = "2h45m"

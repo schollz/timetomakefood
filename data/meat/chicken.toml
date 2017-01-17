@@ -1,0 +1,41 @@
+products = [
+	"chicken",
+	"chicken_carcass"
+]
+
+reactants = [
+	"egg_laying_chicken",
+	"water"
+]
+
+url = "http://archive.is/GCgvD"
+
+ingredients = """
+large pot of water
+kill cone
+sharp knife
+"""
+
+directions = """
+1. Place the chicken upside down in a kill cone like this (or a homemade version, like ours). Using a sharp knife, slit the artery in the throat (which runs right on the backside of the earlobe) and allow the blood to drain out and the chicken to die â this usually takes around 30 seconds to 1 minute. Give it more pressure than you think youâll need â getting the knife through the feathers can be tough and multiple attempts and cuts is not desirable for anyone involved.
+2. Once the chicken is dead, remove itâs body from the kill cone.
+3. Gently dip the chicken into a large pot of 145-150 degree water for 3 seconds, shaking it gently while itâs submerged. Pull the chicken from the water for 3 seconds. Dunk it again in the hot water for 3 seconds, shaking it gently. Again, pull the chicken out of the water for a few seconds. Grab a feather from the bird and pull it out. Does it slip out easily without resistance? If yes, proceed to the next step. If not, continue to dunk the bird for 3 seconds at a time until the feathers pull out like warm butter, baby.
+4. Once the chicken has been scalded, begin plucking the feathers by hand OR transfer the bird to a plucker like this one. We borrow ours from a friend to make quick work of the large amount of birds we harvest at a time. To pluck with a machine, we simply place the scalded chicken into the plucker, flip on the switch, and spray the chicken with water while the machine is running (this helps to remove all those little feathers that would otherwise stick to the skin). There are also a few chicken plucking drill attachment (like THIS ONE) as an option. It should look like this once itâs plucked:
+5. Transfer the chicken to the âevisceration stationâ (as we like to call it). At this station, the head, feet, and guts will be removed.
+Removing the feet (save 'em for stock!) | The Elliott Homestead (.com)
+First the feet. Halfway up their legs thereâs a joint that connects the leg to the foot â cut right in the middle of the joint and the feet will easily be removed. I use a filet knife for this and it works just fine.
+Next, the head. This you may need a pair of pruners for â it can be a bit tricky to remove. Once the neck bone is broken though itâs easy enough to cut through the remaining skin.
+DONâT discard these parts! I always save them for homemade chicken stock â theyâre so rich in gelatin and minerals!
+6. After the feet and head are removed, flip the chicken over so itâs breast side up. At the narrow end of the breast, grab the skin with one hand and use your other hand to cut a slit in the skin. Get all your fingers in there and use your hands to gently pull open the body cavity, revealing the innards.
+Once you can see the innards, itâs easy to reach in with one hand and pull out all of the guts. Using your fingers, itâs nearly impossible to rupture the intestines, but be careful none-the-less. Itâs important that no poo gets onto the meat as this will contaminate it. Pull, pull, pull.
+At this point, youâll likely notice that there is a long straw-like thing at the top of the bird thatâs keeping you from removing the guts completely. Thatâs the windpipe. Reach in there and wrap your fingers around it and reallllly pull hard. Itâll come out. There should be nothing left in the body cavity when youâre finished.
+7. But wait? The guts are still attached to the chicken, arenât they?! Yes. Yes, they are. So what you have to do is take a sharp filet knife and gently cut a âvâ shape around the vent (ahem, the âpoo holeâ) of the chicken. BE CAREFUL to not puncture the intestines or the vent. Just cut around it and remove it completely.
+8. Place the chicken into a large bucket filled with ice and let it remain there while you finish harvesting the rest of the birds.
+9. Once all the birds are cleaned, I take them inside to wash them out and âquality controlâ. Any stray parts left in the body cavity are removed, leftover feathers are plucked, the entire chicken is rinsed with water (both inside and out) and all of the chickens are placed into individual shrink wrap bags, along with the head, the feet, and any other bits we will keep. (But wait! donât shrink wrap them yet!)
+Chickens ready for the 'air-chill' step | The Elliott Homestead (.com)
+10. Place the chickens, in their open shrink wrap bags, into the refrigerator for 1-2 days. This will allow the chickens to âair-chillâ â an incredibly important step in the process. Without this, the chicken tends to be stiff and chewy. During the air-chilling, the meat has a chance to rest and relax, resulting in a much more tender bird.
+11. After the air-chilling period, shrink wrap the chicken (according to the bags instructions) and place in the freezer for storage.
+While it may sound like an overwhelming process, Iâm incredibly surprised at how easily and quickly it can all be done. In a matter of hours, you can have 6, 9, or 12 months worth of chickens put up.
+"""
+
+time = "4h"

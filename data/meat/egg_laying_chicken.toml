@@ -1,9 +1,9 @@
 products = [
-	"egg"
+	"egg_laying_chicken"
 ]
 
 reactants = [
-	"chicks"
+	"baby_chicks"
 ]
 
 ingredients = """
@@ -19,7 +19,7 @@ Create a coop for the chickens. Make sure it has plenty of shelter and possibly 
 Make sure chickens always have access to chicken feed (seed, egg shells) and water.
 Give them a fence and possibly a net to protect from predators.
 Provide an area for them to dig/scratch and run around.
-After 6 months the chickens will start laying an egg every few days
+After 6 months the chickens will be big enough to lay eggs or eat.
 """
 
 time = "4380h"

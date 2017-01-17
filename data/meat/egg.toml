@@ -1,0 +1,25 @@
+products = [
+	"egg",
+]
+
+reactants = [
+	"egg_laying_chicken"
+]
+
+ingredients = """
+egg laying chickens
+coop
+saw dust
+chicken feed
+water
+"""
+
+directions = """
+Create a coop for the chickens. Make sure it has plenty of shelter and possibly a place to roost.
+Make sure chickens always have access to chicken feed (seed, egg shells) and water.
+Give them a fence and possibly a net to protect from predators.
+Provide an area for them to dig/scratch and run around.
+Chickens will lay an egg every few days
+"""
+
+time = "48h"
