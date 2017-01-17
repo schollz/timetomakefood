@@ -1,0 +1,21 @@
+products = [
+	"wheat_berries"
+]
+
+reactants = [
+	"cured_wheat"
+]
+
+ingredients = """
+1 gallon seawater
+"""
+
+url = "http://archive.is/sA2zo"
+
+directions = """
+Now itâs time to thresh the grain â to separate the straw and chaff from it. You can go about this in any number of ways. One method is flailing. A flail consists of one piece of wood about 3 feet long â the handle â attached with a leather thong to a shorter piece about 2 feet long. The shorter piece is flung at the heads of grain repeatedly, shattering a few heads each time. If you are using this method, you can expect to produce about 3 pounds of wheat in 20 to 25 minutes. Thatâs slow work. Also, thereâs a trick to learning to swing the tail without rapping yourself on the head.
+
+Winnowing. The usual method for winnowing is pouring the grain from one container to another, letting either the wind or the breeze from an electric fan push the lighter chaff out of the grain. Repeat the process a few times to get the grain as chaff-free as possible.
+"""
+
+time = "2h"
