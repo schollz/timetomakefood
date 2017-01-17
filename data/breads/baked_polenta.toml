@@ -3,7 +3,7 @@ products = [
 ]
 
 reactants = [
-	"cornmeal_polenta", 
+	"cornmeal", 
 	"chicken_stock", 
 	"garlic",
 	"cheese", 
@@ -11,7 +11,7 @@ reactants = [
 ]
 
 ingredients = """
-1 c. cornmeal polenta
+1 c. cornmeal
 5 c. chicken stock
 1 tbl. chopped garlic
 1/2 c. cheese
