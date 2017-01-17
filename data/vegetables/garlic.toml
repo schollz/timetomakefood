@@ -1,0 +1,28 @@
+products = [
+	"garlic"
+]
+
+reactants = [
+	"soil",
+	"sun",
+	"water"
+]
+
+url = "http://archive.is/AL5od"
+
+ingredients = """
+garlic cloves
+"""
+
+directions = """
+Garlic can be planted in the spring as soon as the ground can be worked, but fall planting is recommended for most gardeners. Plant in the fall and youâll find that your bulbs are bigger and more flavorful when you harvest the next summer.
+In areas that get a hard frost, plant garlic 6 to 8 weeks before that frost. In southern areas, February or March is a better time to plant.
+Break apart cloves from bulb a few days before planting, but keep the papery husk on each individual clove.
+Plant cloves about one month before the ground freezes. 
+Do not plant cloves from the grocery store. They may be unsuited varieties for your area, and most are treated to make their shelf life longer, making them harder to grow. Instead, get cloves from a mail order seed company or a local nursery.
+Ensure soil is well-drained with plenty of organic matter. Select a sunny spot.
+Place cloves 4 inches apart and 2 inches deep, in their upright position (the wide root side facing down and pointed end facing up).
+In the spring, as warmer temperatures come, shoots will emerge through the ground.
+"""
+
+time = "6570h" # 9 months
