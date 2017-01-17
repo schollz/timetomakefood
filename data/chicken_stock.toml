@@ -1,0 +1,34 @@
+products = [
+	"chicken_stock"
+]
+
+reactants = [
+	"chicken_carcass",
+	"celery",
+	"onion",
+	"carrot",
+	"parsley",
+	"salt",
+	"pepper"
+]
+
+url = "http://archive.is/dX0WA"
+
+ingredients = """
+Leftover bones and skin from a cooked or raw chicken carcass
+Celery (especially celery tops)
+Onions
+Carrot
+Parsley
+Salt
+Pepper
+"""
+
+directions = """
+1 Put the leftover bones and skin from a chicken carcass into a large stock pot. Add vegetables like celery, onion, carrots, parsley. Cover with water. Add salt and pepper, about a teaspoon of salt, 1/4 tsp of pepper.
+2 Bring to a boil and immediately reduce heat to bring the stock to barely a simmer. Simmer partially covered at least 4 hours, occasionally skimming off any foam that comes to the surface.
+3 Remove the bones and vegetables with a slotted spoon, and strain the stock through a fine mesh sieve.
+4 If making stock for future use in soup you may want to reduce the stock by simmering an hour or two longer to make it more concentrated and easier to store.
+"""
+
+time = "5h"
