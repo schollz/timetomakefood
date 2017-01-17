@@ -1,5 +1,14 @@
 # Recursive Recipes (v0.3)
 
+## Run
+
+```
+sudo apt-get install graphviz
+go run run.go
+```
+
+# Ideas
+
 ## Axioms
 
 1. Every recipe is composed of "*reactions*".

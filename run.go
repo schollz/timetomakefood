@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"strings"
 	"time"
@@ -85,4 +86,12 @@ func main() {
 	}
 	graphviz += "}"
 	fmt.Println(graphviz)
+
+	ioutil.WriteFile("graphviz.dot", []byte(graphviz), 0755)
+	png, err := exec.Command("dot", "-Tpng", "graphviz.dot").Output()
+	if err != nil {
+		panic(err)
+	}
+	ioutil.WriteFile("graph.png", png, 0755)
+	os.Remove("graphviz.dot")
 }
