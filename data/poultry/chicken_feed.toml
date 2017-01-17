@@ -1,0 +1,27 @@
+products = [
+	"chicken_feed"
+]
+
+reactants = [
+	"sprouted_wheat_berries",
+	"peas",
+	"oats",
+	"sesame_seeds",
+	"mealworms"
+]
+
+url = "http://archive.is/NISQF"
+
+ingredients = """
+Sprouted wheat berries seeds (5 caups)
+Peas (2.5 cups)
+Oats (2.5 cups)
+Sesame Seeds (2 tablespoons)
+Mealworms (1/2 cup)
+"""
+
+directions = """
+Mix together the ingredients. Give it to thie chickens!
+"""
+
+time = "5m"

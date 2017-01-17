@@ -3,7 +3,9 @@ products = [
 ]
 
 reactants = [
-	"baby_chicks"
+	"baby_chicks",
+	"chicken_feed",
+	"water"
 ]
 
 ingredients = """

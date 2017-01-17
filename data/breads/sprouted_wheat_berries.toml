@@ -1,0 +1,22 @@
+products = [
+	"sprouted_wheat_berries"
+]
+
+reactants = [
+	"wheat_berries",
+	"water"
+]
+
+url = "http://archive.is/NISQF"
+
+ingredients = """
+5 cups of wheat berries
+5 cups of water
+"""
+
+directions = """
+Soak wheat berries for 24 hours.
+Give them about 3 days to sprout
+"""
+
+time = "96h"

@@ -77,4 +77,12 @@ func main() {
 			fmt.Println(reactant)
 		}
 	}
+
+	// Produce graphviz dot
+	graphviz := "digraph G {\n"
+	for _, reaction := range reactions {
+		graphviz += "\t{" + strings.Join(reaction.Reactants, " ") + "} -> {" + strings.Join(reaction.Products, " ") + "};\n"
+	}
+	graphviz += "}"
+	fmt.Println(graphviz)
 }
