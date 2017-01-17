@@ -1,5 +1,9 @@
 # Recursive Recipes (v0.3)
 
+Current full graph:
+
+![](http://i.imgur.com/sbtnLIv.png)
+
 ## Run
 
 ```
@@ -26,25 +30,31 @@ This is the [recipe for a grilled cheese sandwich](http://www.foodnetwork.com/re
 
 The recipe reaction would be:
 
-```json
-[
-  {
-    "reactants": [
-      "cheese_sandwich",
-      "butter"
-    ],
-    "directions": {
-      "text":"Heat 1 tablespoon salted butter in a cast-iron or nonstick skillet over medium-low heat. Press the sandwich slightly and place it in the skillet. Cook until golden on the bottom, 3 to 5 minutes. Flip, adding more butter to the pan if needed, and cook until the other side is golden and the cheese melts, 3 to 5 more minutes.",
-      "time":"10m"
-    },
-    "products": [
-      "grilled_cheese_sandwich"
-    ]
-  }
+```toml
+products = [
+        "grilled_cheese_sandwich"
 ]
+
+reactants = [
+        "cheese_sandwich", 
+        "butter", 
+]
+
+ingredients = """
+1 cheese sandwich
+1 tbl. butter
+"""
+
+directions = """
+Heat 1 tablespoon salted butter in a cast-iron or nonstick skillet over medium-low heat. 
+Press the sandwich slightly and place it in the skillet. 
+Cook until golden on the bottom, 3 to 5 minutes. 
+Flip, adding more butter to the pan if needed, and 
+cook until the other side is golden and the cheese melts, 3 to 5 more minutes.
+"""
+
+time = "20m"
 ```
-
-
 
 All recipe reactions can form a directed acyclic graph (DAG). A product has arrows leading toward it. The arrows represent directions. Arrows *should be colored* because different directions can lead to different products of the same reactants. The base of each arrow represents the reactants. For example, here is [the grilled cheese DAG](https://cowyo.com/grilled_cheese_sandwich_dag):
 
@@ -59,67 +69,68 @@ Axiom #6 allows recipes to be subdivided in order to be used for other recipes. 
 
 This can be broken into two reactions:
 
-```json
-[  
-   {  
-      "reactants":[  
-         "yeast",
-         "flour",
-         "salt",
-         "water"
-      ],
-      "directions":{
-        "text":"Mix yeast, salt, water, flour into a dough.",
-        "time":"30m"
-      },
-      "products":[  
-         "bread_dough"
-      ]
-   },
-   {  
-      "reactants":[  
-         "bread_dough"
-      ],
-      "directions":{
-        "text":"Let dough rise. Push down and form loaves. Put loaves in oven at 450F for 20 minutes.",
-        "time":"8h"
-      },
-      "products":[  
-         "bread"
-      ]
-   }
+```toml
+products = [
+        "bread_dough"
 ]
-```
 
+reactants = [
+        "yeast", 
+        "salt", 
+        "water",
+        "flour"
+]
+
+ingredients = """
+1 tbl. yeast
+760 g. water
+1000 g. flour
+20 g. salt
+"""
+
+directions = """
+Mix warm water and flour together. Let it rest for 20 minutes. 
+For foccia bread, add yeast to warm water seperately. 
+For regular bread, add yeast to the top of the dough after 20 minutes.
+Add the salt to the top of the dough and mix together.
+Wet hands and knead in a big bowl. Cut with fingers several times and then let rest.
+"""
+
+time = "35m"
+```
+and
+
+```toml
+products = [
+        "bread"
+]
+
+reactants = [
+        "bread_dough"
+]
+
+ingredients = """
+bread dough
+"""
+
+directions = """
+Let the bread dough rest for 20 minutes. Then knead a little bit.
+Let the bread rise for 4 to 6 hours. Then flour a small bowl and put loaf into bowl.
+Let the bread rise again for 30 minutes, preheat a oven to 450F.
+Bake the bread in a pre-heated dutch oven for 20 minutes. Take off the lid and bake for another 5-10 minutes.
+Take out the bread and let it rest for 20 minutes.
+"""
+
+time = "6h50m"
+```
 to which the DAG would be:
 
 ![](http://i.imgur.com/gimj9EY.png)
 
 The advantage for this, is that you can then use different kinds of directions / reactants to create the same product. This is useful for when the same reactant and directions is used multiple times (in the case of bread dough and bread). For example, for Challah you would only need one more reaction:
 
-```json
-[  
-   {  
-      "subtypes":[
-        "challah"
-      ],
-      "reactants":[  
-         "yeast",
-         "flour",
-         "salt",
-         "water",
-         "egg",
-         "sugar",
-      ],
-      "directions":{
-        "text":"Mix yeast, salt, water, flour, egg and sugar into a dough.",
-        "time:":"20m"
-      },
-      "products":[  
-         "bread_dough"
-      ]
-   }
-]
+```toml
+TODO
 ```
 
 To which the [DAG for Challah/bread](https://cowyo.com/bread_dag) would look like:
@@ -128,9 +139,4 @@ To which the [DAG for Challah/bread](https://cowyo.com/bread_dag) would look lik
 
 In the case of Challah, there is a `subtypes` array which is an optional declaration for specifying specific bundles of ingredients. In this case, this product `bread_dough` occurs twice. To distinguish `bread` for `bread_dough` that uses the Challah recipe, you must specify the subtype in the final product. For example, for Challah, you would generate `bread` normally, but then override any products which have subtype `challah` in them.
 
-# Full graph
-
-Eventually, you can follow every product to the very beginning, in a [large DAG of all recipes](https://gist.github.com/schollz/c3614e5a53e782befd1822ffb4aa15dc):
-
-![](http://i.imgur.com/qDNXaF0.png)
 
