@@ -55,6 +55,26 @@ func main() {
 		if _, err := toml.Decode(string(bData), &reactions[i]); err != nil {
 			panic(err)
 		}
-		fmt.Printf("%+v", reactions[i].Products)
+	}
+
+	hasReactants := make(map[string]bool)
+	for _, reaction := range reactions {
+		for _, reactant := range reaction.Reactants {
+			hasReactants[reactant] = false
+		}
+	}
+	for _, reaction := range reactions {
+		for _, product := range reaction.Products {
+			if _, ok := hasReactants[product]; ok {
+				hasReactants[product] = true
+			}
+		}
+	}
+
+	fmt.Println("\nNo reactions exist to create the following products:")
+	for reactant := range hasReactants {
+		if !hasReactants[reactant] {
+			fmt.Println(reactant)
+		}
 	}
 }
