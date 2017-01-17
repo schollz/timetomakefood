@@ -1,0 +1,17 @@
+products = [
+	"pepper"
+]
+
+reactants = [
+	"peppercorn"
+]
+
+ingredients = """
+1 tbl. peppercorn
+"""
+
+directions = """
+Grind peppercorn in a grinder.
+"""
+
+time = "5m"
