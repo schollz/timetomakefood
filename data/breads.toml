@@ -168,7 +168,8 @@ reactants = [
 	"wheat_berries",
 	"water"
 ]
-description = "The wheat berry is an entire wheat kernel (except the hull). It is often added to salads or bread to give a crunchy texture."
+description = """The wheat berry is an entire wheat kernel (except the hull). It is often added to salads or bread to give a crunchy texture.
+The process of sprouting wheat berries is very simple, but takes some time."""
 time = "96h"
 ingredients = """
 5 cups of wheat berries
