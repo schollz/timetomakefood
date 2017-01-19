@@ -1,3 +1,4 @@
+[[reaction]]
 products = [
 	"cured_wheat"
 ]
@@ -5,7 +6,6 @@ products = [
 reactants = [
 	"wheat"
 ]
-
 ingredients = """
 field of wheat
 """
