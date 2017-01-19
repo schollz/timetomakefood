@@ -7,7 +7,8 @@ reactants = [
 ]
 
 ingredients = """
-1 gallon seawater
+cured wheat
+flail
 """
 
 url = "http://archive.is/sA2zo"
