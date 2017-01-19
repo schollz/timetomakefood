@@ -1,0 +1,60 @@
+[[reaction]]
+products = [
+	"cookies"
+]
+reactants = [
+	"cookie_dough"
+]
+description = """
+Cookies are a nice sugary treat that accompany a good glass of milk.
+"""
+time = "15m"
+ingredients = """
+5 c. cookie dough
+"""
+directions = """
+Spoon balls of cookie dough onto a cookie sheet.
+Bake at 375F for 10 to 14 minutes, until firm and brown.
+"""
+
+[[reaction]]
+variant = "oatmeal"
+products = [
+	"cookie_dough"
+]
+reactants = [
+	"whole_wheat_flour", 
+	"flour", 
+	"baking_powder",
+	"baking_soda", 
+	"salt", 
+	"butter", 
+	"brown_sugar", 
+	"vanilla", 
+	"egg", 
+	"oats", 
+	"chocolate_chips"
+]
+description = """
+Cookies are a nice sugary treat that accompany a good glass of milk.
+"""
+time = "15m"
+ingredients = """
+1 1/2 c Whole Wheat flour
+1/2 c Unbleached flour
+2 tsp baking powder
+1/2 tsp baking soda
+1 tsp salt
+1 stick of softened butter (can't reduce this much more)
+1 c brown sugar
+1/2 tbs vanilla (optional)
+5 beaten eggs
+5 c oatmeal
+1 1/2 to 2 packages chocolate chips (3 to 4 cups)
+"""
+directions = """
+Cream together butter and brown sugar. 
+When blended together added vanilla and beaten eggs. 
+Mix in dry ingredients.
+Add chocolate chips and oatmeal and put in fridge.
+"""
