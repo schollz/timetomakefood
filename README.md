@@ -118,45 +118,4 @@ to which the DAG would be:
 
 ![](http://i.imgur.com/gimj9EY.png)
 
-The advantage for this, is that you can then use different kinds of directions / reactants to create the same product. This is useful for when the same reactant and directions is used multiple times (in the case of bread dough and bread). For example, for Challah you would only need one more reaction:
-
-```toml
-products = [
-        "bread_dough"
-]
-
-reactants = [
-        "yeast", 
-        "salt", 
-        "water",
-        "flour",
-        "egg",
-        "sugar"
-]
-
-variant = "challah"
-
-ingredients = """
-1 1/2 packages active dry yeast (1 1/2 tablespoons)
-1 tablespoon plus 1/2 cup sugar
-1/2 cup vegetable oil, more for greasing bowl
-5 large eggs
-1 tablespoon salt
-8 to 8 1/2 cups all-purpose flour
-"""
-
-directions = """
-In a large bowl, dissolve yeast and 1 tablespoon sugar in 2 3/4 cups lukewarm water.
-Whisk oil into yeast, then beat in 4 eggs, one at a time, with remaining sugar and salt. Gradually add flour. When dough holds together, it is ready for kneading. (You can also use a mixer with a dough hook for both mixing and kneading.)
-"""
-
-time = "30m"
-```
-
-To which the [DAG for Challah/bread](https://cowyo.com/bread_dag) would look like:
-
-![](http://i.imgur.com/1hwnBzC.png)
-
-In the case of Challah, there is a `variant` which is an optional declaration for specifying specific bundles of ingredients. In this case, this product `bread_dough` occurs twice. To distinguish `bread` for `bread_dough` that uses the Challah recipe, you must specify the variant in the final product. For example, for Challah, you would generate `bread` normally, but then override any products which have variant `challah` in them.
-
-
+The advantage for this, is that you can then use different kinds of directions / reactants to create the same product. 
