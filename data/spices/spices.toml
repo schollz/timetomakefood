@@ -1,0 +1,19 @@
+[[reaction]]
+products = [
+	"vanilla"
+]
+
+reactants = [
+	"vanilla_bean"
+]
+description="Homemade Vanilla Extract is prized for its rich, complex flavor and incredibly smooth aroma. "
+ingredients = """
+3 to 5 vanilla beans
+8 ounces alcohol
+"""
+directions = """
+Split each vanilla bean in half lengthwise. Place the vanilla beans in a clean jar or bottle. Cover them with alcohol, making sure they are completely submerged. Cover the jar or bottle and give it a good shake.
+Store the jar or bottle of vanilla beans in a cool, dark place for at least one month, shaking it from time to time. Taste the extract and let it infuse longer if you want a stronger flavor. 
+You may wish to remove the vanilla pods and decant the extract into a pretty bottle. The little flecks of seeds can be a nice touch, but if you want a clear extract you can strain them out using a coffee filter.
+"""
+time = "730h30m"

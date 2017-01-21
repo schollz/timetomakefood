@@ -18,7 +18,6 @@ Bake at 375F for 10 to 14 minutes, until firm and brown.
 """
 
 [[reaction]]
-variant = "oatmeal"
 products = [
 	"cookie_dough"
 ]
@@ -31,7 +30,7 @@ reactants = [
 	"butter", 
 	"brown_sugar", 
 	"vanilla", 
-	"egg", 
+	"eggs", 
 	"oats", 
 	"chocolate_chips"
 ]

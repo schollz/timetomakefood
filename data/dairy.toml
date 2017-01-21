@@ -87,3 +87,25 @@ Apply bag balm to the teats afterward so they don't dry out.
 """
 
 
+[[reaction]]
+products = [
+	"milk",
+	"cream"
+]
+reactants = [
+	"cow_milk"
+]
+description = "Pasteurized milk is a typical milk. Pasteurization is the process of heating milk up and then quickly cooling it down to eliminate certain bacteria."
+time = "2h"
+ingredients = """
+cow milk
+"""
+url = "http://www.offthegridnews.com/how-to-2/what-you-must-know-to-get-milk-from-your-homestead-dairy-cow/"
+directions = """
+The most important aspect of milking is the cleanliness of your operation. Raw milk can be safe and wholesome without the need for pasteurization, but you will need to be exacting about hygiene in the barn to achieve this result.
+The first thing to do is to inspect is your milking equipment. All containers should be stainless steel and should be disinfected with diluted bleach. A dairy acid cleaner should be used as well to remove mineral deposits. The acid can be purchased at most farm supply stores. 
+Heat your milk in a stainless steel double boiler to 140 degrees Fahrenheit and hold the milk at this temperature for 35 minutes. 
+After 35 minutes, dump the milk into a container and put it in an ice bath. Stir constantly until the milk cools to 40 degree Fahrenheit. 
+Once you have cooled and possibly pasteurized your milk, you can skim the cream off for butter or other dairy creations. To do this, you can let your milk stand in the refrigerator for several hours and skim the cream layer off with a ladle, or you can purchase a cream separator. 
+"""
+

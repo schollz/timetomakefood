@@ -1,0 +1,57 @@
+[[reaction]]
+products = [
+	"chocolate_chips"
+]
+reactants = [
+	"cocoa_butter",
+	"cocoa_powder",
+	"brown_sugar",
+	"vanilla",
+	"milk"
+]
+description="Chocolate chips are small chunks of sweetened chocolate, which are used as an ingredient in a number of desserts, notably chocolate chip cookies and muffins, in trail mix and less commonly in some breakfast foods such as pancakes. "
+time = "1h30m"
+url = "http://archive.is/lLdMx"
+ingredients = """
+2 oz raw cocoa butter
+1/2 cup dutch-process cocoa powder
+1/2 cup brown sugar
+1 tsp vanilla
+1 tbsp milk
+"""
+directions = """
+In a double boiler, or a widemouth glass jar in a pot of water, start the cocoa butter melting on medium heat.  Add sugar, cocoa powder, and vanilla once a little oil has liquified.  Stir the mixture frequently with a spatula.  Once the cocoa butter is nearly melted, turn off the heat, and continue stirring until completely melted.
+Add the milk, stirring, gradually in teaspoons (3tsp in a tablespoon).  The sugar will dissolve and the chocolate will congeal into a form that is soft, but no longer liquid and no longer gritty.  It’s almost like it forms tiny, soft grains that compress into a smooth mass when it cools if you’re so inclined to pipe it or roll it out (seized chocolate).  You can’t melt it, so don’t turn up the heat. 
+Spread the chocolate mixture evenly on a large plate using the spatula and put it in the fridge to set, about 30 minutes.    The chocolate will be set but soft and easy to dislodge from the plate onto a cutting board.  You can chop it fine or crumble it easily with your fingers.  
+"""
+
+[[reaction]]
+products = [
+	"cocoa_butter",
+	"cooca_powder"
+]
+reactants = [
+	"cocoa_beans",
+	"water"
+]
+description="Cocoa butter, also known as 'oil of theobroma,' is the fat extracted from the cocoa bean."
+time = "3h30m"
+url = "http://www.livestrong.com/article/183980-how-to-make-cocoa-butter-at-home/"
+ingredients = """
+Cocoa beans
+Cold water
+Roasting apparatus (e.g., oven, toaster oven)
+Fan
+Hammer
+Sieve
+Bowl
+"""
+directions = """
+Clean the cocoa beans with fresh, cold water to remove unwanted residue and air dry.
+Roast the cocoa beans at a temperature between 100 and 135 degrees Fahrenheit for about 90 minutes. Be sure that the heat is applied evenly among all of the cocoa beans.
+Cool the beans quickly to room temperature with a fan to prevent scorching.
+Use a hammer to lightly tap the cocoa bean to remove the inner nib--the part of the cocoa bean that is inside the shell--from the outer shell. The outer shells of the beans will already be loosened from roasting.
+Place the crushed cocoa beans in a sieve with a bowl underneath. Gently press and shake the cocoa beans so that the nibs fall through the sieve into the bowl below. The shell will be too large to pass through and will remain on top.
+Grind the cocoa nib into cocoa liquor with a grinder. The heat from the grinder will melt the fat in the nibs, turning the powdery nibs into a liquid.
+Extract the cocoa butter from the cocoa liquor by passing it through an extrusion, expeller or screw press for a more commercial grade cocoa butter. Alternatively, strain the liquor through a cotton cloth to filter out the cocoa butter. Leave some of the powder for cocoa powder.
+"""

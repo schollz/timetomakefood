@@ -28,8 +28,8 @@ products = [
 	"bread_dough"
 ]
 reactants = [
-	"yeast", 
-	"salt", 
+	"yeast",
+	"salt",
 	"water",
 	"flour"
 ]
@@ -45,34 +45,56 @@ ingredients = """
 20 g. salt
 """
 directions = """
-Mix warm water and flour together. Let it rest for 20 minutes. 
-For foccia bread, add yeast to warm water seperately. 
+Mix warm water and flour together. Let it rest for 20 minutes.
+For foccia bread, add yeast to warm water seperately.
 For regular bread, add yeast to the top of the dough after 20 minutes.
 Add the salt to the top of the dough and mix together.
 Wet hands and knead in a big bowl. Cut with fingers several times and then let rest.
 """
 alternative_origin = "store"
 
-
 [[reaction]]
-variant = "challah"
 products = [
-	"bread_dough"
+	"challah"
 ]
 reactants = [
-	"yeast", 
-	"salt", 
+	"challah_bread_dough"
+]
+description = """
+Bread is a food staple made from flour, water, yeast and salt. The process begins with leavening
+and ends with baking at a high temperature.
+"""
+time = "6h50m"
+ingredients = """
+challah bread dough
+"""
+directions = """
+Let the bread dough rest for 20 minutes. Then knead a little bit.
+Let the bread rise for 4 to 6 hours. Then flour a small bowl and put loaf into bowl.
+Let the bread rise again for 30 minutes, preheat a oven to 450F.
+Bake the bread in a pre-heated dutch oven for 20 minutes. Take off the lid and bake for another 5-10 minutes.
+Take out the bread and let it rest for 20 minutes.
+"""
+alternative_origin = "store"
+
+[[reaction]]
+products = [
+	"challah_bread_dough"
+]
+reactants = [
+	"yeast",
+	"salt",
 	"water",
 	"flour",
-	"egg",
-	"sugar"
+	"eggs",
+	"brown_sugar"
 ]
 description = """Challah is a tradiational Jewish bread that is varies in its use of egg and sugar.
 Typically it is braided before being cooked."""
 time = "30m"
 ingredients = """
 1 1/2 packages active dry yeast (1 1/2 tablespoons)
-1 tablespoon plus 1/2 cup sugar
+1 tablespoon plus 1/2 cup brown sugar
 1/2 cup vegetable oil, more for greasing bowl
 5 large eggs
 1 tablespoon salt
@@ -80,10 +102,11 @@ ingredients = """
 """
 directions = """
 In a large bowl, dissolve yeast and 1 tablespoon sugar in 2 3/4 cups lukewarm water.
-Whisk oil into yeast, then beat in 4 eggs, one at a time, with remaining sugar and salt. 
+Whisk oil into yeast, then beat in 4 eggs, one at a time, with remaining sugar and salt.
 Gradually add flour. When dough holds together, it is ready for kneading.
 """
 alternative_origin = "store"
+
 
 
 [[reaction]]
@@ -91,10 +114,10 @@ products = [
 	"baked_polenta"
 ]
 reactants = [
-	"cornmeal", 
-	"chicken_stock", 
+	"cornmeal",
+	"chicken_stock",
 	"garlic",
-	"cheese", 
+	"cheese",
 	"salt"
 ]
 description = "Polenta is a tasty treat made of cornmeal which goes well with sauces."
@@ -106,9 +129,9 @@ ingredients = """
 1/2 c. cheese
 """
 directions = """
-Mix 1 cup cornmeal polenta and 5 cups chicken stock. 
-Cook, tend frequently. 
-Mix in garlic, cheese. 
+Mix 1 cup cornmeal polenta and 5 cups chicken stock.
+Cook, tend frequently.
+Mix in garlic, cheese.
 Cool for 15 minutes, then bake. Cool again, and then bake again.
 """
 alternative_origin = "store"
@@ -149,9 +172,9 @@ outdoor plot of land
 partial sunlight
 """
 directions = """
-Seeds should be grown outdoors, sow the seeds of wild oats at a depth of 6mm at the beginning to middle of spring. 
+Seeds should be grown outdoors, sow the seeds of wild oats at a depth of 6mm at the beginning to middle of spring.
 Seedlings of wild oats can be purchased; annual varieties should be planted in the early spring, whereas perennial varieties can be planted either in the early spring or in autumn.
-Depending on the variety wild oats seedlings should be planted 25 to 30cm apart (small) or 45 to 60cm apart (larger varieties of oat). 
+Depending on the variety wild oats seedlings should be planted 25 to 30cm apart (small) or 45 to 60cm apart (larger varieties of oat).
 They should be planted in an area that receives full sunlight in a dry soil with a pH of 6 to 7.5.
 Keep the ground moist to allow the seeds to germinate. Continue to do so as the plants begin to grow. The compost or manure should help the oats retain moisture, but it will be necessary to water them periodically whenever the soil begins to dry out. If the area you live in gets plenty of rain, however, you may not need to water your oats at all.
 Modern harvest technique is a matter of available equipment, local tradition, and priorities. Farmers seeking the highest yield from their crop time their harvest so that the kernels have reached 35% moisture, or when the greenest kernels are just turning cream-color. They then harvest by swathing, cutting the plants at about 10 cm (4 inches) above ground, and putting the swathed plants into windrows with the grain all oriented the same way. They leave the windrows to dry in the sun for several days before combining them using a pickup header. Finally, they bale the straw.
@@ -180,6 +203,3 @@ Soak wheat berries for 24 hours.
 Give them about 3 days to sprout.
 """
 alternative_origin = "store"
-
-
-

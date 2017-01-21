@@ -17,4 +17,4 @@ directions = """
 Put the slices of cheese between the bread.
 """
 
-time = "30s"
+time = "3m"

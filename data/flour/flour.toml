@@ -1,11 +1,12 @@
 [[reaction]]
 products = [
-	"flour"
+	"flour",
+	"wheat_middlings"
 ]
 reactants = [
 	"wheat_berries"
 ]
-description="Flour is a staple for many grain and bread foods."
+description="Flour is essentially a whole grain, minus the germ and bran."
 time = "3h"
 url = "http://archive.is/Quooj"
 ingredients = """
@@ -17,5 +18,43 @@ Set the sieve over a large bowl and sift the flour. After a couple minutes, you 
 Repeat with the remaining freshly ground flour until it has all been sifted.
 Repeat the sifting process again, but this time use the flour that has already been sifted. You will again see the germ/bran separate in the sieve. Place the germ/bran into a separate small bowl and repeat the sifting process until all the freshly ground flour has been sifted twice.
 Store the flour and germ/bran in separate containers. The flour will stay fresh in the pantry for up to one week, or you can refrigerate/freeze for up to 2 months. Store the germ/bran in the refrigerator or freezer for up to 2 months.
+Keep the wheat middlings that are not sifted for making semolina flour.
 """
+alternative_origin = "store"
 
+[[reaction]]
+products = [
+	"whole_wheat_flour"
+]
+reactants = [
+	"wheat_berries"
+]
+description="Whole wheat flour is the entire wheat berry kernel, ground up."
+time = "30m"
+url = "http://archive.is/Quooj"
+ingredients = """
+10 cups wheat berries
+"""
+directions = """
+Grind 1 cup of whole grain berries on the finest setting of your grain mill. If you donât have a grain mill, you can grind your own flour using an inexpensive coffee grinder and food processor.
+Store the flour and germ/bran in separate containers. The flour will stay fresh in the pantry for up to one week, or you can refrigerate/freeze for up to 2 months. Store the germ/bran in the refrigerator or freezer for up to 2 months.
+"""
+alternative_origin = "store"
+
+[[reaction]]
+products = [
+	"semolina_flour",
+]
+reactants = [
+	"wheat_middlings"
+]
+description="Semolina is the coarse, purified wheat middlings of durum wheat."
+time = "30m"
+url = "http://archive.is/Quooj"
+ingredients = """
+5 cups wheat middlings
+"""
+directions = """
+Grind the wheat middlings to a coarse consistency.
+"""
+alternative_origin = "store"

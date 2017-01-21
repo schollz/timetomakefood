@@ -1,0 +1,24 @@
+[[reaction]]
+products = [
+	"brown_sugar"
+]
+
+reactants = [
+	"sugar_cane",
+	"water"
+]
+
+ingredients = """
+several stalks of sugar cane
+"""
+
+directions = """
+Strip the sugar cane of all of its leaves with a carving knife. Wash the sugar cane for several minutes with running water.
+Crush the sugar cane to extract a thick, melon-colored juice. Do this in a standard sized mortar and pestle.
+Boil and cook the resulting liquid and allow the water to evaporate. Get rid of the dirty foam that accumulates on the top of the syrup.
+Discard the fibrous product left over and pour the resulting syrup into a large pan to cook further. Continue boiling until crystals occur. The result is raw sugar that is brown in color.
+Dry the sugar in a dryer that uses hot air. After it is dry, blow cool air over it for several days.
+Cleanliness is vital to the whole process. Once the juice has been heated, impurities will speed the 'inversion' of sugar and lead to reduced yields. All boiling pans and tools need to be thoroughly cleaned between uses.
+"""
+
+time = "76h10m"

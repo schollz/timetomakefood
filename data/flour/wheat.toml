@@ -8,19 +8,13 @@ reactants = [
 	"water",
 	"sun"
 ]
-
 ingredients = """
 a plot of land to grow
 """
-
 url = "http://archive.is/sA2zo"
-
 directions = """
-Plant winter wheat in fall to allow for six to eight weeks of growth before the soil freezes. This allows time for good root development. If the wheat is planted too early, it may smother itself the following spring and it could be vulnerable to some late-summer insects that wonât be an issue in the cooler fall weather. If winter wheat is planted too late, it will not overwinter well.
-
-Spring wheat should be planted as early as the ground can be worked in spring. Do the initial plowing in the fall, then till and sow in the spring. To ensure an evenly distributed crop, figure out the amount of seed youâll need, divide it into two piles, and broadcast one part in one direction, such as from east to west. Then broadcast the remainder from north to south. A cyclone crank seeder will do an even job, but broadcasting by hand is fine for a small plot. You also can plant it in rows like other crops.
-
+Plant winter wheat in fall to allow for six to eight weeks of growth before the soil freezes. This allows time for good root development. If the wheat is planted too early, it may smother itself the following spring and it could be vulnerable to some late-summer insects that won't be an issue in the cooler fall weather. If winter wheat is planted too late, it will not overwinter well.
+Spring wheat should be planted as early as the ground can be worked in spring. Do the initial plowing in the fall, then till and sow in the spring. To ensure an evenly distributed crop, figure out the amount of seed you'll need, divide it into two piles, and broadcast one part in one direction, such as from east to west. Then broadcast the remainder from north to south. A cyclone crank seeder will do an even job, but broadcasting by hand is fine for a small plot. You also can plant it in rows like other crops.
 Cover the seed by rototilling or raking it in to a depth of 2 to 2 1â2 inches for winter wheat and 1 to 1 1â2 inches for spring wheat. For best results, roll or otherwise firm the bed to ensure good seed-soil contact.
 """
-
 time = "2920h"

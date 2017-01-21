@@ -1,0 +1,58 @@
+[[reaction]]
+products = [
+	"spaghetti"
+]
+reactants = [
+	"noodles",
+	"pepper",
+	"cheese",
+	"olive_oil",
+	"salt"
+]
+description = """
+It is among the most basic, simplest pastas there is, and suddenly trendy to boot. Why? Because when made right, it is incredible.
+"""
+time = "20m"
+ingredients = """
+1 ½ cups finely grated cheese
+1 tablespoon ground black pepper
+3/4 pound noodles
+Good olive oil
+"""
+directions = """
+Put a pot of salted water on to boil. In a large bowl, combine the cheeses and black pepper; mash with just enough cold water to make a thick paste. Spread the paste evenly in the bowl.
+Once the water is boiling, add the pasta. The second before it is perfectly cooked (about 3 minutes, taste it frequently once it begins to soften), use tongs to quickly transfer it to the bowl, reserving a cup or so of the cooking water. Stir vigorously to coat the pasta, adding a teaspoon or two of olive oil and a bit of the pasta cooking water to thin the sauce if necessary. The sauce should cling to the pasta and be creamy but not watery.
+"""
+alternative_origin = "restaurant"
+
+[[reaction]]
+products = [
+	"noodles"
+]
+reactants = [
+	"semolina_flour",
+	"flour",
+	"eggs",
+	"olive_oil",
+	"salt"
+]
+description = """
+It is among the most basic, simplest pastas there is, and suddenly trendy to boot. Why? Because when made right, it is incredible.
+"""
+time = "50m"
+ingredients = """
+1 c. flour
+1 c. semolina flour
+2 eggs
+1/3 c. water
+1 tsp olive oil
+"""
+directions = """
+In a large bowl stir together 1-3/4 cups of the flour and the salt. Make a well in the center of the flour mixture.
+In a small bowl combine egg yolks and whole egg, the water, and oil. Add the egg mixture to the flour mixture, stirring to combine.
+Sprinkle a clean kneading surface with the remaining flour. Turn dough out onto floured surface. Knead the dough until it is smooth and elastic (8 to 10 minutes total).
+Cover the dough and let rest for 10 minutes.
+Divide the dough into four equal portions. Let the dough stand, uncovered, about 20 minutes.
+Cut the noodles into strips. Spread the noodles on a wire cooling rack.
+"""
+alternative_origin = "store"

@@ -2,29 +2,46 @@
 products = [
 	"corn"
 ]
-
 reactants = [
 	"soil",
 	"sun",
 	"water"
 ]
-
 url = "http://archive.is/ffwxA"
-
 ingredients = """
 A plot of land
 Corn seed
 compost
 """
-
 directions = """
-Site. Plant corn in full sun. Corn grows best in loose, well-worked, well-drained soil with a pH of 5.8 to 6.8. Add aged compost to the planting area before planting. Add aged compost to the planting area the autumn before planting.
-
-Planting time. Corn is a tender, warm-season annual that is best planted after the soil temperature reaches 60Â°F, usually 2 or 3 weeks after the last frost in spring. Corn requires 60 to 100 frost-free days to reach harvest depending upon variety and the amount of heat during the growing season. Corn grows best in air temperatures from 60Â° to 95Â°F. Corn planted in cold, wet soil is unlikely to germinate. Corn seed germinates in 10 to 14 days at 75Â°F, but the rate of germination may reach only 75 percent. Start corn indoors 2 to 3 weeks before the last frost in spring for transplanting 2 to 3 weeks after the last frost. If your season is long enough, plant successive crops every two to three weeks.
-
-Planting and spacing. Sow corn 1 to 1Â½ inches deep. Plant seeds 2 to 4 inches apart in short, side-by-side rows to form a block, rather than one long row. You can also grow several plants on mounds or inverted hills. Planting in a block or clump will help ensure pollination. Thin plants from 12 to 18 inches apart for short varieties and 18 to 24 inches apart for tall varieties once plants are 4 to 6 inches tall. Corn planted too closely will require more water and fertilizer and may offer a smaller yield. For a continuous harvest, succession plant corn every two weeks or plant early, midseason, and late varieties at the same time.
-
+Plant corn in full sun. Corn grows best in loose, well-worked, well-drained soil with a pH of 5.8 to 6.8. Add aged compost to the planting area before planting. Add aged compost to the planting area the autumn before planting.
+Corn is a tender, warm-season annual that is best planted after the soil temperature reaches 60°F, usually 2 or 3 weeks after the last frost in spring. Corn requires 60 to 100 frost-free days to reach harvest depending upon variety and the amount of heat during the growing season. Corn grows best in air temperatures from 60° to 95°F. Corn planted in cold, wet soil is unlikely to germinate. Corn seed germinates in 10 to 14 days at 75°F, but the rate of germination may reach only 75 percent. Start corn indoors 2 to 3 weeks before the last frost in spring for transplanting 2 to 3 weeks after the last frost. If your season is long enough, plant successive crops every two to three weeks.
+Planting and spacing. Sow corn 1 to 1½ inches deep. Plant seeds 2 to 4 inches apart in short, side-by-side rows to form a block, rather than one long row. You can also grow several plants on mounds or inverted hills. Planting in a block or clump will help ensure pollination. Thin plants from 12 to 18 inches apart for short varieties and 18 to 24 inches apart for tall varieties once plants are 4 to 6 inches tall. Corn planted too closely will require more water and fertilizer and may offer a smaller yield. For a continuous harvest, succession plant corn every two weeks or plant early, midseason, and late varieties at the same time.
 Water and feeding. Keep corn evenly moist and regularly watered. Corn grows fast in hot weather and requires an even supply of moisture to avoid wilting. Avoid overhead watering particularly when tassels appear; water hitting the tassels at the time of pollination can reduce the number of kernels on a cob. Add aged compost and aged manure to planting areas the autumn before planting. Corn is a heavy nitrogen user. Side dress corn with aged compost or compost tea when stalks are 10 inches tall and again when they are 18 inches tall and a third time when they tassel.
 """
-
 time = "2400h" # 100 days
+
+[[reaction]]
+products = [
+	"onion"
+]
+reactants = [
+	"soil",
+	"sun",
+	"water"
+]
+description = "The onion also known as the bulb onion or common onion, is a vegetable and is the most widely cultivated species of the genus Allium."
+url = "http://archive.is/ffwxA"
+ingredients = """
+A plot of land
+onion bulbs
+compost
+"""
+directions = """
+Get the plants off to a strong start by mixing an organic or timed-release fertilizer into the soil before your plant your onions. 
+Growing onions requires abundant sun and good drainage, and they grow best when the soil pH ranges between 6.0 and 6.8. Raised beds or raised rows made by mounding up soil are ideal, especially if your soil is heavy clay. Mix a 2-inch layer of compost into the soil before placing an organic or timed-release fertilizer into planting furrows, following label rates. Set plants 1 inch deep, so that their roots are well covered with soil but the top of the plant’s neck is not buried too deeply. You don’t want the part of the neck where the leaves grow away from the clear sheath to collect soil or water down between the young leaves, or they can rot. Space plants 6 inches apart in furrows 12 inches apart. Plants will appreciate a starter solution of liquid fertilizer after planting.
+Onions roots are shallow and not very efficient at taking up moisture, so they need a steady supply of water to grow without interruption. Although they actually recover well from drought and start growing again when watered, it is best to keep the soil consistently moist until the bulbs enlarge.
+For full-sized bulbs, let onions grow and mature. They are ready to harvest when the bulbs are big and the tops begin to turn yellow and fall over. Pull them up, shake off the soil, and lay them out to cure with the tops still attached. Any warm, airy location is a good place to do this; you can even sling them over a fence as long as they aren’t rained upon. Bulbs must stay dry and have good air circulation. As the onions cure, the roots will shrivel and the necks above the bulbs will slowly dry – a natural process that helps to seal the top of the bulb, making the onions less likely to rot. After 7 to 10 days, clip off the tops of the onions and the roots with pruning shears, remove as much dry dirt as possible without taking off the papery outer skins, and store your onions in a cool place. Very sweet, juicy onions may be stored, wrapped in newspaper or paper towels, in the fridge.
+"""
+time = "3600h" # 150 days
+
