@@ -2,7 +2,7 @@
 
 Current full graph:
 
-![](http://i.imgur.com/sbtnLIv.png)
+![](https://timetomakefood.com/img/graph/all.png)
 
 ## Run
 
