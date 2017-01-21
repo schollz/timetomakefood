@@ -4,15 +4,6 @@ Current full graph:
 
 ![](https://timetomakefood.com/img/graph/all.png)
 
-## Run
-
-```
-sudo apt-get install graphviz
-go run run.go
-```
-
-# Ideas
-
 ## Axioms
 
 1. Every recipe is composed of "*reactions*".
