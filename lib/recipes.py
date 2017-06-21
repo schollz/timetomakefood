@@ -1,6 +1,8 @@
+import os
 import json
 from operator import itemgetter
 import logging
+import hashlib
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -12,6 +14,10 @@ from unidecode import unidecode
 ureg = pint.UnitRegistry()
 
 import lib.duration as duration
+
+
+def md5(s):
+    return str(hashlib.md5(s.encode('utf-8')).hexdigest())
 
 
 class RecipeNetwork(object):
@@ -36,8 +42,48 @@ class RecipeNetwork(object):
                 if ingredient['name'] not in self.recipe_has_data:
                     self.recipe_has_data[ingredient['name']] = False
 
+    def generate_graphviz(self, recipes):
+        name = md5(json.dumps(recipes))
+        if os.path.isfile("./static/img/graph/%s.png" % name):
+            return name
+        all_recipes = []
+        for recipe in self.all_recipes:
+            for product in recipe['product']:
+                if product['name'] in recipes:
+                    all_recipes.append(recipe)
+
+        graphviz = ["digraph G { \ngraph [ dpi = 600 ]; \n"]
+        for recipe in all_recipes:
+            products = []
+            for product in recipe['product']:
+                if product['name'] not in products:
+                    products.append('"%s"' % product['name'])
+            for ingredient in recipe['ingredient']:
+                ingredients = []
+                if ingredient['name'] not in ingredients:
+                    ingredients.append('"%s"' % ingredient['name'])
+                graphviz_string = "\t{ " + " ".join(
+                    ingredients) + "} -> { " + " ".join(products) + " };\n"
+                if graphviz_string not in graphviz:
+                    graphviz.append(graphviz_string)
+
+        graphviz.append("}")
+
+        with open("temp-%s" % name, "w") as f:
+            f.write("".join(graphviz))
+
+        os.system("dot -O -Tpng temp-%s" % name)
+        os.remove("temp-%s" % name)
+        try:
+            os.rename("./temp-%s.png" %
+                      name, "./static/img/graph/%s.png" % name)
+        except:
+            pass
+        return name
+
     def generate_graph(self, recipes):
         """Generate a network of recipes with edges weighted by the time to create the recipe"""
+        self.generate_graphviz(recipes)
         all_recipes = []
         for recipe in self.all_recipes:
             for product in recipe['product']:
@@ -85,6 +131,7 @@ class RecipeNetwork(object):
 
         graph_traversal = []
         for starting_recipe in recipes:
+            print(starting_recipe)
             for path in all_simple_paths(G, source=final_recipe, target=starting_recipe):
                 path_length = 0
                 for node in path:
@@ -125,7 +172,7 @@ class RecipeNetwork(object):
                         new_recipe['ingredients'][ingredient['name']] = amount
                     else:
                         new_recipe['ingredients'][ingredient['name']] += amount
-                new_recipe['instructions'] = recipe['directions'].replace('Â','').split(
+                new_recipe['instructions'] = recipe['directions'].replace('Â', '').split(
                     "\n") + new_recipe['instructions']
                 new_recipe[
                     'seconds'] += duration.from_str(recipe['time']).total_seconds()
