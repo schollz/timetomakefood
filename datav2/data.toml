@@ -1,0 +1,244 @@
+[[recipe]]
+time = "20m"
+directions = """
+Heat 1 tablespoon salted butter in a cast-iron or nonstick skillet over medium-low heat. 
+Press the sandwich slightly and place it in the skillet. 
+Cook until golden on the bottom, 3 to 5 minutes. 
+Flip, adding more butter to the pan if needed, and 
+cook until the other side is golden and the cheese melts, 3 to 5 more minutes.
+"""
+
+	[[recipe.product]]
+		name="cheese sandwich"
+		measure = "whole"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="cheese sandwich"
+		measure = "whole"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="butter"
+		measure = "tbl"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="grilled cheese sandwich"
+		measure = "whole"
+		number = 1
+
+
+[[recipe]]
+time = "3m"
+directions = """
+Put the slices of cheese between the bread.
+"""
+
+	[[recipe.product]]
+		name="cheese sandwich"
+		measure = "whole"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="slices of bread"
+		measure = "whole"
+		number = 2
+
+	[[recipe.ingredient]]
+		name="slices of cheese"
+		measure = "whole"
+		number = 2
+
+
+[[recipe]]
+url = "http://archive.is/WRZmB"
+description = "Cheese is a ubiquitous food that adds flavor to almost every meal."
+time = "1485h30m"
+directions = """
+In a large pot, heat the milk to 85°F, stirring frequently. As the milk is heating, add the calcium chloride. When the milk gets to 85°F, add culture, stir in with an up-and-down motion, cover, and ferment for 1 hour.
+Stir to homogenize the milk, and slowly fold in the diluted rennet. Using an up-and-down motion with your spoon will ensure that the rennet works its way through all the milk, so you can get the highest possible yield.
+Allow the cheese to set for 1 hour, or until the whey begins to separate from the curd. You should see a layer of mostly clear whey floating on top of the curd, and the curd should be pulling away from the sides of the pot.
+Using the knife, carefully cut the curds into ¼-inch cubes and allow to set for 5 minutes. Do not stir.
+Over the next 30 minutes, slowly heat the curds to 100°F, stirring frequently. As you stir, the curds will shrink.
+Once the curds are at 100°F, maintain the temperature and continue stirring for the next 30 minutes. If the curds get too hot, remove from heat.
+After 30 minutes, stop stirring and allow the curds to settle to the bottom of the pot. This will take about 20 minutes.
+Pour the curds into a colander. Place the colander and curds back into the cheese pot and allow to drain for 15 minutes.
+Remove the colander from the pot and turn the curds out onto a cutting board. You should have a semi-solid mass that looks like jelly. Pour the whey out of the pot, cut the mass into five slices, and place back into the pot. Cover.
+Fill a sink or basin with 102°F water and place the pot and curds into it. Keeping the temperature of the curds right around 100°F, turn the slices every 15 minutes for the next 2 hours. This is the cheddaring process and will give your cheese its unique flavor and deliciousness.
+After 2 hours, the curds will be shiny and very firm. Remove them from the pot and cut into ½-inch cubes. Place back in the pot, cover, and place in the sink filled with 102°F water.
+In 10 minutes, stir gently with your fingers or a wooden spoon. Repeat twice more.
+Remove the pot from the sink and add salt. Stir gently once more.
+Line the cheese press with a piece of cheesecloth and carefully place the curds into the press. Wrap the cloth around the cheese andpress at 10 pounds of pressure for 15 minutes.
+Remove the cheese from the press, unwrap, and flip the cheese. Re-wrap using a fresh piece of cheesecloth, and press at 40 pounds of pressure for 12 hours.
+Remove the cheese from the press and air-dry for 2 to 3 days, until smooth and dry to the touch.
+Wax the cheese and age at 55° to 60°F for at least 60 days. 
+"""
+		
+	[[recipe.product]]
+		name="cheese"
+		measure = "lb"
+		number = 1
+	
+	[[recipe.ingredient]]
+		name="cow milk"
+		measure = "gallon"
+		number = 2
+
+	[[recipe.ingredient]]
+		name="calcium chloride"
+		measure = "tsp"
+		number = 0.125
+
+	[[recipe.ingredient]]
+		name="mesophilic culture"
+		measure = "tsp"
+		number = 0.125
+	
+	[[recipe.ingredient]]
+		name="rennet"
+		measure = "tbl"
+		number = 1
+
+
+
+[[recipe]]
+description = "Cow milk is the precursor to many dairy products and its simple to get yourself."
+time = "2h"
+url = "http://archive.is/RJhCI"
+directions = """
+Tie your cow in a secure area so she can not escape while you are milking her. Visually inspect your cow's udder for signs of injury, swelling or discomfort that might indicate your cow is experiencing a health problem such as mastitis, which occurs when teats become blocked. Call your veterinarian if you discover a health problem when you are inspecting your cow's condition.
+Wrap your thumb and forefinger into a circle around the base of one of the cow's teats. Gently and quickly squeeze the teat to release a small squirt of milk. This is called stripping the teat; you do so to remove any dirt or debris from the teat as well as to quickly check the appearance of your cow's milk for potential problems. Milk should appear white and smooth, as opposed to clumpy, when you express it from the teat. Do this for every teat.
+Apply pre-milking disinfectant to every teat, following the instructions that come with the product. Wipe disinfectant away with a clean towel once you've completely cleaned the teats with it.
+Wrap your thumb and forefinger around each teat and squeeze the teat so milk squirts out of it and into your clean bucket. Continue expressing milk from the teats until the entire udder is empty. Make sure you milk every teat on your cow's udder. Apply post-milking disinfectant to the teats after you have finished milking the cow.
+Apply bag balm to the teats afterward so they don't dry out.
+"""
+
+	[[recipe.product]]
+		name="cow milk"
+		measure = "cup"
+		number = 12
+
+	[[recipe.ingredient]]
+		name="cow"
+		measure = "whole"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="bag balm"
+		measure = "tbl"
+		number = 2
+
+	[[recipe.ingredient]]
+		name="cow disinfectant"
+		measure = "tbl"
+		number = 2
+
+
+
+[[recipe]]
+description = """
+Bread is a food staple made from flour, water, yeast and salt. The process begins with leavening
+and ends with baking at a high temperature.
+"""
+time = "6h50m"
+directions = """
+Let the bread dough rest for 20 minutes. Then knead a little bit.
+Let the bread rise for 4 to 6 hours. Then flour a small bowl and put loaf into bowl.
+Let the bread rise again for 30 minutes, preheat a oven to 450F.
+Bake the bread in a pre-heated dutch oven for 20 minutes. Take off the lid and bake for another 5-10 minutes.
+Take out the bread and let it rest for 20 minutes.
+"""
+
+	[[recipe.product]]
+		name="bread"
+		measure = "g"
+		number = 1600
+
+	[[recipe.ingredient]]
+		name="bread dough"
+		measure = "g"
+		number = 1800
+
+
+[[recipe]]
+description = """
+Sliced bread is a great to serve bread, nothing is better!
+"""
+time = "6h50m"
+directions = """
+Take the bread and cut it along its side with a sharp, serated, knife.
+"""
+
+	[[recipe.product]]
+		name="slices of bread"
+		measure = "whole"
+		number = 12
+
+
+	[[recipe.ingredient]]
+		name="bread"
+		measure = "g"
+		number = 800
+
+[[recipe]]
+time = "28h"
+directions = """
+Start by pouring one gallon of milk (fresh from the cow) into a clean container. Chill the milk quickly, and keep it in the refrigerator for at least 12 hours. 
+Skim the cream off the top of the fluid with a spoon. When you begin to see watery skim milk in the spoon, stop skimming. Pour the cream into a jar, cap the container tightly and let it sit on the kitchen drainboard for approximately 12 hours.
+Pour the cream into a larger container. Shake the larger container to agitate and congeal the butter. This takes about 30 minutes.
+When the cream gets heavy, shake with less vigor. The heavy mass will turn yellow, become firm and separate from the milk. 
+Put the butter in a bowl and work it and let the buttermilk drain off. Add some salt to the butter and work it in. Its done when your satisfied with the taste
+"""
+url = "http://archive.is/GVk7Q"
+
+	[[recipe.product]]
+		name="butter"
+		measure = "cup"
+		number = 2
+
+	[[recipe.product]]
+		name="buttermilk"
+		measure = "cup"
+		number = 2
+
+	[[recipe.ingredient]]
+		name="salt"
+		measure = "cup"
+		number = 0.5
+
+	[[recipe.ingredient]]
+		name="cow milk"
+		measure = "gallon"
+		number = 1
+
+
+[[recipe]]
+time = "346h"
+
+directions = """
+Let your seawater sit for a while to allow any sediment and particles to settle.
+Get your stockpot out and ready for the boil. 
+Then siphon or scoop water from the top of the container, careful not to disturb the sediment at the bottom, through a filter into your stockpot.
+Use a dishcloth in a sieve for a filter, which provides a good fine mesh to get out any sand or other particles.
+Start off with a full boil at high heat, until about half of the water had evaporated. 
+Then turn the burner down to the medium-high heat.
+As the water evaporates, turn the heat lower and lower until down to medium-low. 
+This gradual decrease in heat helps prevent scorching without requiring you to stir constantly. 
+It will take longer than boiling the whole time, but it does take less interaction on your part.
+You want to get your salt to a consistency of wet sand. Don't worry if there is still water in the pot; the only thing you're concerned about is the consistency of the salt itself.
+Scoop the result into a pan to dry. Place the pan by the sun or window to dry.
+Wait about two weeks for it to dry. 
+Makes about 1/2 cup of salt.
+"""
+
+
+	[[recipe.product]]
+		name="salt"
+		measure = "cup"
+		number = 0.5
+
+	[[recipe.ingredient]]
+		name="seawater"
+		measure = "gallon"
+		number = 1
