@@ -89,7 +89,7 @@
   (adsbygoogle = window.adsbygoogle || []).push({});
 
 </script>
-<h1>Make a {{ recipe['name'] | title }}</h1>
+<h1>{{ recipe['name'] | title }}</h1>
 
 <h1 style="text-align: right">in {{ recipe['time'] }}</h1>
 <h2>Ingredients ({{ recipe['ingredients'] | length }})</h2>
@@ -139,7 +139,11 @@ function showFlowChart() {
 
 <h2>Other recipes</h2>
 <ul>
-  <li><a href="/grilled-cheese-sandwich/">Grilled cheese sandwich</a></li>
+  {% for recipe in other_recipes %}
+  <li>
+    <a href="/{{ recipe | replace(" ","-") }}/">{{ recipe | title }}</a> 
+  </li>
+  {% endfor %}
 </ul>
 
 <br>

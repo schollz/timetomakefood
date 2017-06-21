@@ -1,4 +1,86 @@
 [[recipe]]
+time = "15m"
+directions = """
+Spoon balls of cookie dough onto a cookie sheet.
+Bake at 375F for 10 to 14 minutes, until firm and brown.
+"""
+
+	[[recipe.product]]
+		name="cookies"
+		measure = "whole"
+		number = 24
+
+	[[recipe.ingredient]]
+		name="cookie dough"
+		measure = "cup"
+		number = 10
+
+[[recipe]]
+time = "15m"
+directions = """
+Cream together butter and brown sugar. 
+When blended together added vanilla and beaten eggs. 
+Mix in dry ingredients.
+Add chocolate chips and oatmeal and put in fridge.
+"""
+
+	[[recipe.product]]
+		name="cookie dough"
+		measure = "cup"
+		number = 10
+
+	[[recipe.ingredient]]
+		name="whole wheat flour"
+		measure = "cup"
+		number = 1.5
+
+	[[recipe.ingredient]]
+		name="flour"
+		measure = "cup"
+		number = 0.5
+
+	[[recipe.ingredient]]
+		name="baking powder"
+		measure = "teaspoon"
+		number = 2
+
+	[[recipe.ingredient]]
+		name="baking soda"
+		measure = "teaspoon"
+		number = 0.5
+
+	[[recipe.ingredient]]
+		name="salt"
+		measure = "teaspoon"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="butter"
+		measure = "cup"
+		number = 0.5
+
+	[[recipe.ingredient]]
+		name="brown sugar"
+		measure = "cup"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="egg"
+		measure = "whole"
+		number = 5
+
+	[[recipe.ingredient]]
+		name="oatmeal"
+		measure = "cup"
+		number = 5
+
+	[[recipe.ingredient]]
+		name="chocolate chips"
+		measure = "cup"
+		number = 3
+
+
+[[recipe]]
 time = "20m"
 directions = """
 Heat 1 tablespoon salted butter in a cast-iron or nonstick skillet over medium-low heat. 
