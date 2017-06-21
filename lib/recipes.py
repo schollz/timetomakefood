@@ -112,12 +112,14 @@ class RecipeNetwork(object):
               new_recipe['ingredients'][ingredient['name']] = amount
             else:
               new_recipe['ingredients'][ingredient['name']] += amount
-          if recipe_to_add in new_recipe['ingredients']:
-            print("REMOVING" + recipe_to_add)
-            new_recipe['ingredients'].pop(recipe_to_add,None)
           new_recipe['instructions'] = recipe['directions'].split("\n") + new_recipe['instructions']
           new_recipe['seconds'] += duration.from_str(recipe['time']).total_seconds()
           break
+      # Remove all the products
+      for recipe_to_add in recipes:
+        if recipe_to_add in new_recipe['ingredients']:
+          print("REMOVING" + recipe_to_add)
+          new_recipe['ingredients'].pop(recipe_to_add,None)
       return new_recipe
 
     def generate_recipe(self,main_ingredient,other_ingredients):
