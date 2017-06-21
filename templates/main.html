@@ -1,0 +1,25 @@
+<!doctype html>
+<title>Hello from Flask</title>
+<h1>Time to make {{ recipe['name'] }}: {{ recipe['time'] }}</h1>
+<h2>Ingredients</h2>
+<ul>
+  {% for ingredient in recipe['ingredients'] %}
+  <li>
+    {% if ingredient.has_data %}
+    <a href="./{{ ingredient.name }}/">{{ ingredient.text }}</a> {% else %} {{ ingredient.text }} {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+<h2>Instructions</h2>
+<ol>
+  {% for instruction in recipe['instructions'] %}
+  <li>{{ instruction }}</li>
+  {% endfor %}
+</ol>
+
+<h2>Source</h2>
+
+<a href="https://github.com/schollz/timetomakefood">github.com/schollz/timetomakefood</a>
+
+</html>

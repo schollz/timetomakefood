@@ -9,7 +9,7 @@ cook until the other side is golden and the cheese melts, 3 to 5 more minutes.
 """
 
 	[[recipe.product]]
-		name="cheese sandwich"
+		name="grilled cheese sandwich"
 		measure = "whole"
 		number = 1
 
@@ -20,18 +20,15 @@ cook until the other side is golden and the cheese melts, 3 to 5 more minutes.
 
 	[[recipe.ingredient]]
 		name="butter"
-		measure = "tbl"
+		measure = "tablespoon"
 		number = 1
 
-	[[recipe.ingredient]]
-		name="grilled cheese sandwich"
-		measure = "whole"
-		number = 1
 
 
 [[recipe]]
 time = "3m"
 directions = """
+Take two slices of bread.
 Put the slices of cheese between the bread.
 """
 
@@ -66,7 +63,7 @@ After 30 minutes, stop stirring and allow the curds to settle to the bottom of t
 Pour the curds into a colander. Place the colander and curds back into the cheese pot and allow to drain for 15 minutes.
 Remove the colander from the pot and turn the curds out onto a cutting board. You should have a semi-solid mass that looks like jelly. Pour the whey out of the pot, cut the mass into five slices, and place back into the pot. Cover.
 Fill a sink or basin with 102°F water and place the pot and curds into it. Keeping the temperature of the curds right around 100°F, turn the slices every 15 minutes for the next 2 hours. This is the cheddaring process and will give your cheese its unique flavor and deliciousness.
-After 2 hours, the curds will be shiny and very firm. Remove them from the pot and cut into ½-inch cubes. Place back in the pot, cover, and place in the sink filled with 102°F water.
+After 2 hours, the curds will be shiny and very firm. Remove them from the pot and cut into 1/2-inch cubes. Place back in the pot, cover, and place in the sink filled with 102°F water.
 In 10 minutes, stir gently with your fingers or a wooden spoon. Repeat twice more.
 Remove the pot from the sink and add salt. Stir gently once more.
 Line the cheese press with a piece of cheesecloth and carefully place the curds into the press. Wrap the cloth around the cheese andpress at 10 pounds of pressure for 15 minutes.
@@ -77,7 +74,7 @@ Wax the cheese and age at 55° to 60°F for at least 60 days.
 		
 	[[recipe.product]]
 		name="cheese"
-		measure = "lb"
+		measure = "whole"
 		number = 1
 	
 	[[recipe.ingredient]]
@@ -97,7 +94,7 @@ Wax the cheese and age at 55° to 60°F for at least 60 days.
 	
 	[[recipe.ingredient]]
 		name="rennet"
-		measure = "tbl"
+		measure = "tablespoon"
 		number = 1
 
 
@@ -126,12 +123,12 @@ Apply bag balm to the teats afterward so they don't dry out.
 
 	[[recipe.ingredient]]
 		name="bag balm"
-		measure = "tbl"
+		measure = "tablespoon"
 		number = 2
 
 	[[recipe.ingredient]]
 		name="cow disinfectant"
-		measure = "tbl"
+		measure = "tablespoon"
 		number = 2
 
 
@@ -151,35 +148,15 @@ Take out the bread and let it rest for 20 minutes.
 """
 
 	[[recipe.product]]
-		name="bread"
-		measure = "g"
-		number = 1600
+		name="loaf of bread"
+		measure = "whole"
+		number = 2
 
 	[[recipe.ingredient]]
 		name="bread dough"
-		measure = "g"
-		number = 1800
-
-
-[[recipe]]
-description = """
-Sliced bread is a great to serve bread, nothing is better!
-"""
-time = "6h50m"
-directions = """
-Take the bread and cut it along its side with a sharp, serated, knife.
-"""
-
-	[[recipe.product]]
-		name="slices of bread"
-		measure = "whole"
+		measure = "cup"
 		number = 12
 
-
-	[[recipe.ingredient]]
-		name="bread"
-		measure = "g"
-		number = 800
 
 [[recipe]]
 time = "28h"
@@ -211,6 +188,115 @@ url = "http://archive.is/GVk7Q"
 		name="cow milk"
 		measure = "gallon"
 		number = 1
+		
+[[recipe]]
+time = "35m"
+directions = """
+Mix warm water and flour together. Let it rest for 20 minutes.
+For foccia bread, add yeast to warm water seperately.
+For regular bread, add yeast to the top of the dough after 20 minutes.
+Add the salt to the top of the dough and mix together.
+Wet hands and knead in a big bowl. Cut with fingers several times and then let rest.
+"""
+
+	[[recipe.product]]
+		name="bread dough"
+		measure = "cup"
+		number = 12
+
+	[[recipe.ingredient]]
+		name="yeast"
+		measure = "tablespoon"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="water"
+		measure = "cup"
+		number = 3.2
+
+	[[recipe.ingredient]]
+		name="flour"
+		measure = "cup"
+		number = 7.35
+
+	[[recipe.ingredient]]
+		name="salt"
+		measure = "tsp"
+		number = 3.5
+
+
+[[recipe]]
+description = """
+Sliced bread is a great to serve bread, nothing is better!
+"""
+time = "2m"
+directions = """
+Take the bread and cut it along its side with a sharp, serated, knife.
+"""
+
+	[[recipe.product]]
+		name="slices of bread"
+		measure = "whole"
+		number = 12
+
+	[[recipe.ingredient]]
+		name="loaf of bread"
+		measure = "whole"
+		number = 1
+
+
+[[recipe]]
+description = """
+Sliced cheese is useful for eating
+"""
+time = "5m"
+directions = """
+Take the cheese and cut it along its side with a sharp knife.
+"""
+
+	[[recipe.product]]
+		name="slices of cheese"
+		measure = "whole"
+		number = 12
+
+	[[recipe.ingredient]]
+		name="cheese"
+		measure = "whole"
+		number = 1
+
+[[recipe]]
+time = "28h"
+directions = """
+Start by pouring one gallon of milk (fresh from the cow) into a clean container. Chill the milk quickly, and keep it in the refrigerator for at least 12 hours. 
+Skim the cream off the top of the fluid with a spoon. When you begin to see watery skim milk in the spoon, stop skimming. Pour the cream into a jar, cap the container tightly and let it sit on the kitchen drainboard for approximately 12 hours.
+Pour the cream into a larger container. Shake the larger container to agitate and congeal the butter. This takes about 30 minutes.
+When the cream gets heavy, shake with less vigor. The heavy mass will turn yellow, become firm and separate from the milk. 
+Put the butter in a bowl and work it and let the buttermilk drain off. Add some salt to the butter and work it in. Its done when your satisfied with the taste
+"""
+url = "http://archive.is/GVk7Q"
+
+	[[recipe.product]]
+		name="butter"
+		measure = "cup"
+		number = 2
+
+	[[recipe.product]]
+		name="buttermilk"
+		measure = "cup"
+		number = 2
+
+	[[recipe.ingredient]]
+		name="salt"
+		measure = "cup"
+		number = 0.5
+
+	[[recipe.ingredient]]
+		name="cow milk"
+		measure = "gallon"
+		number = 1
+
+
+
 
 
 [[recipe]]
