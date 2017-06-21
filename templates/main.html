@@ -1,22 +1,60 @@
 <!doctype html>
 
 <head>
-  <title>Hello from Flask</title>
+  <title>Time to make food</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Time to make food!">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://timetomakefood.com/assets/img/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://timetomakefood.com/assets/img/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://timetomakefood.com/assets/img/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://timetomakefood.com/assets/img/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://timetomakefood.com/assets/img/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://timetomakefood.com/assets/img/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://timetomakefood.com/assets/img/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://timetomakefood.com/assets/img/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://timetomakefood.com/assets/img/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://timetomakefood.com/assets/img/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://timetomakefood.com/assets/img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://timetomakefood.com/assets/img/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://timetomakefood.com/assets/img/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://timetomakefood.com/assets/img/icons/manifest.json">
+  <meta name="msapplication-TileImage" content="https://timetomakefood.com/assets/img/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="msapplication-TileColor" content="#56817a">
+  <meta name="msapplication-TileImage" content="https://timetomakefood.com/assets/img/icons/microsoft/mstile-144x144.png?v=gAAmLMYXpw">
+  <meta name="msapplication-config" content="https://timetomakefood.com/assets/img/icons/microsoft/browserconfig.xml?v=gAAmLMYXpw">
+  <meta name="theme-color" content="#56817a">
+
   <!--<link rel="stylesheet" href="http://hackcss.com/prism.css">-->
   <link rel="stylesheet" href="http://hackcss.com/hack.css?t=1490883343124">
 
   <style>
     body {
-      margin: 1em auto;
-      max-width: 40em;
-      padding: 0 .62em;
-      font: 1.2em/1.62 sans-serif;
+      font: 14px/1.25em sans-serif;
+      margin: 40px auto;
+      max-width: 650px;
+      line-height: 1.6;
+      font-size: 18px;
+      color: #1b1b1b;
+      padding: 0 10px
     }
 
     h1,
     h2,
     h3 {
-      line-height: 1.2;
+      line-height: 1.2
+    }
+
+    a {
+      text-decoration: none
     }
 
     @media print {
@@ -24,10 +62,29 @@
         max-width: none
       }
     }
+
+    input,
+    button {
+      width: 100%;
+      border: 1px;
+      padding: 4px;
+      font-size: 35px;
+    }
+
+    footer {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 1rem;
+      background-color: #efefef;
+      text-align: center;
+    }
   </style>
 </head>
-<h1>Time to make {{ recipe['name'] }}: {{ recipe['time'] }}</h1>
-<h2>Ingredients</h2>
+<h1>Make a {{ recipe['name'] | title }}</h1>
+<h1 style="text-align: right">in {{ recipe['time'] }}</h1>
+<h2>Ingredients ({{ recipe['ingredients'] | length }})</h2>
 <ul>
   {% for ingredient in recipe['ingredients'] %}
   <li>
@@ -37,15 +94,27 @@
   {% endfor %}
 </ul>
 
-<h2>Instructions</h2>
+<h2>Instructions ({{ recipe['instructions'] | length }} steps) </h2>
 <ol>
   {% for instruction in recipe['instructions'] %}
   <li>{{ instruction }}</li>
   {% endfor %}
 </ol>
 
-<h2>Source</h2>
 
-<a href="https://github.com/schollz/timetomakefood">github.com/schollz/timetomakefood</a>
+<h2>Other recipes</h2>
+<ul>
+  <li><a href="/grilled cheese sandwich/">Grilled cheese sandwich</a></li>
+</ul>
+
+<br>
+<footer>
+  <small>
+  Made by Zack (C) 2017 &nbsp; &nbsp; &nbsp;
+  <a href="https://github.com/schollz/timetomakefood">
+    <i>Source</i>
+  </a>
+  </small>
+</footer>
 
 </html>

@@ -194,6 +194,7 @@ def get_time_till(sec,s):
 
 def get_total_time_string(total_time):
     the_times = get_time_till(total_time,[])
+    print(the_times)
     if len(the_times) == 0:
         return 'no time'
     elif len(the_times) == 1:
@@ -201,4 +202,4 @@ def get_total_time_string(total_time):
     elif len(the_times) == 2:
         return ' and '.join(the_times)
     else:
-        return ', '.join(the_times[:-2]) + " and " +  the_times[-1]
+        return ', '.join(the_times[:-1]) + ", and " +  the_times[-1]
