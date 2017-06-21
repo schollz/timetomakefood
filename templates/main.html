@@ -103,10 +103,26 @@
   {% endfor %}
 </ul>
 
-<img src="/static/img/graph/{{ graphviz }}.png" width="90%">
-
 
 <h2>Instructions ({{ recipe['instructions'] | length }} steps) </h2>
+
+
+<button id="flowchartbutton" onclick="showFlowChart()">Flow chart</button>
+<div id="flowchart" style="display:none;">
+<img src="/static/img/graph/{{ graphviz }}.png" width="90%">
+</div>
+<script>
+function showFlowChart() {
+    var x = document.getElementById('flowchart');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+
+
 <ol>
   {% for instruction in recipe['instructions'] %}
   <li>{{ instruction }}</li>
