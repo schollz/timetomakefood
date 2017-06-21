@@ -19,3 +19,7 @@ def hello(path):
         other_ingredients = ingredients[1:-1]
     n = RecipeNetwork()
     return render_template('main.html', recipe=n.generate_recipe(main_ingredient, other_ingredients), graphviz=n.generate_graphviz(ingredients))
+
+
+from waitress import serve
+serve(app, listen='*:8082')
