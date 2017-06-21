@@ -82,6 +82,16 @@
     }
   </style>
 </head>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- TimeToMakeFoodv2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4947875154879707"
+     data-ad-slot="7335391250"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <h1>Make a {{ recipe['name'] | title }}</h1>
 <h1 style="text-align: right">in {{ recipe['time'] }}</h1>
 <h2>Ingredients ({{ recipe['ingredients'] | length }})</h2>
@@ -89,7 +99,8 @@
   {% for ingredient in recipe['ingredients'] %}
   <li>
     {% if ingredient.has_data %}
-    <a href="./{{ ingredient.name }}/">{{ ingredient.text }}</a> {% else %} {{ ingredient.text }} {% endif %}
+    <a href="./{{ ingredient.name | replace(" ","-") }}/">{{ ingredient.text }}</a> {% else %} {{ ingredient.text }} {%
+    endif %}
   </li>
   {% endfor %}
 </ul>
@@ -101,10 +112,20 @@
   {% endfor %}
 </ol>
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- TimeToMakeFoodv2-2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4947875154879707"
+     data-ad-slot="8812124453"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 <h2>Other recipes</h2>
 <ul>
-  <li><a href="/grilled cheese sandwich/">Grilled cheese sandwich</a></li>
+  <li><a href="/grilled-cheese-sandwich/">Grilled cheese sandwich</a></li>
 </ul>
 
 <br>

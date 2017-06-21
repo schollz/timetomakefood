@@ -8,10 +8,10 @@ from lib.recipes import *
 @app.route('/<path:path>')
 def hello(path):
     if path == "":
-        return redirect("/grilled cheese sandwich/", code=302)
+        return redirect("/grilled-cheese-sandwich/", code=302)
     if path[-1] != "/":
         return redirect(path + "/", code=302)
-    ingredients = path.split("/")
+    ingredients = path.replace('-',' ').split("/")
     main_ingredient = ingredients[0]
     other_ingredients = []
     if len(ingredients) > 2:

@@ -1,0 +1,5 @@
+networkx
+flask
+toml
+pint
+unidecode

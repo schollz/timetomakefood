@@ -1,8 +1,13 @@
-# Recursive Recipes
+# Time To Make Food
 
-Example:
+## Run
 
-![](http://i.imgur.com/gimj9EY.png)
+```
+python3 -m pip install -r requirements.txt
+export FLASK_APP=timetomakefood.py   (WIN: $env:FLASK_APP="timetomakefood.py")
+export FLASK_DEBUG=1                 (WIN: $env:FLASK_DEBUG=1)
+flask run --debugger
+```
 
 ## Axioms
 
