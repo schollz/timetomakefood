@@ -85,12 +85,13 @@ class RecipeNetwork(object):
 
         graph_traversal = []
         for starting_recipe in recipes:
-            longest_path_length = 0
             for path in all_simple_paths(G, source=final_recipe, target=starting_recipe):
-                if len(path) > longest_path_length:
-                    longest_path_length = len(path)
-            graph_traversal.append(
-                (starting_recipe, longest_path_steps, self.time_to_make[starting_recipe]))
+                path_length = 0
+                for node in path:
+                    if node in self.time_to_make:
+                        path_length += self.time_to_make[node]
+                graph_traversal.append(
+                    (starting_recipe, path_length, len(path)))
 
         print(graph_traversal)
         recipe_ordering = []
@@ -124,7 +125,7 @@ class RecipeNetwork(object):
                         new_recipe['ingredients'][ingredient['name']] = amount
                     else:
                         new_recipe['ingredients'][ingredient['name']] += amount
-                new_recipe['instructions'] = recipe['directions'].split(
+                new_recipe['instructions'] = recipe['directions'].replace('Â','').split(
                     "\n") + new_recipe['instructions']
                 new_recipe[
                     'seconds'] += duration.from_str(recipe['time']).total_seconds()

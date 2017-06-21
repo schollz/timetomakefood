@@ -1,5 +1,31 @@
 <!doctype html>
-<title>Hello from Flask</title>
+
+<head>
+  <title>Hello from Flask</title>
+  <!--<link rel="stylesheet" href="http://hackcss.com/prism.css">-->
+  <link rel="stylesheet" href="http://hackcss.com/hack.css?t=1490883343124">
+
+  <style>
+    body {
+      margin: 1em auto;
+      max-width: 40em;
+      padding: 0 .62em;
+      font: 1.2em/1.62 sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+    }
+
+    @media print {
+      body {
+        max-width: none
+      }
+    }
+  </style>
+</head>
 <h1>Time to make {{ recipe['name'] }}: {{ recipe['time'] }}</h1>
 <h2>Ingredients</h2>
 <ul>
