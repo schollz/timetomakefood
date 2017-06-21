@@ -86,24 +86,17 @@ class RecipeNetwork(object):
         graph_traversal = []
         for starting_recipe in recipes:
             longest_path_length = 0
-            longest_path_steps = 0
             for path in all_simple_paths(G, source=final_recipe, target=starting_recipe):
-                path_length = 0
-                for i, node in enumerate(path):
-                    if i == 0:
-                        continue
-                    path_length += G[path[i - 1]][node]['weight']
-                if path_length > longest_path_length:
-                    longest_path_length = path_length
-                    longest_path_steps = len(path)
+                if len(path) > longest_path_length:
+                    longest_path_length = len(path)
             graph_traversal.append(
-                (starting_recipe, path_length + self.time_to_make[starting_recipe], longest_path_steps))
+                (starting_recipe, longest_path_steps, self.time_to_make[starting_recipe]))
 
         print(graph_traversal)
         recipe_ordering = []
         import operator
         recipe_ordering.append(final_recipe)
-        for item in sorted(graph_traversal, key=operator.itemgetter(1, 2), reverse=False):
+        for item in sorted(graph_traversal, key=itemgetter(1, 2), reverse=False):
             if item[0] not in recipe_ordering:
                 recipe_ordering.append(item[0])
         return recipe_ordering
