@@ -2,6 +2,37 @@
 <html>
 
 <head>
+  <title>{{ recipe['name'] | title }}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Time to make food!">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://timetomakefood.com/assets/img/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://timetomakefood.com/assets/img/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://timetomakefood.com/assets/img/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://timetomakefood.com/assets/img/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://timetomakefood.com/assets/img/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://timetomakefood.com/assets/img/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://timetomakefood.com/assets/img/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://timetomakefood.com/assets/img/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://timetomakefood.com/assets/img/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://timetomakefood.com/assets/img/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://timetomakefood.com/assets/img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://timetomakefood.com/assets/img/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://timetomakefood.com/assets/img/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://timetomakefood.com/assets/img/icons/manifest.json">
+  <meta name="msapplication-TileImage" content="https://timetomakefood.com/assets/img/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="msapplication-TileColor" content="#56817a">
+  <meta name="msapplication-TileImage" content="https://timetomakefood.com/assets/img/icons/microsoft/mstile-144x144.png?v=gAAmLMYXpw">
+  <meta name="msapplication-config" content="https://timetomakefood.com/assets/img/icons/microsoft/browserconfig.xml?v=gAAmLMYXpw">
+  <meta name="theme-color" content="#56817a">
+
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
@@ -14,6 +45,10 @@
     img {
       object-fit: cover;
     }
+  </style>
+
+  <style>
+
   </style>
 
 </head>
@@ -29,21 +64,18 @@
           <h3 class="black-text name">&nbsp;Recipes</h3>
           </a>
         </li>
-        <li>
+
+          {% for recipe in other_recipes %}
+          <li>
           <div class="user-view">
-            <a href="#!user"><img class="circle" src="/static/img/food/grilled_cheese_sandwich.jpg"></a>
-            <a href="#!name"><span class="black-text name">Grilled cheese sandwich</span></a>
+            <a href="/{{ recipe | replace(" ","-") }}/"><img class="circle" src="/static/img/food/{{ recipe | replace(" ","_") }}.jpg"></a>
+            <a href="#!name"><span class="black-text name">{{ recipe | title }}</span></a>
           </div>
         </li>
         <li>
           <div class="divider"></div>
         </li>
-        <li>
-          <div class="user-view">
-            <a href="#!user"><img class="circle" src="/static/img/food/cookies.jpg"></a>
-            <a href="#!name"><span class="black-text name">Cookies</span></a>
-          </div>
-        </li>
+      {% endfor %}
       </ul>
     </div>
   </nav>
@@ -99,7 +131,7 @@
 
 
       <div class="row">
-
+<div class="col s12 cards-container">
         {% for ingredient in recipe['ingredients'] %}
         <div class="col s6 m4">
           <div class=" card teal darken-3 z-depth-4 ">
@@ -111,10 +143,10 @@
               <a class="btn-floating halfway-fab waves-effect waves-light red" href="./{{ ingredient.name | replace(" ","-") }}/"><i class="material-icons">cached</i></a>
               {% endif %}
             </div>
-          </div>
+        </div>
         </div>
         {% endfor %}
-
+</div>
 
       </div>
 
