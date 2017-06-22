@@ -1,11 +1,10 @@
 import os
 import json
 from operator import itemgetter
-import logging
 import hashlib
+import logging
+logger = logging.getLogger('timetomakefood.recipes')
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 import toml
 from networkx import DiGraph, all_simple_paths, shortest_path, dag_longest_path
@@ -141,7 +140,6 @@ class RecipeNetwork(object):
                 graph_traversal.append(
                     (starting_recipe, path_length, len(path)))
 
-        print(graph_traversal)
         recipe_ordering = []
         import operator
         recipe_ordering.append(final_recipe)
@@ -163,13 +161,11 @@ class RecipeNetwork(object):
                 if not found_it:
                     continue
                 for ingredient in recipe['ingredient']:
-                    print(recipe_to_add, ingredient)
                     try:
                         foo = ingredient[
                             'number'] * ureg.parse_expression(ingredient['measure'])
                         amount = "{} {}".format(get_fraction(foo.magnitude),foo.units)
                     except:
-                        print(ingredient['measure'])
                         amount = str(ingredient['number']) + " whole"
                     if ingredient['name'] not in new_recipe['ingredients']:
                         new_recipe['ingredients'][ingredient['name']] = amount
@@ -189,13 +185,13 @@ class RecipeNetwork(object):
         # Remove all the products
         for recipe_to_add in recipes:
             if recipe_to_add in new_recipe['ingredients']:
-                print("REMOVING" + recipe_to_add)
                 new_recipe['ingredients'].pop(recipe_to_add, None)
         return new_recipe
 
     def generate_recipe(self, main_ingredient, other_ingredients):
         recipes_to_combine = self.determine_ordering(
             other_ingredients, main_ingredient)
+        logger.debug(recipes_to_combine)
         finished = self.combine_recipes(recipes_to_combine)
         recipe = {}
         recipe['name'] = main_ingredient
@@ -207,5 +203,4 @@ class RecipeNetwork(object):
         recipe['instructions'] = []
         for instruction in finished['instructions']:
             recipe['instructions'].append(instruction)
-        print(recipes_to_combine)
         return recipe

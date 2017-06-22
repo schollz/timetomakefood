@@ -6,6 +6,14 @@ app = Flask(__name__)
 
 from lib.recipes import *
 
+import logging
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
+logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+    datefmt='%d-%m-%Y:%H:%M:%S',
+    level=logging.DEBUG)
+logger = logging.getLogger('timetomakefood')
+
 CURRENT_RECIPES = ['grilled cheese sandwich','cookies', 'noodles', 'tortilla']
 
 @app.route('/', defaults={'path': ''})
@@ -20,6 +28,7 @@ def hello(path):
     other_ingredients = []
     if len(ingredients) > 2:
         other_ingredients = ingredients[1:-1]
+    logger.info(path)
     n = RecipeNetwork()
     return render_template('main2.html', recipe=n.generate_recipe(main_ingredient, other_ingredients), graphviz=n.generate_graphviz(ingredients), other_recipes=CURRENT_RECIPES)
 

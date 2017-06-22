@@ -194,7 +194,6 @@ def get_time_till(sec,s):
 
 def get_total_time_string(total_time):
     the_times = get_time_till(total_time,[])
-    print(the_times)
     if len(the_times) == 0:
         return 'no time'
     elif len(the_times) == 1:
