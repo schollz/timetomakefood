@@ -172,8 +172,8 @@ class RecipeNetwork(object):
                         new_recipe['ingredients'][ingredient['name']] = amount
                     else:
                         new_recipe['ingredients'][ingredient['name']] += amount
-                for instruction in recipe['directions'].replace('Â', '').split(
-                    "\n"):
+                for instruction in reversed(recipe['directions'].replace('Â', '').split(
+                    "\n")):
                     if len(instruction.strip()) == 0:
                         continue
                     new_recipe['instructions'].insert(0,'({}) {}'.format(recipe_to_add,instruction))
