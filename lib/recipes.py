@@ -14,7 +14,7 @@ from unidecode import unidecode
 ureg = pint.UnitRegistry()
 
 import lib.duration as duration
-
+from lib.fractions import *
 
 def md5(s):
     return str(hashlib.md5(s.encode('utf-8')).hexdigest())
@@ -131,7 +131,8 @@ class RecipeNetwork(object):
 
         graph_traversal = []
         for starting_recipe in recipes:
-            print(starting_recipe)
+            if starting_recipe not in G.nodes():
+                continue
             for path in all_simple_paths(G, source=final_recipe, target=starting_recipe):
                 path_length = 0
                 for node in path:
@@ -164,8 +165,9 @@ class RecipeNetwork(object):
                 for ingredient in recipe['ingredient']:
                     print(recipe_to_add, ingredient)
                     try:
-                        amount = ingredient[
+                        foo = ingredient[
                             'number'] * ureg.parse_expression(ingredient['measure'])
+                        amount = "{} {}".format(get_fraction(foo.magnitude),foo.units)
                     except:
                         print(ingredient['measure'])
                         amount = str(ingredient['number']) + " whole"
