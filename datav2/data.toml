@@ -1,4 +1,164 @@
 [[recipe]]
+time = "48h"
+directions = """
+As you admire your wheat stand, you'll notice in midsummer (later for spring wheat) that the color of the stalks turns from green to yellow or brown. The heads, heavy with grain, tip toward the earth. This means it's time to test the grain. Choose a head, pick out a few grains, and pop them into your mouth. If they are soft and doughy, the grain is not yet ready. Keep testing. One day the grains will be firm and crunchy, and it will be time to harvest.
+
+At harvest, how should you cut the wheat? If you have a small enough plot, you'll just snip the heads of wheat off the stems. It goes quickly if your wheat field is no larger than about 6 feet wide by 25 feet long.
+
+Using a scythe. If you like the old-time way of doing things and are going to harvest a larger amount of grain, you might use a scythe and cradle. The cradle is a series of long wooden fingers mounted above the scythe blade. The scythe cuts the wheat, and then the cradle carries the cut wheat to the end of each swing and deposits it in a neat pile, stacked with all the heads grouped together. You could cut with the scythe alone, but you would spend a lot of time picking up the cut wheat and arranging it for easier handling.
+
+Harvesting with a sickle. Another possible tool for cutting small amounts of grain is the sickle. It's a matter of grab and cut, grab and cut. Hold a handful of wheat in your left hand and swing the sickle with your right to cut the plants at nearly ground level. It's possible to kneel or crouch in various positions to avoid getting too tired. As you cut handfuls, lay them in small piles with all the heads pointed in the same direction.
+
+Binding sheaves. The next step is to bind the grain into sheaves, each about 12 to 14 inches in circumference a bunch you can hold comfortably in your hands. Bind the same day you cut the wheat. It's nice to have two people taking turns cutting and binding. You can bind with cord or baler's twine or even with some of the wheat stems, twisting them in a way that holds the bundle firm.
+
+Curing the grain. Stack sheaves upright in a well-ventilated, dry location safe from grain-eating animals. Our ancestors stacked sheaves to make shocks in the field, but with small quantities, it's easy to bring the sheaves in out of the weather. The grain has been cured when it is hard, shatters easily, and cannot be dented with your thumbnail.
+"""
+
+	[[recipe.product]]
+		name="cured wheat"
+		measure = "whole"
+		number = 24
+
+	[[recipe.ingredient]]
+		name="field of wheat"
+		measure = "whole"
+		number = 1
+
+[[recipe]]
+time = "2h"
+directions = """
+Now it's time to thresh the grain to separate the straw and chaff from it. You can go about this in any number of ways. One method is flailing. A flail consists of one piece of wood about 3 feet long the handle attached with a leather thong to a shorter piece about 2 feet long. The shorter piece is flung at the heads of grain repeatedly, shattering a few heads each time. If you are using this method, you can expect to produce about 3 pounds of wheat in 20 to 25 minutes. That's slow work. Also, there's a trick to learning to swing the tail without rapping yourself on the head.
+Now you can winnow. The usual method for winnowing is pouring the grain from one container to another, letting either the wind or the breeze from an electric fan push the lighter chaff out of the grain. Repeat the process a few times to get the grain as chaff-free as possible.
+"""
+
+	[[recipe.product]]
+		name="wheat berries"
+		measure = "cup"
+		number = 40
+
+	[[recipe.ingredient]]
+		name="cured wheat"
+		measure = "whole"
+		number = 1
+
+[[recipe]]
+time = "30m"
+directions = """
+Grind 1 cup of whole grain berries on the finest setting of your grain mill. If you don't have a grain mill, you can grind your own flour using an inexpensive coffee grinder and food processor.
+Store the flour and germ/bran in separate containers. The flour will stay fresh in the pantry for up to one week, or you can refrigerate/freeze for up to 2 months. Store the germ/bran in the refrigerator or freezer for up to 2 months.
+"""
+
+	[[recipe.product]]
+		name="whole wheat flour"
+		measure = "cup"
+		number = 8
+
+	[[recipe.ingredient]]
+		name="wheat berries"
+		measure = "cup"
+		number = 10
+
+
+[[recipe]]
+time = "3h"
+directions = """
+Grind 1 cup of whole grain berries on the finest setting of your grain mill. If you don't have a grain mill, you can grind your own flour using an inexpensive coffee grinder and food processor.
+Set the sieve over a large bowl and sift the flour. After a couple minutes, you will see the germ and bran remaining in the sieve and the endosperm in the bowl. Place the germ/bran into a separate small bowl.
+Repeat with the remaining freshly ground flour until it has all been sifted.
+Repeat the sifting process again, but this time use the flour that has already been sifted. You will again see the germ/bran separate in the sieve. Place the germ/bran into a separate small bowl and repeat the sifting process until all the freshly ground flour has been sifted twice.
+Store the flour and germ/bran in separate containers. The flour will stay fresh in the pantry for up to one week, or you can refrigerate/freeze for up to 2 months. Store the germ/bran in the refrigerator or freezer for up to 2 months.
+Keep the wheat middlings that are not sifted for making semolina flour.
+"""
+
+	[[recipe.product]]
+		name="flour"
+		measure = "cup"
+		number = 8
+
+	[[recipe.product]]
+		name="wheat middlings"
+		measure = "cup"
+		number = 8
+
+	[[recipe.ingredient]]
+		name="wheat berries"
+		measure = "cup"
+		number = 10
+
+[[recipe]]
+time = "30m"
+directions = """
+Grind the wheat middlings to a coarse consistency.
+"""
+
+	[[recipe.product]]
+		name="semolina flour"
+		measure = "cup"
+		number = 9
+
+	[[recipe.ingredient]]
+		name="wheat middlings"
+		measure = "cup"
+		number = 10
+
+
+[[recipe]]
+time = "2920h"
+directions = """
+Plant winter wheat in fall to allow for six to eight weeks of growth before the soil freezes. This allows time for good root development. If the wheat is planted too early, it may smother itself the following spring and it could be vulnerable to some late-summer insects that won't be an issue in the cooler fall weather. If winter wheat is planted too late, it will not overwinter well.
+Spring wheat should be planted as early as the ground can be worked in spring. Do the initial plowing in the fall, then till and sow in the spring. To ensure an evenly distributed crop, figure out the amount of seed you'll need, divide it into two piles, and broadcast one part in one direction, such as from east to west. Then broadcast the remainder from north to south. A cyclone crank seeder will do an even job, but broadcasting by hand is fine for a small plot. You also can plant it in rows like other crops.
+Cover the seed by rototilling or raking it in to a depth of 2 to 2 1/2 inches for winter wheat and 1 to 1 1/2 inches for spring wheat. For best results, roll or otherwise firm the bed to ensure good seed-soil contact.
+"""
+
+	[[recipe.product]]
+		name="field of wheat"
+		measure = "whole"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="plot of soil"
+		measure = "whole"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="water source"
+		measure = "whole"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="sun"
+		measure = "whole"
+		number = 1
+
+
+[[recipe]]
+time = "48h"
+directions = """
+As you admire your wheat stand, you'll notice in midsummer (later for spring wheat) that the color of the stalks turns from green to yellow or brown. The heads, heavy with grain, tip toward the earth. This means it's time to test the grain. Choose a head, pick out a few grains, and pop them into your mouth. If they are soft and doughy, the grain is not yet ready. Keep testing. One day the grains will be firm and crunchy, and it will be time to harvest.
+
+At harvest, how should you cut the wheat? If you have a small enough plot, you'll just snip the heads of wheat off the stems. It goes quickly if your wheat field is no larger than about 6 feet wide by 25 feet long.
+
+Using a scythe. If you like the old-time way of doing things and are going to harvest a larger amount of grain, you might use a scythe and cradle. The cradle is a series of long wooden fingers mounted above the scythe blade. The scythe cuts the wheat, and then the cradle carries the cut wheat to the end of each swing and deposits it in a neat pile, stacked with all the heads grouped together. You could cut with the scythe alone, but you would spend a lot of time picking up the cut wheat and arranging it for easier handling.
+
+Harvesting with a sickle. Another possible tool for cutting small amounts of grain is the sickle. It's a matter of grab and cut, grab and cut. Hold a handful of wheat in your left hand and swing the sickle with your right to cut the plants at nearly ground level. It's possible to kneel or crouch in various positions to avoid getting too tired. As you cut handfuls, lay them in small piles with all the heads pointed in the same direction.
+
+Binding sheaves. The next step is to bind the grain into sheaves, each about 12 to 14 inches in circumference a bunch you can hold comfortably in your hands. Bind the same day you cut the wheat. It's nice to have two people taking turns cutting and binding. You can bind with cord or baler's twine or even with some of the wheat stems, twisting them in a way that holds the bundle firm.
+
+Curing the grain. Stack sheaves upright in a well-ventilated, dry location safe from grain-eating animals. Our ancestors stacked sheaves to make shocks in the field, but with small quantities, it's easy to bring the sheaves in out of the weather. The grain has been cured when it is hard, shatters easily, and cannot be dented with your thumbnail.
+"""
+
+	[[recipe.product]]
+		name="cured wheat"
+		measure = "whole"
+		number = 24
+
+	[[recipe.ingredient]]
+		name="field of wheat"
+		measure = "whole"
+		number = 1
+
+
+[[recipe]]
 time = "15m"
 directions = """
 Spoon balls of cookie dough onto a cookie sheet.
@@ -65,7 +225,7 @@ Add chocolate chips and oatmeal and put in fridge.
 		number = 1
 
 	[[recipe.ingredient]]
-		name="egg"
+		name="eggs"
 		measure = "whole"
 		number = 5
 
@@ -104,6 +264,161 @@ Cook until the other side is golden and the cheese melts, 3 to 5 more minutes.
 		name="butter"
 		measure = "tablespoon"
 		number = 1
+
+
+[[recipe]]
+time = "48h"
+directions = """
+Make sure chickens always have access to chicken feed (seed, egg shells) and water.
+Give them a fence and possibly a net to protect from predators.
+Provide an area for them to dig/scratch and run around.
+Chickens will lay an egg every few days.
+"""
+
+	[[recipe.product]]
+		name="eggs"
+		measure = "whole"
+		number = 2
+
+	[[recipe.ingredient]]
+		name="egg laying chicken"
+		measure = "whole"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="chicken feed"
+		measure = "cup"
+		number = 10
+
+	[[recipe.ingredient]]
+		name="water"
+		measure = "cup"
+		number = 10
+
+
+[[recipe]]
+time = "48h"
+directions = """
+In a double boiler, or a widemouth glass jar in a pot of water, start the cocoa butter melting on medium heat.  Add sugar, cocoa powder, and vanilla once a little oil has liquified.  Stir the mixture frequently with a spatula.  Once the cocoa butter is nearly melted, turn off the heat, and continue stirring until completely melted.
+Add the milk, stirring, gradually in teaspoons (3tsp in a tablespoon).  The sugar will dissolve and the chocolate will congeal into a form that is soft, but no longer liquid and no longer gritty.  It’s almost like it forms tiny, soft grains that compress into a smooth mass when it cools if you’re so inclined to pipe it or roll it out (seized chocolate).  You can’t melt it, so don’t turn up the heat. 
+Spread the chocolate mixture evenly on a large plate using the spatula and put it in the fridge to set, about 30 minutes.    The chocolate will be set but soft and easy to dislodge from the plate onto a cutting board.  You can chop it fine or crumble it easily with your fingers.  
+"""
+
+	[[recipe.product]]
+		name="chocolate chips"
+		measure = "cup"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="cocoa butter"
+		measure = "oz"
+		number = 2
+
+	[[recipe.ingredient]]
+		name="cocoa powder"
+		measure = "cup"
+		number = 0.5
+
+	[[recipe.ingredient]]
+		name="brown sugar"
+		measure = "cup"
+		number = 0.5
+
+	[[recipe.ingredient]]
+		name="vanilla"
+		measure = "teaspoon"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="milk"
+		measure = "tablespoon"
+		number = 1
+
+
+[[recipe]]
+time = "1080h"
+directions = """
+Seeds should be grown outdoors, sow the seeds of wild oats at a depth of 6mm at the beginning to middle of spring.
+Seedlings of wild oats can be purchased; annual varieties should be planted in the early spring, whereas perennial varieties can be planted either in the early spring or in autumn.
+Depending on the variety wild oats seedlings should be planted 25 to 30cm apart (small) or 45 to 60cm apart (larger varieties of oat).
+They should be planted in an area that receives full sunlight in a dry soil with a pH of 6 to 7.5.
+Keep the ground moist to allow the seeds to germinate. Continue to do so as the plants begin to grow. The compost or manure should help the oats retain moisture, but it will be necessary to water them periodically whenever the soil begins to dry out. If the area you live in gets plenty of rain, however, you may not need to water your oats at all.
+Harvest by swathing, cutting the plants at about 10 cm (4 inches) above ground, and putting the swathed plants into windrows with the grain all oriented the same way. They leave the windrows to dry in the sun for several days before combining them using a pickup header. Finally, bale the straw.
+Oats can also be left standing until completely ripe and then combined with a grain head. This will lead to greater field losses as the grain falls from the heads and to harvesting losses as the grain is threshed out by the reel. Without a draper head, there will also be somewhat more age to the straw since it will not be properly oriented as it enters the throat of the combine. Overall yield loss is 10-15% compared to proper swathing.
+Historical harvest methods involved cutting with a scythe or sickle, and threshing under the feet of cattle. Late 19th and early 20th century harvesting was performed using a binder. Oats were gathered into shocks and then collected and run through a stationary threshing machine.
+"""
+
+	[[recipe.product]]
+		name="oatmeal"
+		measure = "cup"
+		number = 5000
+
+	[[recipe.ingredient]]
+		name="plot of soil"
+		measure = "whole"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="sun"
+		measure = "whole"
+		number = 1
+
+[[recipe]]
+time = "76h10m"
+directions = """
+Strip the sugar cane of all of its leaves with a carving knife. Wash the sugar cane for several minutes with running water.
+Crush the sugar cane to extract a thick, melon-colored juice. Do this in a standard sized mortar and pestle.
+Boil and cook the resulting liquid and allow the water to evaporate. Get rid of the dirty foam that accumulates on the top of the syrup.
+Discard the fibrous product left over and pour the resulting syrup into a large pan to cook further. Continue boiling until crystals occur. The result is raw sugar that is brown in color.
+Dry the sugar in a dryer that uses hot air. After it is dry, blow cool air over it for several days.
+Cleanliness is vital to the whole process. Once the juice has been heated, impurities will speed the 'inversion' of sugar and lead to reduced yields. All boiling pans and tools need to be thoroughly cleaned between uses.
+"""
+
+	[[recipe.product]]
+		name="brown sugar"
+		measure = "cup"
+		number = 4
+
+	[[recipe.ingredient]]
+		name="stalks of sugar cane"
+		measure = "whole"
+		number = 4
+
+	[[recipe.ingredient]]
+		name="water"
+		measure = "cup"
+		number = 40
+
+
+[[recipe]]
+time = "4380h"
+directions = """
+Create a coop for the chickens. Make sure it has plenty of shelter and possibly a place to roost.
+Make sure chickens always have access to chicken feed (seed, egg shells) and water.
+Give them a fence and possibly a net to protect from predators.
+Provide an area for them to dig/scratch and run around.
+After 6 months the chickens will be big enough to lay eggs or eat.
+"""
+
+	[[recipe.product]]
+		name="egg laying chicken"
+		measure = "whole"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="baby chicken"
+		measure = "whole"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="chicken feed"
+		measure = "cup"
+		number = 1000
+
+	[[recipe.ingredient]]
+		name="water"
+		measure = "cup"
+		number = 10000
 
 
 
