@@ -1,0 +1,22 @@
+[[reaction]]
+products = [
+	"ricotta_cheese",
+	"whey"
+]
+reactants = [
+	"milk",
+	"vinegar"
+]
+description="Ricotta cheese is a nice sweet and fresh cheese."
+time = "45m"
+ingredients = """
+1 gallon milk
+3/4 c. vinegar
+"""
+directions = """
+Combine the milk and the vinegar. Gradually heat until its about to boil. 
+Turn off the stove and let it settle for 20 minutes.
+Line a colander with cheese-cloth and place over a large bowl.
+Gently ladel ricotta into cloth-line colander and let it drain for 20 minutes. Save the whey for other use.
+"""
+alternative_origin = "store"

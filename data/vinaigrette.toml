@@ -1,0 +1,26 @@
+[[reaction]]
+products = [
+	"vinaigrette"
+]
+reactants = [
+	"vinegar",
+	"mustard",
+	"pepper",
+	"olive_oil",
+	"salt"
+]
+description = """
+Great dressing for many types of salads.
+"""
+time = "6m"
+ingredients = """
+3 tbl vinegar
+1 1/2 tsp mustard
+7 tbl olive oil
+salt and pepper to taste
+"""
+directions = """
+Mix the vinegar and mustard in a small jar.
+Add the olive oil, and then mix together.
+Season with salt and pepper and mix again.
+"""

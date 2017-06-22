@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 from lib.recipes import *
 
-CURRENT_RECIPES = ['grilled cheese sandwich','cookies']
+CURRENT_RECIPES = ['grilled cheese sandwich','cookies', 'noodles', 'tortilla']
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
@@ -21,9 +21,7 @@ def hello(path):
     if len(ingredients) > 2:
         other_ingredients = ingredients[1:-1]
     n = RecipeNetwork()
-    other_recipes = CURRENT_RECIPES[:]
-    other_recipes.remove(main_ingredient)
-    return render_template('main2.html', recipe=n.generate_recipe(main_ingredient, other_ingredients), graphviz=n.generate_graphviz(ingredients), other_recipes=other_recipes)
+    return render_template('main2.html', recipe=n.generate_recipe(main_ingredient, other_ingredients), graphviz=n.generate_graphviz(ingredients), other_recipes=CURRENT_RECIPES)
 
 if __name__ == "__main__":
     from waitress import serve

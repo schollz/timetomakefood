@@ -157,35 +157,122 @@ Curing the grain. Stack sheaves upright in a well-ventilated, dry location safe 
 		measure = "whole"
 		number = 1
 
+[[recipe]]
+time = "50m"
+directions = """
+Mix dry ingredients together.
+Mix in the olive oil and lard and slowly add the water. Knead the resulting dough.
+Let the dough sit for 30 minutes.
+Cut the dough into 8 small sections. Heat up a cast-iron pan.
+Flatten each dough section and cook on a hot pan for 1 minute on each side.
+"""
+ingredients = """
+2 c. flour
+1 tsp. baking soda 
+1/4 c. olive oil 
+1 tbl lard (optional)
+1/2 tsp. salt
+1/2 - 3/4 c. water
+"""
+
+	[[recipe.product]]
+		name="tortilla"
+		measure = "whole"
+		number = 8
+
+	[[recipe.ingredient]]
+		name="flour"
+		measure = "cup"
+		number = 2
+
+	[[recipe.ingredient]]
+		name="baking soda"
+		measure = "teaspoon"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="olive oil"
+		measure = "cup"
+		number = 0.25
+
+	[[recipe.ingredient]]
+		name="lard"
+		measure = "tablespoon"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="salt"
+		measure = "teaspoon"
+		number = 0.5
+
+	[[recipe.ingredient]]
+		name="water"
+		measure = "cup"
+		number = 0.75
+
+
 
 [[recipe]]
-time = "15m"
+time = "50m"
 directions = """
+In a large bowl stir together 1-3/4 cups of the flour and the salt. Make a well in the center of the flour mixture.
+In a small bowl combine egg yolks and whole egg, the water, and oil. Add the egg mixture to the flour mixture, stirring to combine.
+Sprinkle a clean kneading surface with the remaining flour. Turn dough out onto floured surface. Knead the dough until it is smooth and elastic (8 to 10 minutes total).
+Cover the dough and let rest for 10 minutes.
+Divide the dough into four equal portions. Let the dough stand, uncovered, about 20 minutes.
+Cut the noodles into strips. Spread the noodles on a wire cooling rack.
+"""
+ingredients = """
+1 c. flour
+1 c. semolina flour
+2 eggs
+1/3 c. water
+1 tsp olive oil
+"""
+
+	[[recipe.product]]
+		name="noodles"
+		measure = "whole"
+		number = 24
+
+	[[recipe.ingredient]]
+		name="flour"
+		measure = "cup"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="semolina flour"
+		measure = "cup"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="water"
+		measure = "cup"
+		number = 0.333
+
+	[[recipe.ingredient]]
+		name="olive oil"
+		measure = "teaspoon"
+		number = 1
+
+	[[recipe.ingredient]]
+		name="eggs"
+		measure = "whole"
+		number = 2
+
+[[recipe]]
+time = "30m"
+directions = """
+Cream together butter and brown sugar. 
+When blended together added vanilla and beaten eggs. 
+Mix in dry ingredients.
+Add chocolate chips and oatmeal and put in fridge.
 Spoon balls of cookie dough onto a cookie sheet.
 Bake at 375F for 10 to 14 minutes, until firm and brown.
 """
 
 	[[recipe.product]]
 		name="cookies"
-		measure = "whole"
-		number = 24
-
-	[[recipe.ingredient]]
-		name="cookie dough"
-		measure = "cup"
-		number = 10
-
-[[recipe]]
-time = "15m"
-directions = """
-Cream together butter and brown sugar. 
-When blended together added vanilla and beaten eggs. 
-Mix in dry ingredients.
-Add chocolate chips and oatmeal and put in fridge.
-"""
-
-	[[recipe.product]]
-		name="cookie dough"
 		measure = "cup"
 		number = 10
 

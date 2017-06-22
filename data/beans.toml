@@ -1,0 +1,77 @@
+[[reaction]]
+products = [
+	"refried_beans"
+]
+reactants = [
+	"beans",
+	"butter",
+	"onion"
+]
+url="http://www.simplyrecipes.com/recipes/refried_beans/"
+alternative_origin = "store"
+description = """
+The word comes from the Spanish name for the dish—frijoles refritos. In Spanish “refritos” means “well fried”. To make the beans you have to cook them in water first to soften them. 
+"""
+time = "20m"
+ingredients = """
+2 1/2 c. cooked beans 
+3 quarts of water
+1/2 c. chopped onion
+2 tbsp. butter
+1/4 c. water
+Salt to taste
+"""
+directions = """
+Add the onions and butter to a wide, sturdy frying pan on medium high heat. Cook onions until translucent. 
+Add the beans and about a 1/4 cup of water to the pan. Using a potato masher, mash the beans in the pan, while you are cooking them, until they are a rough purée.
+Add more water if necessary to keep the fried beans from getting too dried out. Add salt to taste.
+"""
+
+[[reaction]]
+products = [
+	"beans"
+]
+reactants = [
+	"dried_beans"
+]
+alternative_origin = "store"
+description = """
+A flour tortilla is a type of soft, thin flatbread made from finely ground wheat flour from Mexico.
+"""
+time = "13h30m"
+ingredients = """
+2 c. dried beans
+water
+"""
+directions = """
+Cover dried beans with water. Soak overnight.
+Drain the soaking water. Throw beans in a pot (optionally add vegetables). Add water about 3 times the heigh of beans in the pot.
+Simmer the beans until they are tender, about 1 1/2 hours.
+"""
+
+[[reaction]]
+products = [
+	"dried_beans"
+]
+reactants = [
+	"soil",
+	"sun",
+	"water"
+]
+alternative_origin = "store"
+description = """
+Dry or dried beans–also called shell beans–are beans grown to full maturity and left in their pods to dry before being shelled and stored for later use. Dried beans can be stored in a cool, dry place for up to a year or more.
+"""
+time = "2892h"
+ingredients = """
+2 c. dried beans
+water
+"""
+directions = """
+Grow beans in full sun. Beans will grow in partial shade but the harvest will not be full. Beans prefer loose, well-drained soil rich in organic matter. Beans prefer a soil pH of 6.0 to 6.8. Prepare planting beds in advance by working in plenty of aged compost. Avoid planting beans where soil nitrogen is high or where green manure crops have just grown; these beans will produce green foliage but few beans.
+Beans are a tender annual that grow best in temperatures between 50° and 85°F. Beans will not set pods in temperatures above 80°F. Sow beans in the garden just after the average date of the last frost in spring when the soil temperature has warmed. The optimal growing soil temperature for beans is 60° to 85°F. Start beans indoors as early as 3 or 4 weeks before the average last frost date in spring for transplanting into the garden a week or two after the last frost. Start beans indoors in a biodegradable peat or paper pot that can be set whole into the garden so as not to disturb plant roots. Beans can continue in the garden until the first frost in fall. Dry beans are allowed to stay on the plant until leaves have fallen and pods have dried and withered.
+Sow beans 1 to 1½ inch deep. Plant bush beans 3 to 4 inches apart; set rows 18 to 24 inches apart. Plant pole beans 4 to 6 inches apart; set rows 30 to 36 inches apart. Set poles, stakes, or supports in place at planting time. Pole beans also can be planted in inverted hills–5 or 6 seeds to a hill; space hills 40 inches apart. Thin strong seedlings from 4 to 6 inches apart. Remove weaker seedlings by cutting them off at soil level with a scissors being careful not to disturb the roots of other seedlings. Bean can be crowded; they will use each other for support.
+Grow beans in soil that is evenly moist. Bean seeds may crack and germinate poorly if the soil moisture is too high at sowing. Do not soak seeds in advance of planting and do not over-water after sowing. Keep the soil evenly moist during flowering and pod formation. Rain or overhead irrigation during flowering can cause flowers and small pods to fall off. Once the soil temperature averages greater than 60°F, mulch to conserve moisture.
+Beans are best fertilized with aged garden compost; they do not require extra nitrogen. Beans set up a mutual exchange with soil microorganisms called nitrogen-fixing bacteria which produce the soil nitrogen beans require. Avoid using green manures or nitrogen-rich fertilizers.
+Dry beans will be ready for harvest 70 to 120 after sowing when plants have matured and leaves have turned brown or fallen. To test for harvest, bite a couple of seeds; if they will hardly dent they are dry and ready for harvest. Harvest pods when they are completely dry. If pods have withered but are still moist, pick them and then spread them on a flat screen or surface in a warm, protected place where they can thoroughly dry. Plant also can be taken up whole and hung upside down to dry. Pods that are fully dry will split open to reveal the dried beans. Dry beans can be shelled by threshing in a burlap sack or by hand.
+"""

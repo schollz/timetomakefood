@@ -1,0 +1,75 @@
+[[reaction]]
+products = [
+	"olive_oil"
+]
+reactants = [
+	"fresh_olives"
+]
+description="Ancient Greeks called olive oil liquid gold, and rightly so. Olive oil is extracted from the olive fruit, a traditional tree crop of the Mediterranean Basin."
+time = "5h"
+url = "http://www.buzzle.com/articles/how-to-make-olive-oil.html"
+ingredients = """
+Millstones or mechanical means of pressing
+Olives (40 pounds for 1 gallon oil)
+Circular mats
+Siphon tube
+Plastic drum (food grade)
+Dark green bottles and corks
+Funnel
+Towel
+"""
+directions = """
+Wash olives with water to remove dirt, and get rid of leaves and twigs attached to the fruits.
+Obtain a paste of olives using a millstone (generally used for large-scale manufacturing) or any mechanical means of pressing. There is no need to remove the pits from the fruits before pressing.
+Now spread the paste obtained from the previous step over circular mats and subject it to pressing. At this point, juice will flow out of the paste, leaving behind what is known as 'pomace'.
+Transfer the juice to a plastic drum and let it stand undisturbed for 1-2 hours. The oil will now separate out of water due to density difference.
+Use a siphon tube to transfer oil (which forms the top layer) into another container, and leave it undisturbed so that unwanted particles can settle at the bottom.
+Place a funnel over a green bottle and slowly decant the liquid in the container to obtain 'ready-to-use' olive oil. Clean the bottle using a towel, cork it, and store in a cool and dry place.
+"""
+alternative_origin = "store"
+
+[[reaction]]
+products = [
+	"fresh_olives"
+]
+reactants = [
+	"olive_tree"
+]
+description="Consumption of olive oil has increased due to the benefits it offers, extraction now takes place on a large-scale"
+time = "1h30"
+url = "http://www.buzzle.com/articles/how-to-make-olive-oil.html"
+ingredients = """
+long stick
+olive trees with olives ready to harvest
+"""
+directions = """
+Harvest ripe or unripe fruits by hitting the branches with a long stick. Spread a net on the ground before hitting so that olives fall directly on it.
+"""
+alternative_origin = "farm"
+
+[[reaction]]
+products = [
+	"olive_tree"
+]
+reactants = [
+	"sun",
+	"water",
+	"soil"
+]
+description="Many olive trees in the groves around the Mediterranean are said to be centuries old, and ages as great as 2000 years."
+time = "87600h"
+url = "http://www.buzzle.com/articles/how-to-make-olive-oil.html"
+ingredients = """
+olive tree saporling
+"""
+directions = """
+Spread the compost over an area roughly 9 feet (2.7 m) by 9 feet (2.7 m) to avoid over-concentration in one spot.
+Bring up your soil's pH to an acceptable level with the addition of lime. If your soil's pH is below 6.5, consider adding lime to the soil to boost its alkalinity. Talk to your Department of Agriculture representative or contact a local fertilizer company if you want specific pH readings and/or pointers on how to get a uniform pH of 6.5.
+Deep-rip your soil at least 2 feet (0.6 m) deep and 10 feet (3.0 m) wide across each planting row. Deep ripping increases soil drainage and eases compaction, giving your olive trees an excellent start and the possibility of speedy growth.
+Plant the olive tree in full sun, outdoors, at the same level that it was in the pot. Ideally, plant in April or May when frost is not likely to harm the tree.
+Water and irrigate your olive tree modestly or as necessary. 
+Pruning should occur between the end of winter and flowering. Although not all trees need to be pruned every year, proper pruning will result in a tree with balanced vigor and better fruit. Removing unwanted branches and suckers can keep the tree at a manageable height for easier harvesting and prevent uneven bearing of fruit. Check diligently for pests and other diseases. Like most plants, the olive tree is sometimes susceptible to attack, particularly from black scale, or Saissetia oleae. 
+While some cultivars begin bearing fruit as soon as two or three years if properly maintained, many trees won't start bearing until 10 years old. Dry-farmed trees may not bear until they are 20 or 30 years old.
+Olives start out green and eventually all turn black as they ripen. Olives that are harvested when they are still green have a peppery, grassy, or more herbaceous flavor, while olives that are harvested when they turn taker have a milder, buttery flavor. Many oils are a mix between green and ripe olives, harvested right when they are turning color.
+"""
+alternative_origin = "farm"

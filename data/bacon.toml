@@ -1,0 +1,26 @@
+[[reaction]]
+products = [
+	"bacon"
+]
+reactants = [
+	"salt",
+	"pepper",
+	"brown_sugar",
+	"pork_belly"
+]
+description="Bacon is a staple of  cured meats, and there are many variations of the flavors that can be produced."
+time = "217h30m"
+ingredients = """
+1/4 c. salt
+1/2 c. brown sugar
+1/3 c. pepper
+2-pound slab of pork belly
+"""
+directions = """
+Mix the salt, sugar and pepper in a bowl. Rub the mixture over the pork belly. Cover and set it in the refrigerator for 7 days, turning it every other day to ensure the pork is covered in the cure.
+Remove the pork from the refrigerator and rinse it well. Pat it dry and place it on a cooling rack over a baking sheet in the refrigerator and air-dry for 2 days.
+Smoke the bacon until the thickest part of the meat reaches 140F. You can use a smoker, a kettle grill, or a large pot on the stove top.
+After smoking, cool for a few minutes and then ease off the skin with a large knife.
+Cool to room temperature and then wrap and chill until it is firm. Slice to eat.
+"""
+alternative_origin = "store"

@@ -1,0 +1,25 @@
+[[reaction]]
+products = [
+	"picnic_ham",
+	"pork_shoulder",
+	"pork_spareribs",
+	"pork_belly",
+	"pork_chop"
+]
+reactants = [
+	"pig"
+]
+alternative_origin = "butcher shop"
+description = """
+If you eat meat, you can take one more step toward independence by learning the process of killing and butchering a pig yourself.
+"""
+time = "48h"
+ingredients = """
+pig
+meat saw
+area to slaughter 
+gun
+"""
+directions = """
+Follow [these instructions for slaugthering and butchering a pig](http://www.wikihow.com/Gut-a-Pig)
+"""

@@ -1,0 +1,27 @@
+[[reaction]]
+products = [
+	"guacamole"
+]
+reactants = [
+	"avocado",
+	"salt",
+	"lime_juice"
+]
+url = "http://www.simplyrecipes.com/recipes/perfect_guacamole/"
+alternative_origin = "store"
+description = """
+Guacamole, a dip made from avocados, is originally from Mexico. The name is derived from two Aztec Nahuatl words—ahuacatl (avocado) and molli (sauce).
+"""
+time = "10m"
+ingredients = """
+2 ripe avocados
+1/2 teaspoon Kosher salt or lemon juice
+salt
+"""
+directions = """
+Cut avocado, remove flesh: Cut the avocados in half. Remove seed. Score the inside of the avocado with a blunt knife and scoop out the flesh with a spoon.
+Mash with a fork: Using a fork, roughly mash the avocado. (Don't overdo it! The guacamole should be a little chunky.)
+Sprinkle with salt and lime (or lemon) juice. The acid in the lime juice will provide some balance to the richness of the avocado and will help delay the avocados from turning brown.
+Place plastic wrap on the surface of the guacamole cover it and to prevent air reaching it. (The oxygen in the air causes oxidation which will turn the guacamole brown.) Refrigerate until ready to serve.
+"""
+

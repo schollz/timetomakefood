@@ -1,5 +1,45 @@
 [[reaction]]
 products = [
+	"cow"
+]
+reactants = [
+	"calf"
+]
+description = "There is more than one way to raise cattle, that is something that everyone, beginner and veteran cattlemen alike. How cattle are raised not only depends on the individual raising them, but the breed, class and type of cattle in concern. For instance, beef cows are raised differently from dairy cows: beef cows are raised to live with minimal management and raise a calf that, in 95% of all cases are sold for beef, and dairy cows are raised to give milk, but not raise a calf. As far as beef cattle are concerned, there are far more variations as how these type of cattle are raised than with dairy cattle."
+time = "17520h"
+ingredients = """
+hay
+pasture
+graise
+"""
+directions = """
+[Follow these steps to raise a cow](http://www.wikihow.com/Raise-Cattle)
+"""
+
+[[reaction]]
+products = [
+	"rennet"
+]
+reactants = [
+	"calf"
+]
+description = "You can make rennet from almost any young animal's fourth stomach that has been salted. The animals involved are either a suckling calf, an unweaned lamb, a baby goat or a young piglet."
+time = "8832h"
+ingredients = """
+stomach of newly killed animal, that is less than 2 days old
+salt
+water
+"""
+directions = """
+Remove the fourth stomach of the animal, wash and salt it.
+Apply handfuls of salt ot both sides of stomach, using a rolling pin, and then hang it up in a warm dry place.
+Let the rennet cure for at least 12 months.
+Pour 1 to 3 quarts of water over the stomach and leave it in the water for 3 days. Then skim and strain the liquid. This rennet is ready for immediete use.
+"""
+
+
+[[reaction]]
+products = [
 	"butter",
 	"buttermilk"
 ]

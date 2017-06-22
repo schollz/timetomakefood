@@ -1,0 +1,20 @@
+[[reaction]]
+products = [
+	"vinegar"
+]
+reactants = [
+	"apple"
+]
+description = "There are many varities of vinegar, this is one of the most common."
+time = "4382h"
+ingredients = """
+apples
+muslin bag
+"""
+directions = """
+Wash the apples and cut them into small pieces, keeping skin, core and stems.
+Make a mush of the apples and then strain it through a muslin bag.
+Pour the juice into a clean, dark glass jug and cover the top with several layers of cheesecloth held in place with rubber bands.
+Leave the juice in a cool, dark place for about six months. 
+Take the liquid, strain, bottle, and cork.
+"""

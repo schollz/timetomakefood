@@ -1,0 +1,87 @@
+[[reaction]]
+products = [
+	"mayonnaise"
+]
+reactants = [
+	"eggs",
+	"mustard",
+	"salt",
+	"lemon",
+	"olive_oil"
+]
+description = """
+
+"""
+time = "10m"
+ingredients = """
+1 egg yolk
+1 1/2 tsp mustard
+salt to taste 
+juice from half a lemon
+1 1/4 c. vegetable oil
+"""
+directions = """
+Combine everything but the oil into a bowl and start blending with a hand blender.
+While the blender is running, add the oil very slowly. Keep whipping until thick.
+"""
+
+[[reaction]]
+products = [
+	"mustard"
+]
+reactants = [
+	"dry_mustard",
+	"mustard_seed",
+	"vinegar",
+	"brown_sugar",
+	"garlic"
+]
+description = """
+A great tasting homemade mustard.
+"""
+time = "12h10m"
+ingredients = """
+1/2 c. mustard seeds
+2 tbl. dry mustard
+1/3 c. vinegar
+1 tbl. sugar 
+2 garlic cloves, peeled
+"""
+directions = """
+Grind the mustard seeds with the dry mustard 
+Stir in 1/2 c. water and let rest at room temperature overnight.
+Move mixture to blender and add veingar, sugar, salt, and garlic. Liquefy. Add more vinegar if nessecary.
+Store in fridge.
+"""
+
+[[reaction]]
+products = [
+	"cream_cheese",
+	"whey"
+]
+reactants = [
+	"milk",
+	"cream",
+	"mesophilic_culture",
+	"rennet",
+	"salt"
+]
+description = """
+
+"""
+time = "20h30m"
+ingredients = """
+1 quart whole milk
+1 quart cream 
+1/4 tsp. mesophilic mesophilic culture 
+2 drop rennet 
+1 tsp salt
+"""
+directions = """
+Make sure all the equipment is clean before you start.
+Combine the milk and cream over low heat, and heat to about 80F. Don't get milk too hot, just take the refridgerator chill away. Remove from the heat.
+Add the cultuer to the milk, stirring with a slotted spoon.
+Add the rennet, and stir in up-and-down motion with slotted spoon. Let it sit at room temprature for 24 hours.
+Place a colander over a bowl an dline the colander with cheesecloth. Gently ladle the curd. Cover with a clean towle and let it drain for 8 hours at room temperature. Store the whey in a jar.
+Stir the salt into the creamy cheese. Scoop the cheese into a container and store in the refridgerator.
+"""

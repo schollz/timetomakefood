@@ -1,0 +1,23 @@
+[[reaction]]
+products = [
+	"applesauce"
+]
+reactants = [
+	"apple",
+	"brown_sugar",
+	"cinnamon"
+]
+description = """
+Applesauce is a great stape, especially if you are feeling sick.
+"""
+time = "40m"
+ingredients = """
+4 pounds applesauce
+3/4 c. sugar 
+1 tsp. cinnamon
+"""
+directions = """
+Peel, core and slice the apples. Place in saucepan with enough water to cover them. Bring to a boil over medium heat. Stir in the sugar.
+Simmer the apples for about 25 minutes, until they are soft.
+Mash the result if you want smooth applesauce.
+"""

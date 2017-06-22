@@ -1,0 +1,55 @@
+[[reaction]]
+products = [
+	"rice"
+]
+reactants = [
+	"dry_rice",
+	"water",
+	"salt",
+	"butter"
+]
+alternative_origin = "store"
+description = """
+Since a large portion of maize crops are grown for purposes other than human consumption, rice is the most important grain with regard to human nutrition and caloric intake, providing more than one-fifth of the calories consumed worldwide by humans.
+"""
+time = "25m"
+ingredients = """
+1 cup of dry rice
+2 cups of water
+1/2 teaspoon of salt
+1 tablespoon of butter
+"""
+directions = """
+Bring the water to a boil
+Add the rice, ½ teaspoon of salt and 1 tablespoon of butter, stir once.
+Cover the pot and return the water to a boil
+Immediately turn the stove down to simmer and turn the timer on for 20 minutes.
+"""
+
+[[reaction]]
+products = [
+	"dry_rice"
+]
+reactants = [
+	"soil",
+	"sun",
+	"water"
+]
+alternative_origin = "store"
+description = """
+Rice comes in long-grain, medium- and short-grain textures. It grows easily in your backyard, in a garden bed or in buckets, given the right amount of soil, water, and other nutrients. Short-grain, medium-grain and long-grain rice thrive in wet conditions, specifically standing puddles of water or swamp-like conditions. Once the rice grains develop, the water in which they grow must drain so that you can harvest and mill the crop. After the harvesting and milling processes, you can eat the rice.
+"""
+time = "3960h"
+ingredients = """
+rice seeds
+area to grow rice
+"""
+directions = """
+Soak the seeds in water for about 36 hours and allow to dry for another 24 hours.
+Fill a bucket with 6 inches of a mixture of soil and compost.
+Add about 5 inches of water to cover the soil.
+Evenly spread the seeds in the bucket and place in a warm, sunny area.
+Periodically add more water to maintain a constant 5-inch depth as the plants grow.
+The rice is ready for harvest when the grain yellows and the start to drop. The water is then drained from the rice paddies during harvest season. The rice is harvested by cutting the rice stalks. The grain is separated from the stalk by a mechanized thresher.
+The rice is then dried. Once dried the rice is taken for milling which separates the outer layer. The end product is white rice, which is then ready for distribution.
+"""

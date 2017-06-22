@@ -13,7 +13,7 @@ ingredients = """
 10 cups wheat berries
 """
 directions = """
-Grind 1 cup of whole grain berries on the finest setting of your grain mill. If you donât have a grain mill, you can grind your own flour using an inexpensive coffee grinder and food processor.
+Grind 1 cup of whole grain berries on the finest setting of your grain mill. 
 Set the sieve over a large bowl and sift the flour. After a couple minutes, you will see the germ and bran remaining in the sieve and the endosperm in the bowl. Place the germ/bran into a separate small bowl.
 Repeat with the remaining freshly ground flour until it has all been sifted.
 Repeat the sifting process again, but this time use the flour that has already been sifted. You will again see the germ/bran separate in the sieve. Place the germ/bran into a separate small bowl and repeat the sifting process until all the freshly ground flour has been sifted twice.
@@ -36,7 +36,7 @@ ingredients = """
 10 cups wheat berries
 """
 directions = """
-Grind 1 cup of whole grain berries on the finest setting of your grain mill. If you donât have a grain mill, you can grind your own flour using an inexpensive coffee grinder and food processor.
+Grind 1 cup of whole grain berries on the finest setting of your grain mill. 
 Store the flour and germ/bran in separate containers. The flour will stay fresh in the pantry for up to one week, or you can refrigerate/freeze for up to 2 months. Store the germ/bran in the refrigerator or freezer for up to 2 months.
 """
 alternative_origin = "store"

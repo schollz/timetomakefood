@@ -1,0 +1,50 @@
+[[reaction]]
+products = [
+	"peanut_butter"
+]
+reactants = [
+	"peanuts",
+	"honey",
+	"salt"
+]
+description="Peanut butter is a food paste popular in many countries, a spread made primarily from ground dry roasted peanuts, but often containing additional ingredients that modify the taste or texture."
+time = "12h"
+url = "http://www.thekitchn.com/how-to-make-homemade-peanut-butter-cooking-lessons-from-the-kitchn-199110"
+ingredients = """
+2 cups (16 ounces) raw, shelled peanuts 
+1/2 teaspoon kosher salt, plus more to taste
+1-2 tablespoons honey
+"""
+directions = """
+Roast peanuts at 350F for 10 minutes.
+Grind the peanuts in a grinder until it is chunky.
+Add honey and salt.
+Continue grinding until it is the consistency you would like for peanut butter. 
+"""
+alternative_origin = "store"
+
+[[reaction]]
+products = [
+	"peanuts"
+]
+reactants = [
+	"soil",
+	"water",
+	"sun"
+]
+description="Peanuts are a great addition to a home garden since they require minimal care and provide bountiful yields. "
+time = "3600h"
+url = "http://www.thekitchn.com/how-to-make-homemade-peanut-butter-cooking-lessons-from-the-kitchn-199110"
+ingredients = """
+2 cups (16 ounces) raw, shelled peanuts 
+1/2 teaspoon kosher salt, plus more to taste
+1-2 tablespoons honey
+"""
+directions = """
+Peanuts are a great addition to a home garden since they require minimal care and provide bountiful yields. 
+Be aware–peanuts need shallow weeding. You could damage them by digging too deeply into the ground where they are are developing. When the plant begins to flower, pegs will drop  into the ground under the flower and produce peanuts. Hand-weeding is the only option after the peanut pegs.
+Also, after your plants start flowering, it’s important not to let them dry out or they won’t produce as many of the mouth-watering legumes you’ve been waiting for.
+Once frost is in the forecast or the plant stems begin to turn yellow, it’s time to harvest. Try not to harvest while the soil is wet, and don’t wait too long to harvest your peanuts–they’ll  start sprouting in the ground if left unattended! Dig around the perimeter of where the plant’s leaves have sprawled. Lift the plant out of the ground and flip it, so that the leaves are on the ground. If rain is in the forecast, bring your plants into a shed or garage.
+A couple days later, it will be time to pull the peanuts off the plant. Most of them will be in a clump at the center of the roots, but some will also be attached to the lower branches.  A well-grown peanut plant can yield 50 -100 peanuts–more than enough for your next ball game outing! Spread the peanuts out to dry for a month where critters won’t be able to get to them, then store them in a closed container. Peanuts left in their shells can stay fresh for years.
+"""
+alternative_origin = "store"

@@ -1,0 +1,21 @@
+[[reaction]]
+products = [
+	"lard"
+]
+reactants = [
+	"pork_belly"
+]
+description = """
+Lard is a fat rendered from meat that gives great flavor and texture to tortillas.
+"""
+time = "9h10m"
+ingredients = """
+pork bell fat
+"""
+directions = """
+Preheat oven to 250F. Cut the pork belly into chunks. Place the chunks into a deep skillet or dutch oven with a cup of water. 
+Place the pot in the oven and let the fat melt for 6 hours.
+Take the pot out and ladle the liquid into a cheesecloth-lined sieve over a large bowl. Extract liquid and then return the smaller pieces of fat back to the oven for a few more hours.
+Remove the pot again and pour the rest of the contents into the sieve.
+Store the liquid lard
+"""

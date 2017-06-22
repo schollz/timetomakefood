@@ -1,0 +1,32 @@
+[[reaction]]
+products = [
+	"pancake"
+]
+reactants = [
+	"flour",
+	"baking_soda",
+	"baking_powder",
+	"salt",
+	"eggs",
+	"brown_sugar",
+	"buttermilk",
+	"butter"
+]
+description="Quick to make and delicious, there is no alternative to the homemade pancake."
+time = "12m"
+ingredients = """
+1 1/4 c. flour
+1/2 tsp. baking soda
+2 tsp. baking powder
+1/2 tsp. salt
+2 tbl. sugar
+1 large eg, beaten
+2 c. buttermilk
+2 tbl butter 
+"""
+directions = """
+In a large bowl whisk together the dry ingredients. 
+Beat the wet ingredients together and then add to the dry ingredients.
+Use a large skillet to cook pancakes one by one.
+"""
+alternative_origin = "store"

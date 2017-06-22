@@ -1,0 +1,120 @@
+[[reaction]]
+products = [
+	"eggs_benedict"
+]
+reactants = [
+	"english_muffin",
+	"bacon",
+	"vinegar",
+	"poached_egg",
+	"hollandaise_sauce"
+]
+description="Eggs benedict is just about the most amazing breakfast you can make for yourself at home.."
+time = "15m"
+ingredients = """
+4 english muffins
+8 slices bacon
+2 tbl vinegar
+8 poached_egg
+1 cup hollandaise sauce
+"""
+directions = """
+Arrange muffin halves on plates
+Fry bacon until it becomes dark and add bacon to each muffin
+Add poached eggs to each muffin
+Pour hollaindaise sauce over each egg
+"""
+alternative_origin = "store"
+
+[[reaction]]
+products = [
+	"poached_egg"
+]
+reactants = [
+	"eggs",
+	"vinegar",
+	"water"
+]
+description="Learning to poach an egg is a great tool to have in the cooking arsenal."
+time = "24m"
+ingredients = """
+2 tsp. vinegar
+1 egg
+pot mostly full of water
+"""
+directions = """
+Boil some water in a large pan on the stove.
+Add vinegar and stir the water carefully so it looks like a whirlpool.
+Crack the egg into a cup and then carefully pour the egg into the boiling water.
+If the egg whites separate, carefully use a spoon to gently push it back towards the yolk.
+Turn off the heat and let the egg cook for about 4 minutes.
+"""
+
+
+[[reaction]]
+products = [
+	"english_muffin"
+]
+reactants = [
+	"yeast",
+	"water",
+	"brown_sugar",
+	"flour",
+	"salt",
+	"eggs",
+	"milk",
+	"butter",
+	"olive_oil",
+	"cornmeal"
+]
+description="English muffins are actually just muffins in UK, but nonetheless they are delicious."
+time = "3h30m"
+ingredients = """
+1/4 c. warm water
+1 tbl yeast
+2 tbl sugar
+4 c. flour
+2 tsp salt
+1 egg
+1 1/4 c. warm milk
+2 tbl butter
+olive oil
+cornmeal
+"""
+directions = """
+Combine water, yeast, sugar, 2 c. flour and salt in a bowl. Add the egg, milk, butter and continue beating until creamy. Add the remaining flour if nessecary. Keep dough moist.
+Remove dough and oil the bowl. Return the dough to bowl and cover with dish towel until doubled, about 2 hours.
+Coat a work surface with a little bit of cornmeal. Roll the dough out about 1/2 inch thick and cut out muffins.
+Heat a cast-iron skillet until very hot.
+Put muffins in pan and immedietly turn down heat to medium. Cook muffins 10 to 15 minutes per side.
+Remove muffins to a cooling rack.
+"""
+alternative_origin = "store"
+
+
+[[reaction]]
+products = [
+	"hollandaise_sauce"
+]
+reactants = [
+	"eggs",
+	"lemon",
+	"butter",
+	"salt",
+	"pepper"
+]
+description="Hollandaise sauce is an emulsion of egg yolk and liquid butter, usually seasoned with lemon juice, salt, and a little white pepper or cayenne pepper."
+time = "15m"
+ingredients = """
+3 large egg yolks
+1 tbl lemon juice
+1 stick of butter
+salt
+pepper
+"""
+directions = """
+Whisk egg yolks and lemon until very thick in a metal bowl.
+Put the bowl over simmering water and whisk constantly. Drizzle in melted butter. Whisk until white and billowy.
+Add salt and pepper to taste.
+"""
+alternative_origin = "store"

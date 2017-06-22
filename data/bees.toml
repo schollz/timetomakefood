@@ -1,0 +1,44 @@
+[[reaction]]
+products = [
+	"bee_hive"
+]
+reactants = [
+	"soil",
+	"water",
+	"sun"
+]
+description="A honey bee (or honeybee) is any bee member of the genus Apis, primarily distinguished by the production and storage of honey and the construction of perennial, colonial nests from wax."
+time = "17531h"
+url = "http://www.motherearthnews.com/Homesteading-and-Livestock/how-to-raise-honeybees-zmaz85zsie?pageid=5#PageContent5"
+ingredients = """
+bees
+wood
+"""
+directions = """
+Build a bee-hive, for example [see this](http://www.wikihow.com/Make-a-Honey-Bee-Box).
+Catch a wild spring swarm of bees (a cluster of bees that have left their hive and are temporarily hanging from a tree or bush), or get bees shipped to you.
+Place the bees in the bee hive and make sure there are flowers in the surrounding area.
+"""
+alternative_origin = "farm"
+
+[[reaction]]
+products = [
+	"honey"
+]
+reactants = [
+	"bee_hive"
+]
+description="A honey bee (or honeybee) is any bee member of the genus Apis, primarily distinguished by the production and storage of honey and the construction of perennial, colonial nests from wax."
+time = "6h"
+url = "http://www.motherearthnews.com/Homesteading-and-Livestock/how-to-raise-honeybees-zmaz85zsie?pageid=5#PageContent5"
+ingredients = """
+bees
+wood
+"""
+directions = """
+Burn some plants or wood to make smoke. (Pine needles are generally good for this purpose.) 
+Put the smoking material into a container you can carry, and take it over to the hive. Waft the smoke into the hole. Smoke makes the bees expect a fire, which makes them concerned about their honey. They gorge themselves over the uncapped honey, which makes them less likely to fly around and sting you. 
+Working slowly and carefully, cut a piece of the honeycomb with a sharp knife. Try to avoid getting comb that contains larvae. Don't try to take the whole hive, just take a piece. 
+Spin the honey comb or pour it into a container.
+"""
+alternative_origin = "store"

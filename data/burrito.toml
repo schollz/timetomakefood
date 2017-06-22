@@ -1,0 +1,30 @@
+[[reaction]]
+products = [
+	"burrito"
+]
+reactants = [
+	"refried_beans",
+	"rice",
+	"tortilla",
+	"cheese",
+	"guacamole",
+	"onion"
+]
+alternative_origin = "restaurant"
+description = """
+A burrito is a type of Mexican and Tex-Mex food, consisting of a large wheat flour tortilla with a filling, 
+"""
+time = "30m"
+ingredients = """
+1/2 c. refried beans
+1/2 c. rice 
+1 tbl. cheese
+1 tbl. guacomole
+1/2 c. onion
+1 tortilla
+"""
+directions = """
+Saute onions until they are brown.
+Combine the refried beans, rice, tortilla, cheese and onion into a tortilla. 
+Wrap and server!
+"""

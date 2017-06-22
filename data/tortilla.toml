@@ -1,0 +1,35 @@
+
+[[reaction]]
+products = [
+	"tortilla"
+]
+reactants = [
+	"flour",
+	"baking_soda",
+	"olive_oil",
+	"salt",
+	"lard",
+	"water"
+]
+alternative_origin = "store"
+description = """
+A flour tortilla is a type of soft, thin flatbread made from finely ground wheat flour from Mexico.
+"""
+time = "50m"
+ingredients = """
+2 c. flour
+1 tsp. baking soda 
+1/4 c. olive oil 
+1 tbl lard (optional)
+1/2 tsp. salt
+1/2 - 3/4 c. water
+"""
+directions = """
+Mix dry ingredients together.
+Mix in the olive oil and lard and slowly add the water. Knead the resulting dough.
+Let the dough sit for 30 minutes.
+Cut the dough into 8 small sections. Heat up a cast-iron pan.
+Flatten each dough section and cook on a hot pan for 1 minute on each side.
+"""
+
+

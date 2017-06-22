@@ -1,0 +1,21 @@
+[[reaction]]
+products = [
+	"peanut_butter_honey_sandwich"
+]
+reactants = [
+	"honey", 
+	"bread", 
+	"peanut_butter"
+]
+ingredients = """
+2 slices bread
+1 tbl honey
+4 tbl peanut butter
+"""
+
+directions = """
+Spread peanut butter and honey on one slice of bread.
+Add the other slice of bread and enjoy.
+"""
+
+time = "3m"

@@ -1,0 +1,21 @@
+[[reaction]]
+products = [
+	"yogurt",
+	"whey"
+]
+reactants = [
+	"milk"
+]
+description="Yogurt is great for you and simple to make."
+time = "15h10m"
+ingredients = """
+1/2 gallon whole milk
+1/4 cup yogurt
+"""
+directions = """
+In a large sauce pan, warm milk until uits on the verge of boil. Stir it constantly.
+Remove the milk from heat, pour into a bowl and let it cool until its lukewarm.
+Stir in some yogurt (from the store or from a friend) and cover with a clean damp towel overnight.
+Put a piece of cheesecloth in a sieve over a bowl and scoop the yogurt into it and let it drain for a few hours until the yogurt is as thick as you would like it. Store the drained yogurt in a jar to use as whey.
+"""
+alternative_origin = "store"

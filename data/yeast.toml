@@ -1,0 +1,25 @@
+[[reaction]]
+products = [
+	"yeast"
+]
+reactants = [
+	"potato",
+	"water",
+	"brown_sugar",
+	"flour"
+]
+description="Yeasts are eukaryotic, single-celled microorganisms classified as members of the fungus kingdom."
+time = "12h"
+url = "http://www.offthegridnews.com/off-grid-foods/prepper-baking-101-making-your-own-yeast/"
+ingredients = """
+potatos
+water
+flour
+sugar
+"""
+directions = """
+Boil potatos in water.
+Take a cup and a half of the potato water, add a tablespoon of sugar, and stir in flour until stiff. Cover and leave overnight in a warm place. 
+If it is nice and bubbly the next morning it is ready to use.
+"""
+alternative_origin = "store"

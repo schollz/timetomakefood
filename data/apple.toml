@@ -1,0 +1,22 @@
+[[reaction]]
+products = [
+	"apple"
+]
+reactants = [
+	"soil",
+	"sun",
+	"water"
+]
+description = "The apple tree is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple."
+time = "52560h"
+ingredients = """
+soil
+sun
+water
+"""
+directions = """
+Spring planting is recommended in central and northern areas. Where fall and winter weather is generally mild and moist, fall planting is successful. 
+Find a sunny spot with well-drained soil that is not too wet. Remove all weeds and grass in 4-foot diameter circle. Dig a hole and place the seeds.
+Wait about 6 years for the tree to grow.
+Then harvest the apples by picking them off the tree.
+"""
