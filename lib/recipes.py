@@ -172,8 +172,11 @@ class RecipeNetwork(object):
                         new_recipe['ingredients'][ingredient['name']] = amount
                     else:
                         new_recipe['ingredients'][ingredient['name']] += amount
-                new_recipe['instructions'] = recipe['directions'].replace('Â', '').split(
-                    "\n") + new_recipe['instructions']
+                for instruction in recipe['directions'].replace('Â', '').split(
+                    "\n"):
+                    if len(instruction.strip()) == 0:
+                        continue
+                    new_recipe['instructions'].insert(0,'({}) {}'.format(recipe_to_add,instruction))
                 new_recipe[
                     'seconds'] += duration.from_str(recipe['time']).total_seconds()
                 break

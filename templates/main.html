@@ -52,14 +52,15 @@
 
 
     a {
-        cursor: pointer;
-        color: #ff2e88;
-        text-decoration: none;
-        border-bottom: 1px solid #ff2e88
+      cursor: pointer;
+      color: #ff2e88;
+      text-decoration: none;
+      border-bottom: 1px solid #ff2e88
     }
+
     a:hover {
-        background-color: #ff2e88;
-        color: #fff
+      background-color: #ff2e88;
+      color: #fff
     }
 
     @media print {
@@ -106,7 +107,7 @@
 
 <button id="flowchartbutton" onclick="showFlowChart()">Flow chart</button>
 <div id="flowchart" style="display:none;">
-<img src="/static/img/graph/{{ graphviz }}.png" width="90%">
+  <img src="/static/img/graph/{{ graphviz }}.png" width="90%">
 </div>
 
 
@@ -115,24 +116,24 @@
   {% for ingredient in recipe['ingredients'] %}
   <li>
     {% if ingredient.has_data %}
-    <a href="./{{ ingredient.name | replace(" ","-") }}/">{{ ingredient.text }}</a> {% else %} {{ ingredient.text }} {%
+    <a href="./{{ ingredient.name | replace(" ","- ") }}/">{{ ingredient.text }}</a> {% else %} {{ ingredient.text }} {%
     endif %}
   </li>
   {% endfor %}
 </ul>
 
-
 <h2>Instructions ({{ recipe['instructions'] | length }} steps) </h2>
 
 <script>
-function showFlowChart() {
+  function showFlowChart() {
     var x = document.getElementById('flowchart');
     if (x.style.display === 'none') {
-        x.style.display = 'block';
+      x.style.display = 'block';
     } else {
-        x.style.display = 'none';
+      x.style.display = 'none';
     }
-}
+  }
+
 </script>
 
 
@@ -154,7 +155,7 @@ function showFlowChart() {
 <ul>
   {% for recipe in other_recipes %}
   <li>
-    <a href="/{{ recipe | replace(" ","-") }}/">{{ recipe | title }}</a> 
+    <a href="/{{ recipe | replace(" ","- ") }}/">{{ recipe | title }}</a>
   </li>
   {% endfor %}
 </ul>
