@@ -60,7 +60,7 @@
 
           <div class="row valign-wrapper">
             <div class="col s8 card-content">
-              <h3>{{ recipe['name'] | title }}</h3>
+              <h3>{{ recipe['name'] | title }}</h3>  <!-- Modal Trigger -->
               <h4><i class="material-icons">alarm</i> {{ recipe['time'] }}</h4>
             </div>
             <div class="col s2 ">
@@ -70,6 +70,7 @@
             </div>
           </div>
 
+
         </div>
       </div>
 
@@ -78,6 +79,22 @@
 
 
     <div class="section">
+
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Flow chart</h4>
+      <img src="/static/img/graph/{{ graphviz }}.png" width="90%">
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+          
+
+
       <h3>Ingredients</h3>
 
 
@@ -102,7 +119,7 @@
       </div>
 
       <div class="section ">
-        <h3>Instructions</h3>
+        <h3>Instructions                 <a class="waves-effect waves-light btn" href="#modal1">Flow chart</a></h3>
 
         {% for subrecipe in recipe['instructions'] %}
         <div class="row ">
@@ -172,6 +189,8 @@
           closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
           draggable: true, // Choose whether you can drag to open on touch screens,
         });
+
+            $('.modal').modal();
 
       })
   </script>
