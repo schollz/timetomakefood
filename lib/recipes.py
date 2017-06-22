@@ -162,11 +162,10 @@ class RecipeNetwork(object):
                     continue
                 for ingredient in recipe['ingredient']:
                     try:
-                        foo = ingredient[
+                        amount = ingredient[
                             'number'] * ureg.parse_expression(ingredient['measure'])
-                        amount = "{} {}".format(get_fraction(foo.magnitude),foo.units)
                     except:
-                        amount = str(ingredient['number']) + " whole"
+                        amount = ingredient['number']
                     if ingredient['name'] not in new_recipe['ingredients']:
                         new_recipe['ingredients'][ingredient['name']] = amount
                     else:
@@ -198,8 +197,12 @@ class RecipeNetwork(object):
         recipe['time'] = duration.get_total_time_string(finished['seconds'])
         recipe['ingredients'] = []
         for ingredient, amount in finished['ingredients'].items():
+            try:
+                amount_str = "{} {}".format(get_fraction(amount.magnitude),amount.units)
+            except:
+                amount_str = "{} whole".format(get_fraction(amount))
             recipe['ingredients'].append(
-                {"amount": amount, "name": ingredient, 'has_data': self.recipe_has_data[ingredient]})
+                {"amount": amount_str, "name": ingredient, 'has_data': self.recipe_has_data[ingredient]})
         recipe['instructions'] = []
         for instruction in finished['instructions']:
             recipe['instructions'].append(instruction)

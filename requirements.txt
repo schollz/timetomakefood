@@ -4,3 +4,4 @@ toml
 pint
 unidecode
 waitress
+humanize

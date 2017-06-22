@@ -1,4 +1,5 @@
 import math
+from humanize import intcomma
 
 def get_fraction(f):
 	"""
@@ -11,6 +12,6 @@ def get_fraction(f):
 	if firstNum == 0:
 		return "{}/{}".format(secondNum,thirdNum)
 	elif secondNum > 0 :
-		return "{} {}/{}".format(firstNum,secondNum,thirdNum)
+		return "{} {}/{}".format(intcomma(firstNum),secondNum,thirdNum)
 	else:
 		return firstNum
