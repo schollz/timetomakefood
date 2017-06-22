@@ -151,7 +151,8 @@ class RecipeNetwork(object):
 
     def combine_recipes(self, recipes):
         new_recipe = {'ingredients': {}, 'instructions': [], 'seconds': 0}
-        for recipe_to_add in recipes:
+        instruction_count = 1
+        for recipe_to_add in reversed(recipes):
             for recipe in self.all_recipes:
                 found_it = False
                 for product in recipe['product']:
@@ -167,16 +168,19 @@ class RecipeNetwork(object):
                             'number'] * ureg.parse_expression(ingredient['measure'])
                     except:
                         print(ingredient['measure'])
-                        amount = ingredient['number']
+                        amount = str(ingredient['number']) + " whole"
                     if ingredient['name'] not in new_recipe['ingredients']:
                         new_recipe['ingredients'][ingredient['name']] = amount
                     else:
                         new_recipe['ingredients'][ingredient['name']] += amount
+                subrecipe = {'name':recipe_to_add,'instructions':[]}
                 for instruction in reversed(recipe['directions'].replace('Â', '').split(
                     "\n")):
                     if len(instruction.strip()) == 0:
                         continue
-                    new_recipe['instructions'].insert(0,'({}) {}'.format(recipe_to_add,instruction))
+                    subrecipe['instructions'].append({'text':instruction,'count':instruction_count})
+                    instruction_count += 1
+                new_recipe['instructions'].append(subrecipe)
                 new_recipe[
                     'seconds'] += duration.from_str(recipe['time']).total_seconds()
                 break
@@ -196,11 +200,9 @@ class RecipeNetwork(object):
         recipe['time'] = duration.get_total_time_string(finished['seconds'])
         recipe['ingredients'] = []
         for ingredient, amount in finished['ingredients'].items():
-            recipe['ingredients'].append({"text": "{} {}".format(
-                amount, ingredient), "name": ingredient, 'has_data': self.recipe_has_data[ingredient]})
+            recipe['ingredients'].append({"amount":amount,"name": ingredient, 'has_data': self.recipe_has_data[ingredient]})
         recipe['instructions'] = []
         for instruction in finished['instructions']:
-            if len(instruction.strip()) > 0:
-                recipe['instructions'].append(instruction)
+            recipe['instructions'].append(instruction)
         print(recipes_to_combine)
         return recipe

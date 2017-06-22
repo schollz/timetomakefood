@@ -23,7 +23,7 @@ def hello(path):
     n = RecipeNetwork()
     other_recipes = CURRENT_RECIPES[:]
     other_recipes.remove(main_ingredient)
-    return render_template('main.html', recipe=n.generate_recipe(main_ingredient, other_ingredients), graphviz=n.generate_graphviz(ingredients), other_recipes=other_recipes)
+    return render_template('main2.html', recipe=n.generate_recipe(main_ingredient, other_ingredients), graphviz=n.generate_graphviz(ingredients), other_recipes=other_recipes)
 
 if __name__ == "__main__":
     from waitress import serve
