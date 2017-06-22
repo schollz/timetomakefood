@@ -51,7 +51,7 @@ class RecipeNetwork(object):
                 if product['name'] in recipes:
                     all_recipes.append(recipe)
 
-        graphviz = ["digraph G { \ngraph [ dpi = 600 ]; \n"]
+        graphviz = ["digraph G { \ngraph [ dpi = 600 ];\nbgcolor=transparent;\ntruecolor=true; \n"]
         for recipe in all_recipes:
             products = []
             for product in recipe['product']:
