@@ -173,12 +173,12 @@ class RecipeNetwork(object):
                         new_recipe['ingredients'][ingredient['name']] = amount
                     else:
                         new_recipe['ingredients'][ingredient['name']] += amount
-                subrecipe = {'name':recipe_to_add,'instructions':[]}
-                for instruction in reversed(recipe['directions'].replace('Â', '').split(
-                    "\n")):
+                subrecipe = {'name': recipe_to_add, 'instructions': []}
+                for instruction in recipe['directions'].replace('Â', '').split("\n"):
                     if len(instruction.strip()) == 0:
                         continue
-                    subrecipe['instructions'].append({'text':instruction,'count':instruction_count})
+                    subrecipe['instructions'].append(
+                        {'text': instruction, 'count': instruction_count})
                     instruction_count += 1
                 new_recipe['instructions'].append(subrecipe)
                 new_recipe[
@@ -200,7 +200,8 @@ class RecipeNetwork(object):
         recipe['time'] = duration.get_total_time_string(finished['seconds'])
         recipe['ingredients'] = []
         for ingredient, amount in finished['ingredients'].items():
-            recipe['ingredients'].append({"amount":amount,"name": ingredient, 'has_data': self.recipe_has_data[ingredient]})
+            recipe['ingredients'].append(
+                {"amount": amount, "name": ingredient, 'has_data': self.recipe_has_data[ingredient]})
         recipe['instructions'] = []
         for instruction in finished['instructions']:
             recipe['instructions'].append(instruction)
