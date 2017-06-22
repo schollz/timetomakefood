@@ -43,7 +43,7 @@ class RecipeNetwork(object):
                     self.recipe_has_data[ingredient['name']] = False
 
     def generate_graphviz(self, recipes):
-        name = md5(json.dumps(recipes))
+        name = md5(json.dumps(sorted(recipes)))
         if os.path.isfile("./static/img/graph/%s.png" % name):
             return name
         all_recipes = []
