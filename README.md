@@ -1,6 +1,18 @@
 # Time To Make Food
 
-## Run
+## Production
+
+```
+python timetomakefood.py
+```
+
+Optionally, create static site:
+
+```
+wget -m localhost:8082
+```
+
+## Dev
 
 ```
 python3 -m pip install -r requirements.txt
