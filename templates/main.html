@@ -92,7 +92,7 @@
   </style>
 </head>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- TimeToMakeFoodv2 -->
+<!--TimeToMakeFoodv2 -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4947875154879707" data-ad-slot="7335391250" data-ad-format="auto"></ins>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({});
@@ -116,7 +116,7 @@
   {% for ingredient in recipe['ingredients'] %}
   <li>
     {% if ingredient.has_data %}
-    <a href="./{{ ingredient.name | replace(" ","- ") }}/">{{ ingredient.text }}</a> {% else %} {{ ingredient.text }} {%
+    <a href="./{{ ingredient.name | replace(" ","-") }}/">{{ ingredient.text }}</a> {% else %} {{ ingredient.text }} {%
     endif %}
   </li>
   {% endfor %}
@@ -144,7 +144,7 @@
 </ol>
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- TimeToMakeFoodv2-2 -->
+<!--TimeToMakeFoodv2-2 -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4947875154879707" data-ad-slot="8812124453" data-ad-format="auto"></ins>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({});
@@ -155,7 +155,7 @@
 <ul>
   {% for recipe in other_recipes %}
   <li>
-    <a href="/{{ recipe | replace(" ","- ") }}/">{{ recipe | title }}</a>
+    <a href="/{{ recipe | replace(" ","-") }}/">{{ recipe | title }}</a>
   </li>
   {% endfor %}
 </ul>
