@@ -222,7 +222,7 @@ a2a_config.linkurl = window.location.href;
             <div class="card z-depth-4 ">
               <div class="card-image">
                 <img src="/static/img/food/{{subrecipe['name'] | replace(' ','_')}}.jpg" height=100px>
-                <span class="card-title white-text">{{ subrecipe['name'] | title }}</span>
+                <span class="card-title"><a href="/{{ subrecipe['name'] | replace(' ','-') }}/" class=" white-text">{{ subrecipe['name'] | title }}</a></span>
                 <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">check</i></a>-->
               </div>
               <div class="card-content  flow-text">
