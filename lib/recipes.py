@@ -52,20 +52,32 @@ class RecipeNetwork(object):
                     all_recipes.append(recipe)
 
         graphviz = ["digraph G { \ngraph [ dpi = 300 ];\nbgcolor=transparent;\ntruecolor=true; \n"]
+        all_ingredients = []
+        all_products = []
         for recipe in all_recipes:
             products = []
             for product in recipe['product']:
                 if product['name'] not in products:
                     products.append('"%s"' % product['name'])
+                    all_products.append(product['name'])
             for ingredient in recipe['ingredient']:
                 ingredients = []
                 if ingredient['name'] not in ingredients:
                     ingredients.append('"%s"' % ingredient['name'])
+                    all_ingredients.append(ingredient['name'])
                 graphviz_string = "\t{ " + " ".join(
                     ingredients) + "} -> { " + " ".join(products) + " };\n"
                 if graphviz_string not in graphviz:
                     graphviz.append(graphviz_string)
 
+        all_products = list(set(all_products))
+        for ingredient in list(set(all_ingredients)):
+            if ingredient not in all_products:
+                graphviz.append('\n"{}" [fillcolor=tomato, style=filled]'.format(ingredient))
+            else:
+                graphviz.append('\n"{}" [fillcolor=palegoldenrod, style=filled]'.format(ingredient))
+                
+        graphviz.append('\n"{}" [fillcolor=springgreen, style=filled]'.format(recipes[0]))
         graphviz.append("}")
 
         with open("temp-%s" % name, "w") as f:
