@@ -92,6 +92,34 @@ nav .brand-logo {
 
   <div class="container">
 
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- TimeToMakeFoodv2-2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4947875154879707"
+     data-ad-slot="8812124453"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+  <!-- Tap Target Structure -->
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+          <a id="menu" class="btn btn-floating btn-large cyan" onclick="toggleTarget();"><i><img src="/static/img/site/help.png" /></i></a>
+        </div>
+  <div class="tap-target teal lighten-1" data-activates="menu">
+    <div class="tap-target-content white-text">
+      <h5 align="right">Welcome!</h5>
+      <p align="right"><strong>Click on the <a class="btn-floating red"><i class="material-icons">cached</i></a> button next to any ingredient to substitute it for its food ancestors. 
+The instructions and time to make food will update as well!</strong></p>
+      <br>
+    </div>
+  </div>
+  <!-- END Tap Target Structure -->
+
+
     <!--  Collections Section  -->
     <div id="basic" class="section">
 
@@ -160,10 +188,10 @@ a2a_config.linkurl = window.location.href;
           <div class=" card teal darken-3 z-depth-4 ">
             <div class="card-content white-text ">
               
-              <span class="card-title ">{{ ingredient.name }}</span>
+              <span class="card-title ">{{ ingredient.name | title }}</span>
               <p>{{ ingredient.amount }}</p>
               {% if ingredient.has_data %}
-              <a class="btn-floating halfway-fab waves-effect waves-light red" href="./{{ ingredient.name | replace(" ","-") }}/"><i class="material-icons">cached</i></a>
+              <a class="btn-floating halfway-fab waves-effect waves-light red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Click to replace '{{ ingredient.name }}' with its source ingredients" href="./{{ ingredient.name | replace(" ","-") }}/"><i class="material-icons">cached</i></a>
               {% endif %}
             </div>
         </div>
@@ -172,6 +200,19 @@ a2a_config.linkurl = window.location.href;
 </div>
 
       </div>
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- TimeToMakeFoodv2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4947875154879707"
+     data-ad-slot="7335391250"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
       <div class="section ">
         <h3>Instructions                 <a class="waves-effect waves-light btn" href="#modal1">Flow chart</a></h3>
@@ -200,6 +241,7 @@ a2a_config.linkurl = window.location.href;
 
       </div>
     </div>
+
 
 
   </div>
@@ -249,9 +291,24 @@ a2a_config.linkurl = window.location.href;
           draggable: true, // Choose whether you can drag to open on touch screens,
         });
 
-            $('.modal').modal();
+        $('.modal').modal();
 
+        {% if first_time_user %}
+      tap_target == true
+      $('.tap-target').tapTarget('open');
+        {% endif %}
       })
+      tap_target = false
+      function toggleTarget() {
+        if (tap_target == true) {
+          tap_target == false
+           $('.tap-target').tapTarget('close');
+        } else {
+          tap_target == true
+           $('.tap-target').tapTarget('open');
+        }
+
+      }
   </script>
 
 </body>

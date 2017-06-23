@@ -23,6 +23,7 @@ try:
     mkdir("cache")
 except:
     pass
+first_time_users = {}
 
 @app.route('/static/<path:path>')
 def send_js(path):
@@ -50,8 +51,16 @@ def hello(path):
         recipe = n.generate_recipe(main_ingredient, other_ingredients)
         with open(cache_file,'w') as f:
             f.write(json.dumps(recipe))
-    logger.debug("{} {:2.0f} ms".format(path,1000*(time.time()-start)))
-    return render_template('main2.html', recipe=recipe, graphviz=n.generate_graphviz(ingredients), other_recipes=CURRENT_RECIPES)
+    logger.debug("{} {} {:2.0f} ms".format(request.remote_addr,path,1000*(time.time()-start)))
+    first_time_user = True
+    if request.remote_addr not in first_time_users:
+        first_time_users[request.remote_addr] = time.time()
+    else:
+        if first_time_users[request.remote_addr] - time.time() > 60 * 60 * 72:
+            first_time_users[request.remote_addr] = time.time()
+        else:
+            first_time_user = False
+    return render_template('main2.html', recipe=recipe, graphviz=n.generate_graphviz(ingredients), other_recipes=CURRENT_RECIPES,first_time_user=first_time_user)
 
 if __name__ == "__main__":
     from waitress import serve
