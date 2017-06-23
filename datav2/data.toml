@@ -557,7 +557,7 @@ Wax the cheese and age at 55° to 60°F for at least 60 days.
 """
 		
 	[[recipe.product]]
-		name="cheese"
+		name="block of cheese"
 		measure = "whole"
 		number = 1
 	
@@ -744,7 +744,7 @@ Take the cheese and cut it along its side with a sharp knife.
 		number = 12
 
 	[[recipe.ingredient]]
-		name="cheese"
+		name="block of cheese"
 		measure = "whole"
 		number = 1
 

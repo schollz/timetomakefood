@@ -16,6 +16,10 @@ logger = logging.getLogger('timetomakefood')
 
 CURRENT_RECIPES = ['grilled cheese sandwich','cookies', 'noodles', 'tortilla']
 
+@app.route('/static/<path:path>')
+def send_js(path):
+    return send_from_directory('staticjs', path)
+
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def hello(path):
