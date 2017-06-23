@@ -48,6 +48,12 @@
     html {
       font-family: GillSans, Calibri, Trebuchet, sans-serif;
     }
+
+nav .brand-logo {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
   </style>
 
   <style>
@@ -58,10 +64,10 @@
 
 <body>
 
-  <nav class="nav-extended">
+  <nav class="nav-extended grey darken-4">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Time To Make Food</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="/" class="brand-logo">Time To Make Food</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large fixed"><i class="material-icons">menu</i></a>
       <ul class="side-nav" id="mobile-demo">
         <li>
           <h3 class="black-text name">&nbsp;Recipes</h3>
@@ -91,22 +97,36 @@
 
       <div class="col s12 ">
 
-        <div class="card horizontal z-depth-4 ">
-
-          <div class="row valign-wrapper">
-            <div class="col s8 card-content">
+       <div class="card">
+        <div class="card-image">
+          <img src="/static/img/food/{{ recipe['name'] | replace(" ","_") }}.jpg" height=200px>
+        </div>
+        <div class="card-content">
               <h3>{{ recipe['name'] | title }}</h3>  <!-- Modal Trigger -->
               <h4><i class="material-icons">alarm</i> {{ recipe['time'] }}</h4>
-            </div>
-            <div class="col s2 ">
-              <img src="/static/img/food/{{ recipe['name'] | replace(" ","_") }}.jpg" alt="" class="circle responsive-img">
-            </div>
-            <div class="col s1">
-            </div>
-          </div>
-
-
         </div>
+        <div class="card-action">
+
+          <!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_stumbleupon"></a>
+<a class="a2a_button_reddit"></a>
+<a class="a2a_button_email"></a>
+<a class="a2a_button_pinterest"></a>
+</div>
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.linkname = "Make {{ recipe['name'] | title }} in {{ recipe['time'] }}";
+a2a_config.linkurl = window.location.href;
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+</div>
+      </div>
+
+
       </div>
 
     </div>
@@ -114,7 +134,6 @@
 
 
     <div class="section">
-
 
 
   <!-- Modal Structure -->
@@ -164,7 +183,7 @@
               <div class="card-image">
                 <img src="/static/img/food/{{subrecipe['name'] | replace(' ','_')}}.jpg" height=100px>
                 <span class="card-title white-text">{{ subrecipe['name'] | title }}</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">check</i></a>
+                <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">check</i></a>-->
               </div>
               <div class="card-content  flow-text">
                 <ul>
@@ -186,18 +205,18 @@
   </div>
 
 
-  <footer class="page-footer">
+  <footer class="page-footer grey darken-4">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">About</h5>
-          <p class="grey-text text-lighten-4">Learn exactly how long to make food.</p>
+          <p class="grey-text text-lighten-4"><a href="timetomakefood.com">timetomakefood.com</a> is an educational website to help inform where food comes from and how food is made. The amount of time and effort that goes into modern food is often lost on the consumer, so <a href="timetomakefood.com">timetomakefood.com</a> helps you to explore the food tree to its most central components.</p>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-        © 2017 timetomakefood.com
+        © 2017 <a href="timetomakefood.com">timetomakefood.com</a>
         <a class="grey-text text-lighten-4 right" href="#!">timetomakefood@gmail.com</a>
       </div>
     </div>
@@ -220,8 +239,8 @@
       $(document).ready(function () {
 
         $('.button-collapse').sideNav({
-          menuWidth: 300, // Default is 300
-          edge: 'right', // Choose the horizontal origin
+          menuWidth: 200, // Default is 300
+          edge: 'left', // Choose the horizontal origin
           closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
           draggable: true, // Choose whether you can drag to open on touch screens,
         });
