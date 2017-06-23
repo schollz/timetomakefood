@@ -5,6 +5,7 @@ __pycache__/
 static/img/graph/
 .vscode/
 index.html*
+cache/
 
 # C extensions
 *.so

@@ -1,5 +1,7 @@
-import random 
-
+import random
+import time
+from os import mkdir
+from os.path import isfile, join
 from flask import Flask
 from flask import render_template, request, redirect
 app = Flask(__name__)
@@ -16,13 +18,20 @@ logger = logging.getLogger('timetomakefood')
 
 CURRENT_RECIPES = ['grilled cheese sandwich','cookies', 'noodles', 'tortilla']
 
+n = RecipeNetwork()
+try:
+    mkdir("cache")
+except:
+    pass
+
 @app.route('/static/<path:path>')
 def send_js(path):
-    return send_from_directory('staticjs', path)
+    return send_from_directory('static', path)
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def hello(path):
+    start = time.time()
     if path == "":
         return redirect("/%s/" % random.choice(CURRENT_RECIPES).replace(' ','-'), code=302)
     if path[-1] != "/":
@@ -33,8 +42,16 @@ def hello(path):
     if len(ingredients) > 2:
         other_ingredients = ingredients[1:-1]
     logger.info(path)
-    n = RecipeNetwork()
-    return render_template('main2.html', recipe=n.generate_recipe(main_ingredient, other_ingredients), graphviz=n.generate_graphviz(ingredients), other_recipes=CURRENT_RECIPES)
+    cache_file = join("cache",md5(json.dumps(list(sorted(ingredients)))) + ".json")
+    if isfile(cache_file):
+        logger.debug("Using cache {}".format(cache_file))
+        recipe = json.load(open(cache_file))
+    else:
+        recipe = n.generate_recipe(main_ingredient, other_ingredients)
+        with open(cache_file,'w') as f:
+            f.write(json.dumps(recipe))
+    logger.debug("{} {:2.0f} ms".format(path,1000*(time.time()-start)))
+    return render_template('main2.html', recipe=recipe, graphviz=n.generate_graphviz(ingredients), other_recipes=CURRENT_RECIPES)
 
 if __name__ == "__main__":
     from waitress import serve
