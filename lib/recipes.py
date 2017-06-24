@@ -31,7 +31,8 @@ class RecipeNetwork(object):
         self.load_recipes()
 
     def load_recipes(self):
-        self.all_recipes = toml.load(open('datav2/data.toml', 'r'))['recipe']
+        data = open('datav2/data.toml', 'rb').read().decode('utf-8')
+        self.all_recipes = toml.loads(data)['recipe']
         self.recipe_has_data = {}
         for recipe in self.all_recipes:
             for product in recipe['product']:
