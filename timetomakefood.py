@@ -18,12 +18,13 @@ logger = logging.getLogger('timetomakefood')
 
 CURRENT_RECIPES = ['grilled cheese sandwich','cookies', 'noodles', 'tortilla']
 
-n = RecipeNetwork()
+
 try:
     mkdir("cache")
 except:
     pass
 first_time_users = {}
+n = RecipeNetwork()
 
 @app.route('/static/<path:path>')
 def send_js(path):

@@ -134,8 +134,8 @@ Cover the seed by rototilling or raking it in to a depth of 2 to 2 1/2 inches fo
 [[recipe]]
 time = "50m"
 directions = """
-Mix dry ingredients together.
-Mix in the olive oil and lard and slowly add the water. Knead the resulting dough.
+Mix together 1 tsp baking soda, 2 cup flour and 1/2 tsp salt.
+Mix in 1/4 c. olive oil and 1 tbl. lard and slowly add the water. Knead the resulting dough.
 Let the dough sit for 30 minutes.
 Cut the dough into 8 small sections. Heat up a cast-iron pan.
 Flatten each dough section and cook on a hot pan for 1 minute on each side.
@@ -709,7 +709,6 @@ Take the cheese and cut it along its side with a sharp knife.
 
 [[recipe]]
 time = "346h"
-
 directions = """
 Let your seawater sit for a while to allow any sediment and particles to settle.
 Get your stockpot out and ready for the boil. 
@@ -736,3 +735,168 @@ Makes about 1/2 cup of salt.
 		name="seawater"
 		measure = "gallon"
 		number = 1
+
+[[recipe]]
+time = "9h10m"
+directions = """
+Preheat oven to 250F. Cut the pork belly into chunks. Place the chunks into a deep skillet or dutch oven with a cup of water. 
+Place the pot in the oven and let the fat melt for 6 hours.
+Take the pot out and ladle the liquid into a cheesecloth-lined sieve over a large bowl. Extract liquid and then return the smaller pieces of fat back to the oven for a few more hours.
+Remove the pot again and pour the rest of the contents into the sieve.
+Store the liquid lard
+"""
+
+	[[recipe.product]]
+		name="lard"
+		measure = "cup"
+		number = 10
+
+	[[recipe.reactant]]
+		name="pork belly"
+		measure = "whole"
+		number = 1
+
+
+[[recipe]]
+time = "48h"
+directions = """
+Kill the pig humanely. Whether you're harvesting a farm-raised hog or hunting one in the wild, you need to make sure you start the process as clean as possible by using a quick kill, immediately draining the blood afterward to improve the flavor of the meat.
+After killing or stunning the hog, you need to hang it, preferably using a meat gambrel, which is like a big clothes hanger made for hanging meat. Hook a chain onto the gambrel and attach it to a winch, or the back of a truck if you want.
+Scrape the hair off using a sharp knife.
+Cut around the anus and pull it upward. To start removing the entrails, work a smaller knife around the anus (and the vaginal opening) of the hog, about an inch or two deep. Make the circle about two inches wider than the anus itself so you don't pierce the colon. Grab ahold and pull up gently, then use a rubber band or a zip-tie to pinch it off. This closes everything up, so you'll be able to pull it out the other side, when you open up the chest. 
+Cut from the sternum to the groin. Pinch the skin near the base of the sternum, where the ribs end and the abdomen begins, and pull toward you as far as possible. Insert your knife and gently work your way down the center line of the pig's belly, in between the two rows of nipples. Be extremely careful not to puncture the stomach lining and the intestines. Keep working your knife until you get all the way up between the animal's legs.
+Reach into the cavity near the groin and pull downward. Everything in the digestive tract should fall out relatively easily with a bit of coaxing, including the lower intestine that you tied off earlier. Use you knife to trim away any stubborn connective tissue The kidneys and the pancreas are perfectly edible and popular items to reserve.
+After the entrails are removed, you need to open up the chest to remove the rest of the organs. You can use your knife to separate the front of the rib cage, working your way in between the layer of cartilage that connects the breastbone. You shouldn't have to use the saw to do this. After separating the ribs, remove the rest of the organs. The heart and liver and commonly reserved and eaten.
+Behind the ears, work your knife in a circular direction around the throat to separate the head, using the jawline as a guide. As you separate the meat and expose the neck bone, you might need to get in there with a cleaver to break through the vertebrae with firm chop.
+Chill the carcass for at least 24 hours before breaking it down. To dry out the meat some, the hog will need to be aged for about a day in cold temperature, between 30 and 40 degrees F. A walk-in fridge is the easiest way to do this, or processing your hot during a very cold season, in which you'll be able to do it in a shed or garage.
+Remove the hams. Lay one half cut-side up, and find where the spine ends, near the fleshy part of the thigh (that's the ham) on that side. Start with a sharp boning knife to expose the ham.
+Remove the shoulder. To remove the shoulder, flip the side of pork over so the skin side is facing up. Pull the limb up, exposing the underarm of the shoulder, and work your knife into the connective tissue underneath. You'll only have to use your knife to continue working toward the joint, which should pull away easily by pulling it back on itself.
+Remove the chops and tenderloin. Flip the side over again, cut-side up. From the smallest rib at the narrow end of the side, count up to the third or fourth rib and use the cleaver to cut through the backbone at that point, between the ribs. Remove everything below that line and reserve the meat for the grinder, or discard it. If you've got an electric butcher's saw, this is much easier.
+Separate the bacon. The lower, thinner section of the side contains everyone's favorite pork: the ribs and the bacon. It's best to separate the bacon, first. It's just below where the ribs end, and should appear to be quite fatty.
+Bone out the neck and grind up some sausage. The only remaining meat is usually best reserved for grinding up into sausage. If you have access to a meat grinder, you can grind pork to make sausage or basic ground pork. It's usually best to re-chill the meat before feeding it into the grinder, since cooler meat tends to grind up more uniformly.
+Store the meat properly. As soon as you portioned out the pork, it's important that you wrap it neatly in clean butcher paper, label it with the cut and date using a marker. You can refrigerate the meat you plan on using right away and find freezer space for the rest of it. There's going to be a lot of meat to deal with, so it's usually more common to freeze most of it immediately.
+"""
+
+	[[recipe.product]]
+		name="pork belly"
+		measure = "whole"
+		number = 1
+
+	[[recipe.product]]
+		name="pork ribs"
+		measure = "whole"
+		number = 1
+
+	[[recipe.product]]
+		name="pork chop"
+		measure = "whole"
+		number = 1
+
+	[[recipe.product]]
+		name="pork bacon"
+		measure = "whole"
+		number = 1
+
+	[[recipe.product]]
+		name="pork shoulder"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="pig"
+		measure = "whole"
+		number = 1
+
+
+[[recipe]]
+time = "5h"
+directions = """
+Wash olives with water to remove dirt, and get rid of leaves and twigs attached to the fruits.
+Obtain a paste of olives using a millstone (generally used for large-scale manufacturing) or any mechanical means of pressing. There is no need to remove the pits from the fruits before pressing.
+Now spread the paste obtained from the previous step over circular mats and subject it to pressing. At this point, juice will flow out of the paste, leaving behind what is known as 'pomace'.
+Transfer the juice to a plastic drum and let it stand undisturbed for 1-2 hours. The oil will now separate out of water due to density difference.
+Use a siphon tube to transfer oil (which forms the top layer) into another container, and leave it undisturbed so that unwanted particles can settle at the bottom.
+Place a funnel over a green bottle and slowly decant the liquid in the container to obtain 'ready-to-use' olive oil. Clean the bottle using a towel, cork it, and store in a cool and dry place.
+"""
+
+	[[recipe.product]]
+		name="olive oil"
+		measure = "gallon"
+		number = 1
+
+	[[recipe.reactant]]
+		name="fresh olives"
+		measure = "pounds"
+		number = 40
+
+
+[[recipe]]
+time = "87600h"
+directions = """
+Spread the compost over an area roughly 9 feet (2.7 m) by 9 feet (2.7 m) to avoid over-concentration in one spot.
+Bring up your soil's pH to an acceptable level with the addition of lime. If your soil's pH is below 6.5, consider adding lime to the soil to boost its alkalinity. Talk to your Department of Agriculture representative or contact a local fertilizer company if you want specific pH readings and/or pointers on how to get a uniform pH of 6.5.
+Deep-rip your soil at least 2 feet (0.6 m) deep and 10 feet (3.0 m) wide across each planting row. Deep ripping increases soil drainage and eases compaction, giving your olive trees an excellent start and the possibility of speedy growth.
+Plant the olive tree in full sun, outdoors, at the same level that it was in the pot. Ideally, plant in April or May when frost is not likely to harm the tree.
+Water and irrigate your olive tree modestly or as necessary. 
+Pruning should occur between the end of winter and flowering. Although not all trees need to be pruned every year, proper pruning will result in a tree with balanced vigor and better fruit. Removing unwanted branches and suckers can keep the tree at a manageable height for easier harvesting and prevent uneven bearing of fruit. Check diligently for pests and other diseases. Like most plants, the olive tree is sometimes susceptible to attack, particularly from black scale, or Saissetia oleae. 
+While some cultivars begin bearing fruit as soon as two or three years if properly maintained, many trees won't start bearing until 10 years old. Dry-farmed trees may not bear until they are 20 or 30 years old.
+Olives start out green and eventually all turn black as they ripen. Olives that are harvested when they are still green have a peppery, grassy, or more herbaceous flavor, while olives that are harvested when they turn taker have a milder, buttery flavor. Many oils are a mix between green and ripe olives, harvested right when they are turning color.
+Harvest ripe or unripe fruits by hitting the branches with a long stick. Spread a net on the ground before hitting so that olives fall directly on it.
+"""
+
+	[[recipe.product]]
+		name="fresh olives"
+		measure = "pounds"
+		number = 100
+
+	[[recipe.reactant]]
+		name="plot of soil"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="water source"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="sun"
+		measure = "whole"
+		number = 1
+
+[[recipe]]
+time = "3h30m"
+directions = """
+Clean the cocoa beans with fresh, cold water to remove unwanted residue and air dry.
+Roast the cocoa beans at a temperature between 100 and 135 degrees Fahrenheit for about 90 minutes. Be sure that the heat is applied evenly among all of the cocoa beans.
+Cool the beans quickly to room temperature with a fan to prevent scorching.
+Use a hammer to lightly tap the cocoa bean to remove the inner nib--the part of the cocoa bean that is inside the shell--from the outer shell. The outer shells of the beans will already be loosened from roasting.
+Place the crushed cocoa beans in a sieve with a bowl underneath. Gently press and shake the cocoa beans so that the nibs fall through the sieve into the bowl below. The shell will be too large to pass through and will remain on top.
+Grind the cocoa nib into cocoa liquor with a grinder. The heat from the grinder will melt the fat in the nibs, turning the powdery nibs into a liquid.
+Extract the cocoa butter from the cocoa liquor by passing it through an extrusion, expeller or screw press for a more commercial grade cocoa butter. Alternatively, strain the liquor through a cotton cloth to filter out the cocoa butter. Leave some of the powder for cocoa powder.
+"""
+
+	[[recipe.product]]
+		name="cocoa butter"
+		measure = "cup"
+		number = 0.5
+
+	[[recipe.product]]
+		name="cocoa powder"
+		measure = "cup"
+		number = 1
+
+	[[recipe.reactant]]
+		name="plot of soil"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="cocoa beans"
+		measure = "whole"
+		number = 50
+
+	[[recipe.reactant]]
+		name="water"
+		measure = "cup"
+		number = 10
