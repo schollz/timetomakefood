@@ -900,3 +900,37 @@ Extract the cocoa butter from the cocoa liquor by passing it through an extrusio
 		name="water"
 		measure = "cup"
 		number = 10
+
+[[recipe]]
+time = "20m"
+directions = """
+Heat about 2 cups of milk to medium hot and then add a 1/4 cup of butter.
+Add in 1 clove of chopped garlic and let it simmer for 10 minutes.
+Slowly add in flour and whisk, and never stop whisking. Wait about 5 minutes and then continue adding flour until it is a consistency you like.
+Add mint and enjoy!
+"""
+
+	[[recipe.product]]
+		name="white sauce"
+		measure = "cup"
+		number = 2
+
+	[[recipe.reactant]]
+		name="milk"
+		measure = "cup"
+		number = 2
+
+	[[recipe.reactant]]
+		name="butter"
+		measure = "cup"
+		number = 0.25
+
+	[[recipe.reactant]]
+		name="flour"
+		measure = "cup"
+		number = 0.5
+
+	[[recipe.reactant]]
+		name="mint leaf"
+		measure = "whole"
+		number = 1

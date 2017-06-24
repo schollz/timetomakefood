@@ -16,7 +16,7 @@ logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:
     level=logging.DEBUG)
 logger = logging.getLogger('timetomakefood')
 
-CURRENT_RECIPES = ['grilled cheese sandwich','cookies', 'noodles', 'tortilla']
+CURRENT_RECIPES = ['grilled cheese sandwich','cookies', 'noodles', 'tortilla', 'white sauce','loaf of bread']
 
 
 try:
@@ -24,7 +24,7 @@ try:
 except:
     pass
 first_time_users = {}
-n = RecipeNetwork()
+
 
 @app.route('/static/<path:path>')
 def send_js(path):
@@ -33,6 +33,7 @@ def send_js(path):
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def hello(path):
+    n = RecipeNetwork()
     start = time.time()
     if path == "":
         return redirect("/%s/" % random.choice(CURRENT_RECIPES).replace(' ','-'), code=302)
@@ -61,7 +62,7 @@ def hello(path):
             first_time_users[request.remote_addr] = time.time()
         else:
             first_time_user = False
-    return render_template('main2.html', recipe=recipe, graphviz=n.generate_graphviz(ingredients), other_recipes=CURRENT_RECIPES,first_time_user=first_time_user)
+    return render_template('main2.html', recipe=recipe, graphviz=n.generate_graphviz(ingredients), other_recipes=CURRENT_RECIPES,first_time_user=first_time_user,url=path)
 
 if __name__ == "__main__":
     from waitress import serve
