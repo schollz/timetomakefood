@@ -207,15 +207,16 @@ class RecipeNetwork(object):
         recipe = {}
         recipe['name'] = main_reactant
         recipe['time'] = duration.get_total_time_string(finished['seconds'])
-        recipe['reactants'] = []
+        recipe['ingredients'] = []
         for reactant, amount in finished['reactants'].items():
             try:
                 amount_str = "{} {}".format(get_fraction(amount.magnitude),amount.units)
             except:
                 amount_str = "{} whole".format(get_fraction(amount))
-            recipe['reactants'].append(
+            recipe['ingredients'].append(
                 {"amount": amount_str, "name": reactant, 'has_data': self.recipe_has_data[reactant]})
         recipe['instructions'] = []
         for instruction in finished['instructions']:
             recipe['instructions'].append(instruction)
+        
         return recipe

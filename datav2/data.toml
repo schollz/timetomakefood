@@ -1,17 +1,13 @@
 [[recipe]]
 time = "48h"
 directions = """
-As you admire your wheat stand, you'll notice in midsummer (later for spring wheat) that the color of the stalks turns from green to yellow or brown. The heads, heavy with grain, tip toward the earth. This means it's time to test the grain. Choose a head, pick out a few grains, and pop them into your mouth. If they are soft and doughy, the grain is not yet ready. Keep testing. One day the grains will be firm and crunchy, and it will be time to harvest.
+Go out to your wheatfield and wait for stalks to turn from green to yellow or brown. The heads, heavy with grain, should tip toward the earth. This means it's time to test the grain. Choose a head, pick out a few grains, and pop them into your mouth. If they are soft and doughy, the grain is not yet ready. Keep testing. One day the grains will be firm and crunchy, and it will be time to harvest.
 
-At harvest, how should you cut the wheat? If you have a small enough plot, you'll just snip the heads of wheat off the stems. It goes quickly if your wheat field is no larger than about 6 feet wide by 25 feet long.
+When you are ready to harvest, if you have a small enough plot, you can just snip the heads of wheat off the stems. It goes quickly if your wheat field is no larger than about 6 feet wide by 25 feet long. If you like the old-time way of doing things and are going to harvest a larger amount of grain, you might use a scythe and cradle. 
 
-Using a scythe. If you like the old-time way of doing things and are going to harvest a larger amount of grain, you might use a scythe and cradle. The cradle is a series of long wooden fingers mounted above the scythe blade. The scythe cuts the wheat, and then the cradle carries the cut wheat to the end of each swing and deposits it in a neat pile, stacked with all the heads grouped together. You could cut with the scythe alone, but you would spend a lot of time picking up the cut wheat and arranging it for easier handling.
+The next step is to bind the grain into sheaves, each about 12 to 14 inches in circumference a bunch you can hold comfortably in your hands. Bind the same day you cut the wheat. It's nice to have two people taking turns cutting and binding. You can bind with cord or baler's twine or even with some of the wheat stems, twisting them in a way that holds the bundle firm.
 
-Harvesting with a sickle. Another possible tool for cutting small amounts of grain is the sickle. It's a matter of grab and cut, grab and cut. Hold a handful of wheat in your left hand and swing the sickle with your right to cut the plants at nearly ground level. It's possible to kneel or crouch in various positions to avoid getting too tired. As you cut handfuls, lay them in small piles with all the heads pointed in the same direction.
-
-Binding sheaves. The next step is to bind the grain into sheaves, each about 12 to 14 inches in circumference a bunch you can hold comfortably in your hands. Bind the same day you cut the wheat. It's nice to have two people taking turns cutting and binding. You can bind with cord or baler's twine or even with some of the wheat stems, twisting them in a way that holds the bundle firm.
-
-Curing the grain. Stack sheaves upright in a well-ventilated, dry location safe from grain-eating animals. Our ancestors stacked sheaves to make shocks in the field, but with small quantities, it's easy to bring the sheaves in out of the weather. The grain has been cured when it is hard, shatters easily, and cannot be dented with your thumbnail.
+Stack the wheat sheaves upright in a well-ventilated, dry location safe from grain-eating animals. Our ancestors stacked sheaves to make shocks in the field, but with small quantities, it's easy to bring the sheaves in out of the weather. The grain has been cured when it is hard, shatters easily, and cannot be dented with your thumbnail.
 """
 
 	[[recipe.product]]
@@ -27,8 +23,8 @@ Curing the grain. Stack sheaves upright in a well-ventilated, dry location safe 
 [[recipe]]
 time = "2h"
 directions = """
-Now it's time to thresh the grain to separate the straw and chaff from it. You can go about this in any number of ways. One method is flailing. A flail consists of one piece of wood about 3 feet long the handle attached with a leather thong to a shorter piece about 2 feet long. The shorter piece is flung at the heads of grain repeatedly, shattering a few heads each time. If you are using this method, you can expect to produce about 3 pounds of wheat in 20 to 25 minutes. That's slow work. Also, there's a trick to learning to swing the tail without rapping yourself on the head.
-Now you can winnow. The usual method for winnowing is pouring the grain from one container to another, letting either the wind or the breeze from an electric fan push the lighter chaff out of the grain. Repeat the process a few times to get the grain as chaff-free as possible.
+Take your cured wheat and thresh the grain to separate the straw and chaff from it. You can go about this in any number of ways. One method is flailing. A flail consists of one piece of wood about 3 feet long the handle attached with a leather thong to a shorter piece about 2 feet long. The shorter piece is flung at the heads of grain repeatedly, shattering a few heads each time. If you are using this method, you can expect to produce about 3 pounds of wheat in 20 to 25 minutes. That's slow work. Also, there's a trick to learning to swing the tail without rapping yourself on the head.
+Now you can winnow. The usual method for winnowing is pouring the grain from one container to another, letting either the wind or the breeze from an electric fan push the lighter chaff out of the grain. Repeat the process a few times to get the grain as chaff-free as possible until you have as many wheat berries as you need.
 """
 
 	[[recipe.product]]
@@ -45,13 +41,18 @@ Now you can winnow. The usual method for winnowing is pouring the grain from one
 time = "30m"
 directions = """
 Grind 1 cup of whole grain berries on the finest setting of your grain mill. If you don't have a grain mill, you can grind your own flour using an inexpensive coffee grinder and food processor.
-Store the flour and germ/bran in separate containers. The flour will stay fresh in the pantry for up to one week, or you can refrigerate/freeze for up to 2 months. Store the germ/bran in the refrigerator or freezer for up to 2 months.
+Store the whole wheat flour and wheat bran in separate containers. The flour will stay fresh in the pantry for up to one week, or you can refrigerate/freeze for up to 2 months. Store the wheat in the refrigerator or freezer for up to 2 months.
 """
 
 	[[recipe.product]]
 		name="whole wheat flour"
 		measure = "cup"
-		number = 8
+		number = 4
+
+	[[recipe.product]]
+		name="wheat bran"
+		measure = "cup"
+		number = 4
 
 	[[recipe.reactant]]
 		name="wheat berries"
@@ -66,8 +67,7 @@ Grind 1 cup of whole grain berries on the finest setting of your grain mill. If 
 Set the sieve over a large bowl and sift the flour. After a couple minutes, you will see the germ and bran remaining in the sieve and the endosperm in the bowl. Place the germ/bran into a separate small bowl.
 Repeat with the remaining freshly ground flour until it has all been sifted.
 Repeat the sifting process again, but this time use the flour that has already been sifted. You will again see the germ/bran separate in the sieve. Place the germ/bran into a separate small bowl and repeat the sifting process until all the freshly ground flour has been sifted twice.
-Store the flour and germ/bran in separate containers. The flour will stay fresh in the pantry for up to one week, or you can refrigerate/freeze for up to 2 months. Store the germ/bran in the refrigerator or freezer for up to 2 months.
-Keep the wheat middlings that are not sifted for making semolina flour.
+Store the flour and germ/bran in separate containers. The flour will stay fresh in the pantry for up to one week, or you can refrigerate/freeze for up to 2 months. Store the germ/bran in the refrigerator or freezer for up to 2 months. Keep the wheat middlings that are not sifted for making semolina flour.
 """
 
 	[[recipe.product]]
@@ -132,32 +132,6 @@ Cover the seed by rototilling or raking it in to a depth of 2 to 2 1/2 inches fo
 
 
 [[recipe]]
-time = "48h"
-directions = """
-As you admire your wheat stand, you'll notice in midsummer (later for spring wheat) that the color of the stalks turns from green to yellow or brown. The heads, heavy with grain, tip toward the earth. This means it's time to test the grain. Choose a head, pick out a few grains, and pop them into your mouth. If they are soft and doughy, the grain is not yet ready. Keep testing. One day the grains will be firm and crunchy, and it will be time to harvest.
-
-At harvest, how should you cut the wheat? If you have a small enough plot, you'll just snip the heads of wheat off the stems. It goes quickly if your wheat field is no larger than about 6 feet wide by 25 feet long.
-
-Using a scythe. If you like the old-time way of doing things and are going to harvest a larger amount of grain, you might use a scythe and cradle. The cradle is a series of long wooden fingers mounted above the scythe blade. The scythe cuts the wheat, and then the cradle carries the cut wheat to the end of each swing and deposits it in a neat pile, stacked with all the heads grouped together. You could cut with the scythe alone, but you would spend a lot of time picking up the cut wheat and arranging it for easier handling.
-
-Harvesting with a sickle. Another possible tool for cutting small amounts of grain is the sickle. It's a matter of grab and cut, grab and cut. Hold a handful of wheat in your left hand and swing the sickle with your right to cut the plants at nearly ground level. It's possible to kneel or crouch in various positions to avoid getting too tired. As you cut handfuls, lay them in small piles with all the heads pointed in the same direction.
-
-Binding sheaves. The next step is to bind the grain into sheaves, each about 12 to 14 inches in circumference a bunch you can hold comfortably in your hands. Bind the same day you cut the wheat. It's nice to have two people taking turns cutting and binding. You can bind with cord or baler's twine or even with some of the wheat stems, twisting them in a way that holds the bundle firm.
-
-Curing the grain. Stack sheaves upright in a well-ventilated, dry location safe from grain-eating animals. Our ancestors stacked sheaves to make shocks in the field, but with small quantities, it's easy to bring the sheaves in out of the weather. The grain has been cured when it is hard, shatters easily, and cannot be dented with your thumbnail.
-"""
-
-	[[recipe.product]]
-		name="cured wheat"
-		measure = "whole"
-		number = 24
-
-	[[recipe.reactant]]
-		name="field of wheat"
-		measure = "whole"
-		number = 1
-
-[[recipe]]
 time = "50m"
 directions = """
 Mix dry ingredients together.
@@ -165,14 +139,6 @@ Mix in the olive oil and lard and slowly add the water. Knead the resulting doug
 Let the dough sit for 30 minutes.
 Cut the dough into 8 small sections. Heat up a cast-iron pan.
 Flatten each dough section and cook on a hot pan for 1 minute on each side.
-"""
-ingredients = """
-2 c. flour
-1 tsp. baking soda 
-1/4 c. olive oil 
-1 tbl lard (optional)
-1/2 tsp. salt
-1/2 - 3/4 c. water
 """
 
 	[[recipe.product]]
@@ -221,13 +187,6 @@ Sprinkle a clean kneading surface with the remaining flour. Turn dough out onto 
 Cover the dough and let rest for 10 minutes.
 Divide the dough into four equal portions. Let the dough stand, uncovered, about 20 minutes.
 Cut the noodles into strips. Spread the noodles on a wire cooling rack.
-"""
-ingredients = """
-1 c. flour
-1 c. semolina flour
-2 eggs
-1/3 c. water
-1 tsp olive oil
 """
 
 	[[recipe.product]]
@@ -359,7 +318,7 @@ directions = """
 Make sure chickens always have access to chicken feed (seed, egg shells) and water.
 Give them a fence and possibly a net to protect from predators.
 Provide an area for them to dig/scratch and run around.
-Chickens will lay an egg every few days.
+Chickens will lay an egg every few days, collect the eggs in the morning.
 """
 
 	[[recipe.product]]
@@ -388,7 +347,7 @@ time = "48h"
 directions = """
 In a double boiler, or a widemouth glass jar in a pot of water, start the cocoa butter melting on medium heat.  Add sugar, cocoa powder, and vanilla once a little oil has liquified.  Stir the mixture frequently with a spatula.  Once the cocoa butter is nearly melted, turn off the heat, and continue stirring until completely melted.
 Add the milk, stirring, gradually in teaspoons (3tsp in a tablespoon).  The sugar will dissolve and the chocolate will congeal into a form that is soft, but no longer liquid and no longer gritty.  It’s almost like it forms tiny, soft grains that compress into a smooth mass when it cools if you’re so inclined to pipe it or roll it out (seized chocolate).  You can’t melt it, so don’t turn up the heat. 
-Spread the chocolate mixture evenly on a large plate using the spatula and put it in the fridge to set, about 30 minutes.    The chocolate will be set but soft and easy to dislodge from the plate onto a cutting board.  You can chop it fine or crumble it easily with your fingers.  
+Spread the chocolate mixture evenly on a large plate using the spatula and put it in the fridge to set, about 30 minutes. The chocolate will be set but soft and easy to dislodge from the plate onto a cutting board. You can chop it fine or crumble it easily with your fingers.  
 """
 
 	[[recipe.product]]
@@ -588,11 +547,10 @@ description = "Cow milk is the precursor to many dairy products and its simple t
 time = "2h"
 url = "http://archive.is/RJhCI"
 directions = """
-Tie your cow in a secure area so she can not escape while you are milking her. Visually inspect your cow's udder for signs of injury, swelling or discomfort that might indicate your cow is experiencing a health problem such as mastitis, which occurs when teats become blocked. Call your veterinarian if you discover a health problem when you are inspecting your cow's condition.
+Tie a cow in a secure area so she can not escape while you are milking her. Visually inspect your cow's udder for signs of injury, swelling or discomfort that might indicate your cow is experiencing a health problem such as mastitis, which occurs when teats become blocked. Call your veterinarian if you discover a health problem when you are inspecting your cow's condition.
 Wrap your thumb and forefinger into a circle around the base of one of the cow's teats. Gently and quickly squeeze the teat to release a small squirt of milk. This is called stripping the teat; you do so to remove any dirt or debris from the teat as well as to quickly check the appearance of your cow's milk for potential problems. Milk should appear white and smooth, as opposed to clumpy, when you express it from the teat. Do this for every teat.
 Apply pre-milking disinfectant to every teat, following the instructions that come with the product. Wipe disinfectant away with a clean towel once you've completely cleaned the teats with it.
-Wrap your thumb and forefinger around each teat and squeeze the teat so milk squirts out of it and into your clean bucket. Continue expressing milk from the teats until the entire udder is empty. Make sure you milk every teat on your cow's udder. Apply post-milking disinfectant to the teats after you have finished milking the cow.
-Apply bag balm to the teats afterward so they don't dry out.
+Wrap your thumb and forefinger around each teat and squeeze the teat so milk squirts out of it and into your clean bucket. Continue expressing milk from the teats until the entire udder is empty. Make sure you milk every teat on your cow's udder. Apply post-milking disinfectant to the teats after you have finished milking the cow. Apply bag balm to the teats afterward so they don't dry out.
 """
 
 	[[recipe.product]]
@@ -649,7 +607,7 @@ Start by pouring one gallon of milk (fresh from the cow) into a clean container.
 Skim the cream off the top of the fluid with a spoon. When you begin to see watery skim milk in the spoon, stop skimming. Pour the cream into a jar, cap the container tightly and let it sit on the kitchen drainboard for approximately 12 hours.
 Pour the cream into a larger container. Shake the larger container to agitate and congeal the butter. This takes about 30 minutes.
 When the cream gets heavy, shake with less vigor. The heavy mass will turn yellow, become firm and separate from the milk. 
-Put the butter in a bowl and work it and let the buttermilk drain off. Add some salt to the butter and work it in. Its done when your satisfied with the taste
+Put the butter in a bowl and work it and let the buttermilk drain off. Add some salt to the butter and work it in. The butter is done when your satisfied with the taste.
 """
 url = "http://archive.is/GVk7Q"
 
@@ -747,40 +705,6 @@ Take the cheese and cut it along its side with a sharp knife.
 		name="block of cheese"
 		measure = "whole"
 		number = 1
-
-[[recipe]]
-time = "28h"
-directions = """
-Start by pouring one gallon of milk (fresh from the cow) into a clean container. Chill the milk quickly, and keep it in the refrigerator for at least 12 hours. 
-Skim the cream off the top of the fluid with a spoon. When you begin to see watery skim milk in the spoon, stop skimming. Pour the cream into a jar, cap the container tightly and let it sit on the kitchen drainboard for approximately 12 hours.
-Pour the cream into a larger container. Shake the larger container to agitate and congeal the butter. This takes about 30 minutes.
-When the cream gets heavy, shake with less vigor. The heavy mass will turn yellow, become firm and separate from the milk. 
-Put the butter in a bowl and work it and let the buttermilk drain off. Add some salt to the butter and work it in. Its done when your satisfied with the taste
-"""
-url = "http://archive.is/GVk7Q"
-
-	[[recipe.product]]
-		name="butter"
-		measure = "cup"
-		number = 2
-
-	[[recipe.product]]
-		name="buttermilk"
-		measure = "cup"
-		number = 2
-
-	[[recipe.reactant]]
-		name="salt"
-		measure = "cup"
-		number = 0.5
-
-	[[recipe.reactant]]
-		name="cow milk"
-		measure = "gallon"
-		number = 1
-
-
-
 
 
 [[recipe]]
