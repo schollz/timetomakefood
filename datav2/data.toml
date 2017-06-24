@@ -19,7 +19,7 @@ Curing the grain. Stack sheaves upright in a well-ventilated, dry location safe 
 		measure = "whole"
 		number = 24
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="field of wheat"
 		measure = "whole"
 		number = 1
@@ -36,7 +36,7 @@ Now you can winnow. The usual method for winnowing is pouring the grain from one
 		measure = "cup"
 		number = 40
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="cured wheat"
 		measure = "whole"
 		number = 1
@@ -53,7 +53,7 @@ Store the flour and germ/bran in separate containers. The flour will stay fresh 
 		measure = "cup"
 		number = 8
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="wheat berries"
 		measure = "cup"
 		number = 10
@@ -80,7 +80,7 @@ Keep the wheat middlings that are not sifted for making semolina flour.
 		measure = "cup"
 		number = 8
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="wheat berries"
 		measure = "cup"
 		number = 10
@@ -96,7 +96,7 @@ Grind the wheat middlings to a coarse consistency.
 		measure = "cup"
 		number = 9
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="wheat middlings"
 		measure = "cup"
 		number = 10
@@ -115,17 +115,17 @@ Cover the seed by rototilling or raking it in to a depth of 2 to 2 1/2 inches fo
 		measure = "whole"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="plot of soil"
 		measure = "whole"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="water source"
 		measure = "whole"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="sun"
 		measure = "whole"
 		number = 1
@@ -152,7 +152,7 @@ Curing the grain. Stack sheaves upright in a well-ventilated, dry location safe 
 		measure = "whole"
 		number = 24
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="field of wheat"
 		measure = "whole"
 		number = 1
@@ -180,32 +180,32 @@ ingredients = """
 		measure = "whole"
 		number = 8
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="flour"
 		measure = "cup"
 		number = 2
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="baking soda"
 		measure = "teaspoon"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="olive oil"
 		measure = "cup"
 		number = 0.25
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="lard"
 		measure = "tablespoon"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="salt"
 		measure = "teaspoon"
 		number = 0.5
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="water"
 		measure = "cup"
 		number = 0.75
@@ -235,27 +235,27 @@ ingredients = """
 		measure = "whole"
 		number = 24
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="flour"
 		measure = "cup"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="semolina flour"
 		measure = "cup"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="water"
 		measure = "cup"
 		number = 0.333
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="olive oil"
 		measure = "teaspoon"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="eggs"
 		measure = "whole"
 		number = 2
@@ -276,52 +276,52 @@ Bake at 375F for 10 to 14 minutes, until firm and brown.
 		measure = "cup"
 		number = 10
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="whole wheat flour"
 		measure = "cup"
 		number = 1.5
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="flour"
 		measure = "cup"
 		number = 0.5
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="baking powder"
 		measure = "teaspoon"
 		number = 2
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="baking soda"
 		measure = "teaspoon"
 		number = 0.5
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="salt"
 		measure = "teaspoon"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="butter"
 		measure = "cup"
 		number = 0.5
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="brown sugar"
 		measure = "cup"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="eggs"
 		measure = "whole"
 		number = 5
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="oatmeal"
 		measure = "cup"
 		number = 5
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="chocolate chips"
 		measure = "cup"
 		number = 3
@@ -342,12 +342,12 @@ Cook until the other side is golden and the cheese melts, 3 to 5 more minutes.
 		measure = "whole"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="cheese sandwich"
 		measure = "whole"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="butter"
 		measure = "tablespoon"
 		number = 1
@@ -367,17 +367,17 @@ Chickens will lay an egg every few days.
 		measure = "whole"
 		number = 2
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="egg laying chicken"
 		measure = "whole"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="chicken feed"
 		measure = "cup"
 		number = 10
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="water"
 		measure = "cup"
 		number = 10
@@ -396,27 +396,27 @@ Spread the chocolate mixture evenly on a large plate using the spatula and put i
 		measure = "cup"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="cocoa butter"
 		measure = "oz"
 		number = 2
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="cocoa powder"
 		measure = "cup"
 		number = 0.5
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="brown sugar"
 		measure = "cup"
 		number = 0.5
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="vanilla"
 		measure = "teaspoon"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="milk"
 		measure = "tablespoon"
 		number = 1
@@ -440,12 +440,12 @@ Historical harvest methods involved cutting with a scythe or sickle, and threshi
 		measure = "cup"
 		number = 5000
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="plot of soil"
 		measure = "whole"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="sun"
 		measure = "whole"
 		number = 1
@@ -466,12 +466,12 @@ Cleanliness is vital to the whole process. Once the juice has been heated, impur
 		measure = "cup"
 		number = 4
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="stalks of sugar cane"
 		measure = "whole"
 		number = 4
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="water"
 		measure = "cup"
 		number = 40
@@ -492,17 +492,17 @@ After 6 months the chickens will be big enough to lay eggs or eat.
 		measure = "whole"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="baby chicken"
 		measure = "whole"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="chicken feed"
 		measure = "cup"
 		number = 1000
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="water"
 		measure = "cup"
 		number = 10000
@@ -521,12 +521,12 @@ Put the slices of cheese between the bread.
 		measure = "whole"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="slices of bread"
 		measure = "whole"
 		number = 2
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="slices of cheese"
 		measure = "whole"
 		number = 2
@@ -561,22 +561,22 @@ Wax the cheese and age at 55° to 60°F for at least 60 days.
 		measure = "whole"
 		number = 1
 	
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="cow milk"
 		measure = "gallon"
 		number = 2
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="calcium chloride"
 		measure = "tsp"
 		number = 0.125
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="mesophilic culture"
 		measure = "tsp"
 		number = 0.125
 	
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="rennet"
 		measure = "tablespoon"
 		number = 1
@@ -600,17 +600,17 @@ Apply bag balm to the teats afterward so they don't dry out.
 		measure = "cup"
 		number = 12
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="cow"
 		measure = "whole"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="bag balm"
 		measure = "tablespoon"
 		number = 2
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="cow disinfectant"
 		measure = "tablespoon"
 		number = 2
@@ -636,7 +636,7 @@ Take out the bread and let it rest for 20 minutes.
 		measure = "whole"
 		number = 2
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="bread dough"
 		measure = "cup"
 		number = 12
@@ -663,12 +663,12 @@ url = "http://archive.is/GVk7Q"
 		measure = "cup"
 		number = 2
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="salt"
 		measure = "cup"
 		number = 0.5
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="cow milk"
 		measure = "gallon"
 		number = 1
@@ -688,22 +688,22 @@ Wet hands and knead in a big bowl. Cut with fingers several times and then let r
 		measure = "cup"
 		number = 12
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="yeast"
 		measure = "tablespoon"
 		number = 1
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="water"
 		measure = "cup"
 		number = 3.2
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="flour"
 		measure = "cup"
 		number = 7.35
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="salt"
 		measure = "tsp"
 		number = 3.5
@@ -723,7 +723,7 @@ Take the bread and cut it along its side with a sharp, serated, knife.
 		measure = "whole"
 		number = 12
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="loaf of bread"
 		measure = "whole"
 		number = 1
@@ -743,7 +743,7 @@ Take the cheese and cut it along its side with a sharp knife.
 		measure = "whole"
 		number = 12
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="block of cheese"
 		measure = "whole"
 		number = 1
@@ -769,12 +769,12 @@ url = "http://archive.is/GVk7Q"
 		measure = "cup"
 		number = 2
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="salt"
 		measure = "cup"
 		number = 0.5
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="cow milk"
 		measure = "gallon"
 		number = 1
@@ -808,7 +808,7 @@ Makes about 1/2 cup of salt.
 		measure = "cup"
 		number = 0.5
 
-	[[recipe.ingredient]]
+	[[recipe.reactant]]
 		name="seawater"
 		measure = "gallon"
 		number = 1

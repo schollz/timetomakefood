@@ -37,9 +37,9 @@ class RecipeNetwork(object):
             for product in recipe['product']:
                 self.recipe_has_data[product['name']] = True
         for recipe in self.all_recipes:
-            for ingredient in recipe['ingredient']:
-                if ingredient['name'] not in self.recipe_has_data:
-                    self.recipe_has_data[ingredient['name']] = False
+            for reactant in recipe['reactant']:
+                if reactant['name'] not in self.recipe_has_data:
+                    self.recipe_has_data[reactant['name']] = False
 
     def generate_graphviz(self, recipes):
         name = md5(json.dumps(sorted(recipes)))
@@ -52,7 +52,7 @@ class RecipeNetwork(object):
                     all_recipes.append(recipe)
 
         graphviz = ["digraph G { \ngraph [ dpi = 300 ];\nbgcolor=transparent;\ntruecolor=true; \n"]
-        all_ingredients = []
+        all_reactants = []
         all_products = []
         for recipe in all_recipes:
             products = []
@@ -60,22 +60,22 @@ class RecipeNetwork(object):
                 if product['name'] not in products:
                     products.append('"%s"' % product['name'])
                     all_products.append(product['name'])
-            for ingredient in recipe['ingredient']:
-                ingredients = []
-                if ingredient['name'] not in ingredients:
-                    ingredients.append('"%s"' % ingredient['name'])
-                    all_ingredients.append(ingredient['name'])
+            for reactant in recipe['reactant']:
+                reactants = []
+                if reactant['name'] not in reactants:
+                    reactants.append('"%s"' % reactant['name'])
+                    all_reactants.append(reactant['name'])
                 graphviz_string = "\t{ " + " ".join(
-                    ingredients) + "} -> { " + " ".join(products) + " };\n"
+                    reactants) + "} -> { " + " ".join(products) + " };\n"
                 if graphviz_string not in graphviz:
                     graphviz.append(graphviz_string)
 
         all_products = list(set(all_products))
-        for ingredient in list(set(all_ingredients)):
-            if ingredient not in all_products:
-                graphviz.append('\n"{}" [fillcolor=tomato, style=filled]'.format(ingredient))
+        for reactant in list(set(all_reactants)):
+            if reactant not in all_products:
+                graphviz.append('\n"{}" [fillcolor=tomato, style=filled]'.format(reactant))
             else:
-                graphviz.append('\n"{}" [fillcolor=palegoldenrod, style=filled]'.format(ingredient))
+                graphviz.append('\n"{}" [fillcolor=palegoldenrod, style=filled]'.format(reactant))
                 
         graphviz.append('\n"{}" [fillcolor=springgreen, style=filled]'.format(recipes[0]))
         graphviz.append("}")
@@ -107,11 +107,11 @@ class RecipeNetwork(object):
             for product in recipe['product']:
                 if product['name'] not in G.nodes():
                     G.add_node(product['name'])
-            for ingredient in recipe['ingredient']:
-                if ingredient['name'] not in G.nodes():
-                    G.add_node(ingredient['name'])
+            for reactant in recipe['reactant']:
+                if reactant['name'] not in G.nodes():
+                    G.add_node(reactant['name'])
 
-        # Determine times to make each ingredient
+        # Determine times to make each reactant
         self.time_to_make = {}
         for recipe in all_recipes:
             how_long = duration.from_str(recipe['time']).total_seconds()
@@ -124,8 +124,8 @@ class RecipeNetwork(object):
         for recipe in all_recipes:
             how_long = duration.from_str(recipe['time']).total_seconds()
             for product in recipe['product']:
-                for ingredient in recipe['ingredient']:
-                    G.add_edge(product['name'], ingredient[
+                for reactant in recipe['reactant']:
+                    G.add_edge(product['name'], reactant[
                                'name'], weight=how_long)
 
         return G
@@ -161,7 +161,7 @@ class RecipeNetwork(object):
         return recipe_ordering
 
     def combine_recipes(self, recipes):
-        new_recipe = {'ingredients': {}, 'instructions': [], 'seconds': 0}
+        new_recipe = {'reactants': {}, 'instructions': [], 'seconds': 0}
         instruction_count = 1
         for recipe_to_add in reversed(recipes):
             for recipe in self.all_recipes:
@@ -172,16 +172,16 @@ class RecipeNetwork(object):
                         break
                 if not found_it:
                     continue
-                for ingredient in recipe['ingredient']:
+                for reactant in recipe['reactant']:
                     try:
-                        amount = ingredient[
-                            'number'] * ureg.parse_expression(ingredient['measure'])
+                        amount = reactant[
+                            'number'] * ureg.parse_expression(reactant['measure'])
                     except:
-                        amount = ingredient['number']
-                    if ingredient['name'] not in new_recipe['ingredients']:
-                        new_recipe['ingredients'][ingredient['name']] = amount
+                        amount = reactant['number']
+                    if reactant['name'] not in new_recipe['reactants']:
+                        new_recipe['reactants'][reactant['name']] = amount
                     else:
-                        new_recipe['ingredients'][ingredient['name']] += amount
+                        new_recipe['reactants'][reactant['name']] += amount
                 subrecipe = {'name': recipe_to_add, 'instructions': []}
                 for instruction in recipe['directions'].replace('Â', '').split("\n"):
                     if len(instruction.strip()) == 0:
@@ -195,26 +195,26 @@ class RecipeNetwork(object):
                 break
         # Remove all the products
         for recipe_to_add in recipes:
-            if recipe_to_add in new_recipe['ingredients']:
-                new_recipe['ingredients'].pop(recipe_to_add, None)
+            if recipe_to_add in new_recipe['reactants']:
+                new_recipe['reactants'].pop(recipe_to_add, None)
         return new_recipe
 
-    def generate_recipe(self, main_ingredient, other_ingredients):
+    def generate_recipe(self, main_reactant, other_reactants):
         recipes_to_combine = self.determine_ordering(
-            other_ingredients, main_ingredient)
+            other_reactants, main_reactant)
         logger.debug(recipes_to_combine)
         finished = self.combine_recipes(recipes_to_combine)
         recipe = {}
-        recipe['name'] = main_ingredient
+        recipe['name'] = main_reactant
         recipe['time'] = duration.get_total_time_string(finished['seconds'])
-        recipe['ingredients'] = []
-        for ingredient, amount in finished['ingredients'].items():
+        recipe['reactants'] = []
+        for reactant, amount in finished['reactants'].items():
             try:
                 amount_str = "{} {}".format(get_fraction(amount.magnitude),amount.units)
             except:
                 amount_str = "{} whole".format(get_fraction(amount))
-            recipe['ingredients'].append(
-                {"amount": amount_str, "name": ingredient, 'has_data': self.recipe_has_data[ingredient]})
+            recipe['reactants'].append(
+                {"amount": amount_str, "name": reactant, 'has_data': self.recipe_has_data[reactant]})
         recipe['instructions'] = []
         for instruction in finished['instructions']:
             recipe['instructions'].append(instruction)
