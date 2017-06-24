@@ -10,7 +10,10 @@ def get_fraction(f):
 	secondNum = fracs[0] % fracs[1]
 	thirdNum = fracs[1]
 	if firstNum == 0:
-		return "{}/{}".format(secondNum,thirdNum)
+		if secondNum == 0:
+			return "{}".format(thirdNum)
+		else:
+			return "{}/{}".format(secondNum,thirdNum)
 	elif secondNum > 0 :
 		return "{} {}/{}".format(intcomma(firstNum),secondNum,thirdNum)
 	else:
