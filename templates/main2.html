@@ -78,7 +78,7 @@ nav .brand-logo {
           <li>
           <div class="user-view">
             <a href="/{{ recipe | replace(" ","-") }}/"><img class="circle" src="/static/img/food/{{ recipe | replace(" ","_") }}.jpg"></a>
-            <a href="#!name"><span class="black-text name">{{ recipe | title }}</span></a>
+            <a href="/{{ recipe | replace(" ","-") }}/"><span class="black-text name">{{ recipe | title }}</span></a>
           </div>
         </li>
         <li>
