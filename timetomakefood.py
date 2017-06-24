@@ -24,7 +24,7 @@ try:
 except:
     pass
 first_time_users = {}
-
+n = RecipeNetwork()
 
 @app.route('/static/<path:path>')
 def send_js(path):
@@ -33,7 +33,7 @@ def send_js(path):
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def hello(path):
-    n = RecipeNetwork()
+
     start = time.time()
     if path == "":
         return redirect("/%s/" % random.choice(CURRENT_RECIPES).replace(' ','-'), code=302)

@@ -576,31 +576,6 @@ Wrap your thumb and forefinger around each teat and squeeze the teat so milk squ
 
 
 [[recipe]]
-description = """
-Bread is a food staple made from flour, water, yeast and salt. The process begins with leavening
-and ends with baking at a high temperature.
-"""
-time = "6h50m"
-directions = """
-Let the bread dough rest for 20 minutes. Then knead a little bit.
-Let the bread rise for 4 to 6 hours. Then flour a small bowl and put loaf into bowl.
-Let the bread rise again for 30 minutes, preheat a oven to 450F.
-Bake the bread in a pre-heated dutch oven for 20 minutes. Take off the lid and bake for another 5-10 minutes.
-Take out the bread and let it rest for 20 minutes.
-"""
-
-	[[recipe.product]]
-		name="loaf of bread"
-		measure = "whole"
-		number = 2
-
-	[[recipe.reactant]]
-		name="bread dough"
-		measure = "cup"
-		number = 12
-
-
-[[recipe]]
 time = "28h"
 directions = """
 Start by pouring one gallon of milk (fresh from the cow) into a clean container. Chill the milk quickly, and keep it in the refrigerator for at least 12 hours. 
@@ -630,7 +605,30 @@ url = "http://archive.is/GVk7Q"
 		name="cow milk"
 		measure = "gallon"
 		number = 1
-		
+
+
+
+[[recipe]]
+description = """
+Bread is a food staple made from flour, water, yeast and salt. The process begins with leavening
+and ends with baking at a high temperature.
+"""
+time = "6h50m"
+directions = """
+Let the bread dough rest for 20 minutes. Then knead a little bit.
+Let the bread rise for 4 to 6 hours. Then flour a small bowl and put loaf into bowl.
+Let the bread rise again for 30 minutes, preheat a oven to 450F.
+Bake the bread in a pre-heated dutch oven for 20 minutes. Take off the lid and bake for another 5-10 minutes.
+Take out the bread and let it rest for 20 minutes.
+"""
+
+
+	[[recipe.reactant]]
+		name="bread dough"
+		measure = "cup"
+		number = 12
+
+
 [[recipe]]
 time = "35m"
 directions = """
@@ -642,9 +640,9 @@ Wet hands and knead in a big bowl. Cut with fingers several times and then let r
 """
 
 	[[recipe.product]]
-		name="bread dough"
-		measure = "cup"
-		number = 12
+		name="loaf of bread"
+		measure = "whole"
+		number = 2
 
 	[[recipe.reactant]]
 		name="yeast"
