@@ -16,7 +16,7 @@ logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:
     level=logging.DEBUG)
 logger = logging.getLogger('timetomakefood')
 
-CURRENT_RECIPES = ['tortilla', 'grilled cheese sandwich','cookies', 'noodles', 'white sauce','loaf of bread','eggs benedict','english muffin', 'pancakes']
+CURRENT_RECIPES = ['tortilla', 'grilled cheese sandwich','cookies', 'noodles', 'white sauce','loaf of bread','eggs benedict','english muffin', 'pancakes', 'mustard', 'mayonnaise']
 
 
 try:

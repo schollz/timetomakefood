@@ -1,4 +1,118 @@
 [[recipe]]
+time = "4382h"
+directions = """
+Wash the apples and cut them into small pieces, keeping skin, core and stems.
+Make a mush of the apples and then strain it through a muslin bag.
+Pour the juice into a clean, dark glass jug and cover the top with several layers of cheesecloth held in place with rubber bands.
+Leave the juice in a cool, dark place for about six months. 
+Take the liquid, strain, bottle, and cork.
+"""
+
+	[[recipe.reactant]]
+		name="apples"
+		measure = "whole"
+		number = 12
+
+	[[recipe.product]]
+		name="vinegar"
+		measure = "cup"
+		number = 3
+
+[[recipe]]
+time = "12h10m"
+directions = """
+Grind 1/2 c. mustard seeds with 2 tbl. dry mustard.
+Stir in 1/2 c. water and let rest at room temperature overnight.
+Move mixture to blender and add veingar, sugar, salt, and garlic. Liquefy. Add more vinegar if nessecary.
+Store in fridge.
+"""
+
+	[[recipe.product]]
+		name="mustard"
+		measure = "cup"
+		number = 1
+
+	[[recipe.reactant]]
+		name="dry mustard"
+		measure = "tablespoon"
+		number = 2
+
+	[[recipe.reactant]]
+		name="vinegar"
+		measure = "cup"
+		number = 0.25
+
+	[[recipe.reactant]]
+		name="sugar"
+		measure = "tablespoon"
+		number = 1
+
+	[[recipe.reactant]]
+		name="garlic"
+		measure = "whole"
+		number = 2
+
+
+[[recipe]]
+time = "10m"
+directions = """
+Combine 1 egg yolk, 1 1/2 tsp mustard, salt to taste, and juice from half a lemon  into a bowl and start blending with a hand blender.
+While the blender is running, add 1 1/4 c. oil very slowly. Keep whipping until thick.
+"""
+
+	[[recipe.product]]
+		name="mayonnaise"
+		measure = "cup"
+		number = 1
+
+	[[recipe.reactant]]
+		name="egg yolk"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="mustard"
+		measure = "teaspoon"
+		number = 1.5
+
+	[[recipe.reactant]]
+		name="salt"
+		measure = "teaspoon"
+		number = 0.5
+
+	[[recipe.reactant]]
+		name="lemon juice"
+		measure = "cup"
+		number = 0.25
+
+	[[recipe.reactant]]
+		name="olive oil"
+		measure = "cup"
+		number = 1.25
+
+[[recipe]]
+time = "1m"
+directions = """
+Break egg open a cup. Keep the yolk inside the egg shells. Move the yolk between the two egg shells, letting the egg white fall off.
+"""
+
+	[[recipe.product]]
+		name="egg yolk"
+		measure = "whole"
+		number = 1
+
+	[[recipe.product]]
+		name="egg white"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="eggs"
+		measure = "whole"
+		number = 1
+
+
+[[recipe]]
 time = "24m"
 directions = """
 In a large bowl whisk together the dry ingredients. 
