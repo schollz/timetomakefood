@@ -1,4 +1,164 @@
 [[recipe]]
+time = "15m"
+directions = """
+Arrange a muffin in halves on a plate
+Fry bacon until it becomes dark and add bacon to each muffin
+Add poached egg to muffin
+Pour hollaindaise sauce over each egg
+"""
+
+	[[recipe.product]]
+		name="eggs benedict"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="hollandaise sauce"
+		measure = "cup"
+		number = 0.25
+
+	[[recipe.reactant]]
+		name="english muffin"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="slice of bacon"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="poached egg"
+		measure = "whole"
+		number = 1
+
+[[recipe]]
+time = "15m"
+directions = """
+Whisk egg yolks and lemon until very thick in a metal bowl.
+Put the bowl over simmering water and whisk constantly. Drizzle in melted butter. Whisk until white and billowy.
+Add salt and pepper to taste.
+"""
+
+	[[recipe.product]]
+		name="hollandaise sauce"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="egg yolk"
+		measure = "whole"
+		number = 3
+
+	[[recipe.reactant]]
+		name="lemon juice"
+		measure = "tablespoon"
+		number = 1
+
+	[[recipe.reactant]]
+		name="butter"
+		measure = "cup"
+		number = 1
+
+	[[recipe.reactant]]
+		name="salt"
+		measure = "teaspoon"
+		number = 1
+
+	[[recipe.reactant]]
+		name="pepper"
+		measure = "teaspoon"
+		number = 1
+
+[[recipe]]
+time = "24m"
+directions = """
+Boil water in a large pan on the stove.
+Add 2 tablespoons of vinegar and stir the water carefully so it looks like a whirlpool.
+Crack the egg into a cup and then carefully pour the egg into the boiling water.
+If the egg whites separate, carefully use a spoon to gently push it back towards the yolk.
+Turn off the heat and let the egg cook for about 4 minutes.
+"""
+
+	[[recipe.product]]
+		name="poached egg"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="vinegar"
+		measure = "tablespoon"
+		number = 2
+
+	[[recipe.reactant]]
+		name="water"
+		measure = "cup"
+		number = 20
+
+	[[recipe.reactant]]
+		name="eggs"
+		measure = "whole"
+		number = 1
+
+
+[[recipe]]
+time = "3h30m"
+directions = """
+Combine 1/4 c. warm water, 1 tbl yeast yeast, 2 tbl. sugar, 2 c. flour and 2 tsp. salt in a bowl. Add the egg, milk, butter and continue beating until creamy. Add the remaining flour if nessecary. Keep dough moist.
+Remove dough and oil the bowl. Return the dough to bowl and cover with dish towel until doubled, about 2 hours.
+Coat a work surface with a little bit of cornmeal. Roll the dough out about 1/2 inch thick and cut out muffins.
+Heat a cast-iron skillet until very hot.
+Put muffins in pan and immedietly turn down heat to medium. Cook muffins 10 to 15 minutes per side.
+Remove muffins to a cooling rack.
+"""
+
+	[[recipe.product]]
+		name="english muffin"
+		measure = "whole"
+		number = 8
+
+	[[recipe.reactant]]
+		name="water"
+		measure = "cup"
+		number = 0.25
+
+	[[recipe.reactant]]
+		name="sugar"
+		measure = "tablespoon"
+		number = 2
+
+	[[recipe.reactant]]
+		name="flour"
+		measure = "cup"
+		number = 4
+
+	[[recipe.reactant]]
+		name="salt"
+		measure = "teaspoon"
+		number = 2
+
+	[[recipe.reactant]]
+		name="eggs"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="milk"
+		measure = "cup"
+		number = 1.25
+
+	[[recipe.reactant]]
+		name="butter"
+		measure = "tablespoon"
+		number = 2
+
+	[[recipe.reactant]]
+		name="cornmeal"
+		measure = "tablespoon"
+		number = 2
+
+
+[[recipe]]
 time = "48h"
 directions = """
 Go out to your wheatfield and wait for stalks to turn from green to yellow or brown. The heads, heavy with grain, should tip toward the earth. This means it's time to test the grain. Choose a head, pick out a few grains, and pop them into your mouth. If they are soft and doughy, the grain is not yet ready. Keep testing. One day the grains will be firm and crunchy, and it will be time to harvest.
@@ -514,12 +674,12 @@ Remove the cheese from the press, unwrap, and flip the cheese. Re-wrap using a f
 Remove the cheese from the press and air-dry for 2 to 3 days, until smooth and dry to the touch.
 Wax the cheese and age at 55° to 60°F for at least 60 days. 
 """
-		
+
 	[[recipe.product]]
 		name="block of cheese"
 		measure = "whole"
 		number = 1
-	
+
 	[[recipe.reactant]]
 		name="cow milk"
 		measure = "gallon"
@@ -534,7 +694,7 @@ Wax the cheese and age at 55° to 60°F for at least 60 days.
 		name="mesophilic culture"
 		measure = "tsp"
 		number = 0.125
-	
+
 	[[recipe.reactant]]
 		name="rennet"
 		measure = "tablespoon"
@@ -573,6 +733,31 @@ Wrap your thumb and forefinger around each teat and squeeze the teat so milk squ
 		measure = "tablespoon"
 		number = 2
 
+
+[[recipe]]
+time = "2h"
+directions = """
+The most important aspect of milking is the cleanliness of your operation. Raw milk can be safe and wholesome without the need for pasteurization, but you will need to be exacting about hygiene in the barn to achieve this result.
+The first thing to do is to inspect is your milking equipment. All containers should be stainless steel and should be disinfected with diluted bleach. A dairy acid cleaner should be used as well to remove mineral deposits. The acid can be purchased at most farm supply stores. 
+Heat your milk in a stainless steel double boiler to 140 degrees Fahrenheit and hold the milk at this temperature for 35 minutes. 
+After 35 minutes, dump the milk into a container and put it in an ice bath. Stir constantly until the milk cools to 40 degree Fahrenheit. 
+Once you have cooled and possibly pasteurized your milk, you can skim the cream off for butter or other dairy creations. To do this, you can let your milk stand in the refrigerator for several hours and skim the cream layer off with a ladle, or you can purchase a cream separator. 
+"""
+
+	[[recipe.product]]
+		name="milk"
+		measure = "cup"
+		number = 12
+
+	[[recipe.product]]
+		name="cream"
+		measure = "cup"
+		number = 12
+
+	[[recipe.reactant]]
+		name="cow milk"
+		measure = "cup"
+		number = 25
 
 
 [[recipe]]
@@ -630,7 +815,7 @@ url = "http://archive.is/GVk7Q"
 		name="cow milk"
 		measure = "gallon"
 		number = 1
-		
+
 [[recipe]]
 time = "35m"
 directions = """

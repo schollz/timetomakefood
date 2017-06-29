@@ -16,7 +16,7 @@ logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:
     level=logging.DEBUG)
 logger = logging.getLogger('timetomakefood')
 
-CURRENT_RECIPES = ['grilled cheese sandwich','cookies', 'noodles', 'tortilla', 'white sauce','loaf of bread']
+CURRENT_RECIPES = ['grilled cheese sandwich','cookies', 'noodles', 'tortilla', 'white sauce','loaf of bread','eggs benedict','english muffin']
 
 
 try:
@@ -24,7 +24,6 @@ try:
 except:
     pass
 first_time_users = {}
-n = RecipeNetwork()
 
 @app.route('/static/<path:path>')
 def send_js(path):
@@ -46,7 +45,8 @@ def hello(path):
         other_ingredients = ingredients[1:-1]
     logger.info(path)
     cache_file = join("cache",md5(json.dumps(list(sorted(ingredients)))) + ".json")
-    if isfile(cache_file):
+    n = RecipeNetwork()
+    if isfile(cache_file) and False:
         logger.debug("Using cache {}".format(cache_file))
         recipe = json.load(open(cache_file))
     else:
