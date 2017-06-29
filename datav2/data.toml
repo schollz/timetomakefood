@@ -1,4 +1,27 @@
 [[recipe]]
+time = "730h30m"
+directions = """
+Split each vanilla bean in half lengthwise. Place the vanilla beans in a clean jar or bottle. Cover them with alcohol, making sure they are completely submerged. Cover the jar or bottle and give it a good shake.
+Store the jar or bottle of vanilla beans in a cool, dark place for at least one month, shaking it from time to time. Taste the extract and let it infuse longer if you want a stronger flavor. 
+You may wish to remove the vanilla pods and decant the extract into a pretty bottle. The little flecks of seeds can be a nice touch, but if you want a clear extract you can strain them out using a coffee filter.
+"""
+
+	[[recipe.product]]
+		name="vanilla"
+		measure = "ounces"
+		number = 7
+
+	[[recipe.reactant]]
+		name="alcohol"
+		measure = "ounces"
+		number = 8
+
+	[[recipe.reactant]]
+		name="vanilla beans"
+		measure = "whole"
+		number = 5
+
+[[recipe]]
 time = "5m"
 directions = """
 Grind peppercorn in a grinder.
@@ -13,6 +36,130 @@ Grind peppercorn in a grinder.
 		name="peppercorn"
 		measure = "whole"
 		number = 5
+
+[[recipe]]
+time = "52560h"
+directions = """
+Spring planting of apples is recommended in central and northern areas. Where fall and winter weather is generally mild and moist, fall planting is successful. 
+Find a sunny spot with well-drained soil that is not too wet. Remove all weeds and grass in 4-foot diameter circle. Dig a hole and place the seeds.
+Wait about 6 years for the tree to grow.
+Then harvest the apples by picking them off the tree.
+"""
+
+	[[recipe.product]]
+		name="apples"
+		measure = "whole"
+		number = 200
+
+	[[recipe.reactant]]
+		name="plot of soil"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="water source"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="sun"
+		measure = "whole"
+		number = 1
+
+[[recipe]]
+time = "2892h"
+directions = """
+Grow beans in full sun. Beans will grow in partial shade but the harvest will not be full. Beans prefer loose, well-drained soil rich in organic matter. Beans prefer a soil pH of 6.0 to 6.8. Prepare planting beds in advance by working in plenty of aged compost. Avoid planting beans where soil nitrogen is high or where green manure crops have just grown; these beans will produce green foliage but few beans.
+Beans are a tender annual that grow best in temperatures between 50° and 85°F. Beans will not set pods in temperatures above 80°F. Sow beans in the garden just after the average date of the last frost in spring when the soil temperature has warmed. The optimal growing soil temperature for beans is 60° to 85°F. Start beans indoors as early as 3 or 4 weeks before the average last frost date in spring for transplanting into the garden a week or two after the last frost. Start beans indoors in a biodegradable peat or paper pot that can be set whole into the garden so as not to disturb plant roots. Beans can continue in the garden until the first frost in fall. Dry beans are allowed to stay on the plant until leaves have fallen and pods have dried and withered.
+Sow beans 1 to 1½ inch deep. Plant bush beans 3 to 4 inches apart; set rows 18 to 24 inches apart. Plant pole beans 4 to 6 inches apart; set rows 30 to 36 inches apart. Set poles, stakes, or supports in place at planting time. Pole beans also can be planted in inverted hills–5 or 6 seeds to a hill; space hills 40 inches apart. Thin strong seedlings from 4 to 6 inches apart. Remove weaker seedlings by cutting them off at soil level with a scissors being careful not to disturb the roots of other seedlings. Bean can be crowded; they will use each other for support.
+Grow beans in soil that is evenly moist. Bean seeds may crack and germinate poorly if the soil moisture is too high at sowing. Do not soak seeds in advance of planting and do not over-water after sowing. Keep the soil evenly moist during flowering and pod formation. Rain or overhead irrigation during flowering can cause flowers and small pods to fall off. Once the soil temperature averages greater than 60°F, mulch to conserve moisture.
+Beans are best fertilized with aged garden compost; they do not require extra nitrogen. Beans set up a mutual exchange with soil microorganisms called nitrogen-fixing bacteria which produce the soil nitrogen beans require. Avoid using green manures or nitrogen-rich fertilizers.
+Dry beans will be ready for harvest 70 to 120 after sowing when plants have matured and leaves have turned brown or fallen. To test for harvest, bite a couple of seeds; if they will hardly dent they are dry and ready for harvest. Harvest pods when they are completely dry. If pods have withered but are still moist, pick them and then spread them on a flat screen or surface in a warm, protected place where they can thoroughly dry. Plant also can be taken up whole and hung upside down to dry. Pods that are fully dry will split open to reveal the dried beans. Dry beans can be shelled by threshing in a burlap sack or by hand.
+"""
+
+	[[recipe.product]]
+		name="dried beans"
+		measure = "cup"
+		number = 200
+
+	[[recipe.reactant]]
+		name="plot of soil"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="water source"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="sun"
+		measure = "whole"
+		number = 1
+
+[[recipe]]
+time = "13h30m"
+directions = """
+Cover dried beans with water. Soak overnight.
+Drain the soaking water. Throw beans in a pot (optionally add vegetables). Add water about 3 times the heigh of beans in the pot.
+Simmer the beans until they are tender, about 1 1/2 hours.
+"""
+
+	[[recipe.product]]
+		name="beans"
+		measure = "cup"
+		number = 1.5
+
+	[[recipe.reactant]]
+		name="dried beans"
+		measure = "cup"
+		number = 2
+
+	[[recipe.reactant]]
+		name="water"
+		measure = "cup"
+		number = 20
+
+
+[[recipe]]
+time = "45m"
+directions = """
+Add the onions and butter to a wide, sturdy frying pan on medium high heat. Cook onions until translucent. 
+Add the beans and about a 1/4 cup of water to the pan. Using a potato masher, mash the beans in the pan, while you are cooking them, until they are a rough purée.
+Add more water if necessary to keep the fried beans from getting too dried out. Add salt to taste.
+"""
+
+	[[recipe.product]]
+		name="refried beans"
+		measure = "cup"
+		number = 1.5
+
+	[[recipe.reactant]]
+		name="beans"
+		measure = "cup"
+		number = 2.5
+
+	[[recipe.reactant]]
+		name="butter"
+		measure = "tablespoon"
+		number = 2
+
+	[[recipe.reactant]]
+		name="onion"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="water"
+		measure = "cup"
+		number = 0.25
+
+	[[recipe.reactant]]
+		name="salt"
+		measure = "teaspoon"
+		number = 1
+
+
 
 [[recipe]]
 time = "35040h" # 4 years
