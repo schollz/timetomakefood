@@ -1,4 +1,82 @@
 [[recipe]]
+time = "24m"
+directions = """
+In a large bowl whisk together the dry ingredients. 
+Beat the wet ingredients together and then add to the dry ingredients.
+Use a large skillet to cook pancakes one by one.
+"""
+
+	[[recipe.product]]
+		name="pancakes"
+		measure = "whole"
+		number = 8
+
+	[[recipe.reactant]]
+		name="flour"
+		measure = "cup"
+		number = 1.25
+
+	[[recipe.reactant]]
+		name="baking soda"
+		measure = "teaspoon"
+		number = 0.5
+
+	[[recipe.reactant]]
+		name="baking powder"
+		measure = "teaspoon"
+		number = 2
+
+	[[recipe.reactant]]
+		name="salt"
+		measure = "teaspoon"
+		number = 0.5
+
+	[[recipe.reactant]]
+		name="sugar"
+		measure = "tablespoon"
+		number = 2
+
+	[[recipe.reactant]]
+		name="eggs"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="buttermilk"
+		measure = "cup"
+		number = 2
+
+	[[recipe.reactant]]
+		name="butter"
+		measure = "tablespoon"
+		number = 2
+
+[[recipe]]
+time = "15h10m"
+directions = """
+In a large sauce pan, warm milk until uits on the verge of boil. Stir it constantly.
+Remove the milk from heat, pour into a bowl and let it cool until its lukewarm.
+Stir in some yogurt (from the store or from a friend) and cover with a clean damp towel overnight.
+Put a piece of cheesecloth in a sieve over a bowl and scoop the yogurt into it and let it drain for a few hours until the yogurt is as thick as you would like it. Store the drained yogurt in a jar to use as whey.
+"""
+
+	[[recipe.product]]
+		name="yogurt"
+		measure = "cup"
+		number = 4
+
+	[[recipe.product]]
+		name="whey"
+		measure = "cup"
+		number = 1
+
+	[[recipe.reactant]]
+		name="milk"
+		measure = "gallon"
+		number = 0.5
+
+
+[[recipe]]
 time = "15m"
 directions = """
 Arrange a muffin in halves on a plate
