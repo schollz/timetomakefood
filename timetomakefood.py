@@ -17,7 +17,7 @@ logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:
 logger = logging.getLogger('timetomakefood')
 
 CURRENT_RECIPES = ['tortilla', 'refried beans', 'grilled cheese sandwich','cookies', 'noodles', 'white sauce','loaf of bread','eggs benedict','english muffin', 'pancakes', 'mustard', 'mayonnaise']
-
+n = RecipeNetwork()
 
 try:
     mkdir("cache")
@@ -45,8 +45,8 @@ def hello(path):
         other_ingredients = ingredients[1:-1]
     logger.info(path)
     cache_file = join("cache",md5(json.dumps(list(sorted(ingredients)))) + ".json")
-    n = RecipeNetwork()
-    if isfile(cache_file) and False:
+    # n = RecipeNetwork()
+    if isfile(cache_file) and True:
         logger.debug("Using cache {}".format(cache_file))
         recipe = json.load(open(cache_file))
     else:
