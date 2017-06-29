@@ -978,11 +978,6 @@ Store the meat properly. As soon as you portioned out the pork, it's important t
 		number = 1
 
 	[[recipe.product]]
-		name="pork bacon"
-		measure = "whole"
-		number = 1
-
-	[[recipe.product]]
 		name="pork shoulder"
 		measure = "whole"
 		number = 1
@@ -992,6 +987,40 @@ Store the meat properly. As soon as you portioned out the pork, it's important t
 		measure = "whole"
 		number = 1
 
+[[recipe]]
+time = "217h30m"
+directions = """
+Mix 1/4 c. salt, 1/2 c. brown sugar and 1/3 c. pepper in a bowl. Rub the mixture over the 2 pound slab of pork belly. Cover and set it in the refrigerator for 7 days, turning it every other day to ensure the pork is covered in the cure.
+Remove the pork from the refrigerator and rinse it well. Pat it dry and place it on a cooling rack over a baking sheet in the refrigerator and air-dry for 2 days.
+Smoke the bacon until the thickest part of the meat reaches 140F. You can use a smoker, a kettle grill, or a large pot on the stove top.
+After smoking, cool for a few minutes and then ease off the skin with a large knife.
+Cool to room temperature and then wrap and chill until it is firm. Slice to eat.
+"""
+
+	[[recipe.product]]
+		name="slices of bacon"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="pork belly"
+		measure = "whole"
+		number = 1
+
+	[[recipe.reactant]]
+		name="salt"
+		measure = "cup"
+		number = 0.25
+
+	[[recipe.reactant]]
+		name="pepper"
+		measure = "cup"
+		number = 0.25
+
+	[[recipe.reactant]]
+		name="brown sugar"
+		measure = "cup"
+		number = 0.5
 
 [[recipe]]
 time = "5h"
