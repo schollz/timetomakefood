@@ -134,7 +134,6 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
     for row in rows:
         t2 = time.time()
         source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
-        logger.debug(time.time()-t2)
         ingredients = json.loads(ingredients)
         instructions = json.loads(instructions)
         recipe_data = {}
@@ -154,6 +153,7 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
         recipe_text += "\n"
         recipes.append(recipe_text)
         recipe_datas.append(recipe_data)
+        logger.debug(time.time()-t2)
     logger.debug("parsed rows " + str(time.time()-t))
     t = time.time()
     conn.close()
