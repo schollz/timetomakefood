@@ -132,9 +132,13 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
     logger.debug("exclusive " + str(time.time()-t))
     t = time.time()
     for row in rows:
+        t = time.time()
         source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
+        logger.debug("exploded " + str(time.time()-t))
+        t = time.time()
         ingredients = json.loads(ingredients)
         instructions = json.loads(instructions)
+        logger.debug("json loaded " + str(time.time()-t))
         recipe_data = {}
         recipe_data['name'] = name.title()
         recipe_data['ingredients'] = ingredients
