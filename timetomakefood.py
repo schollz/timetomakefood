@@ -154,7 +154,7 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
         recipes.append(recipe_text)
         recipe_datas.append(recipe_data)
         logger.debug(time.time()-t2)
-    logger.debug("parsed rows " + str(time.time()-t3))
+    logger.debug(time.time()-t3)
     t = time.time()
     conn.close()
     logger.debug("closed " + str(time.time()-t))
