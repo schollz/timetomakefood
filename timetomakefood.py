@@ -132,17 +132,25 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
     logger.debug("exclusive " + str(time.time()-t))
     t = time.time()
     for row in rows:
-        t = time.time()
         source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
-        logger.debug("exploded " + str(time.time()-t))
-        t = time.time()
         ingredients = json.loads(ingredients)
         instructions = json.loads(instructions)
-        logger.debug("json loaded " + str(time.time()-t))
         recipe_data = {}
         recipe_data['name'] = name.title()
         recipe_data['ingredients'] = ingredients
         recipe_data['instructions'] = instructions
+        recipe_text = ""
+        recipe_text += "-"*70 + "\n"
+        recipe_text += name.title().center(70) + "\n\n"
+        for i,ingredient in enumerate(ingredients):
+            ingredient = "  \n   ".join(textwrap.wrap(ingredient.strip(),65))
+            recipe_text += "   - {}\n".format(ingredient) 
+        recipe_text += "\n"
+        for i,instruction in enumerate(instructions):
+            instruction = "  \n   ".join(textwrap.wrap(instruction.strip(),65))
+            recipe_text += "  {}. {}\n".format(i+1,instruction)
+        recipe_text += "\n"
+        recipes.append(recipe_text)
         recipe_datas.append(recipe_data)
     logger.debug("parsed rows " + str(time.time()-t))
     t = time.time()
