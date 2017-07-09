@@ -127,8 +127,10 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
     sql_statement = "SELECT * FROM (SELECT * FROM recipes WHERE source=='{}') WHERE ".format("' OR source=='".join(sources_to_include)) + " AND ".join(sql_statements)
     recipes = []
     recipe_datas = []
+    t = time.time()
     rows = c.execute(sql_statement)
     logger.debug("exclusive " + str(time.time()-t))
+    t = time.time()
     for row in rows:
         source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
         ingredients = json.loads(ingredients)
@@ -150,8 +152,10 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
         recipe_text += "\n"
         recipes.append(recipe_text)
         recipe_datas.append(recipe_data)
-    logger.debug("closing")
+    logger.debug("parsed rows " + str(time.time()-t))
+    t = time.time()
     conn.close()
+    logger.debug("closed " + str(time.time()-t))
     return recipes, recipe_datas
 
 # import time
