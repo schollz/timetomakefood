@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Find a recipe</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Time to make food!">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://timetomakefood.com/assets/img/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://timetomakefood.com/assets/img/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://timetomakefood.com/assets/img/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://timetomakefood.com/assets/img/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://timetomakefood.com/assets/img/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://timetomakefood.com/assets/img/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://timetomakefood.com/assets/img/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://timetomakefood.com/assets/img/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://timetomakefood.com/assets/img/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://timetomakefood.com/assets/img/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://timetomakefood.com/assets/img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://timetomakefood.com/assets/img/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://timetomakefood.com/assets/img/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://timetomakefood.com/assets/img/icons/manifest.json">
+  <meta name="msapplication-TileImage" content="https://timetomakefood.com/assets/img/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="msapplication-TileColor" content="#56817a">
+  <meta name="msapplication-TileImage" content="https://timetomakefood.com/assets/img/icons/microsoft/mstile-144x144.png?v=gAAmLMYXpw">
+  <meta name="msapplication-config" content="https://timetomakefood.com/assets/img/icons/microsoft/browserconfig.xml?v=gAAmLMYXpw">
+  <meta name="theme-color" content="#56817a">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="/static/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    img {
+      object-fit: cover;
+    }
+    html {
+      font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    }
+
+nav .brand-logo {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+
+  </style>
+
+  <style>
+	 input,
+        button {
+            width: 100%;
+            border: 5px;
+            padding: 4px;
+            margin: 4px;
+            font-size: 25px;
+        }
+    input {
+		box-sizing: border-box;
+		border: 2px solid gray;
+		border-radius: 2px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav class="nav-extended grey darken-4">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Time To Make Food</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large fixed"><i class="material-icons">menu</i></a>
+      <ul class="side-nav" id="mobile-demo">
+        <li>
+          <h3 class="black-text name">&nbsp;Recipes</h3>
+          </a>
+        </li>
+
+          
+          <li>
+          <div class="user-view">
+            <a href="/tortilla/"><img class="circle" src="/static/img/food/tortilla.jpg"></a>
+            <a href="/tortilla/"><span class="black-text name">Tortilla</span></a>
+          </div>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      
+          <li>
+          <div class="user-view">
+            <a href="/refried-beans/"><img class="circle" src="/static/img/food/refried_beans.jpg"></a>
+            <a href="/refried-beans/"><span class="black-text name">Refried Beans</span></a>
+          </div>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      
+          <li>
+          <div class="user-view">
+            <a href="/grilled-cheese-sandwich/"><img class="circle" src="/static/img/food/grilled_cheese_sandwich.jpg"></a>
+            <a href="/grilled-cheese-sandwich/"><span class="black-text name">Grilled Cheese Sandwich</span></a>
+          </div>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      
+          <li>
+          <div class="user-view">
+            <a href="/cookies/"><img class="circle" src="/static/img/food/cookies.jpg"></a>
+            <a href="/cookies/"><span class="black-text name">Cookies</span></a>
+          </div>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      
+          <li>
+          <div class="user-view">
+            <a href="/noodles/"><img class="circle" src="/static/img/food/noodles.jpg"></a>
+            <a href="/noodles/"><span class="black-text name">Noodles</span></a>
+          </div>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      
+          <li>
+          <div class="user-view">
+            <a href="/white-sauce/"><img class="circle" src="/static/img/food/white_sauce.jpg"></a>
+            <a href="/white-sauce/"><span class="black-text name">White Sauce</span></a>
+          </div>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      
+          <li>
+          <div class="user-view">
+            <a href="/loaf-of-bread/"><img class="circle" src="/static/img/food/loaf_of_bread.jpg"></a>
+            <a href="/loaf-of-bread/"><span class="black-text name">Loaf Of Bread</span></a>
+          </div>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      
+          <li>
+          <div class="user-view">
+            <a href="/eggs-benedict/"><img class="circle" src="/static/img/food/eggs_benedict.jpg"></a>
+            <a href="/eggs-benedict/"><span class="black-text name">Eggs Benedict</span></a>
+          </div>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      
+          <li>
+          <div class="user-view">
+            <a href="/english-muffin/"><img class="circle" src="/static/img/food/english_muffin.jpg"></a>
+            <a href="/english-muffin/"><span class="black-text name">English Muffin</span></a>
+          </div>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      
+          <li>
+          <div class="user-view">
+            <a href="/pancakes/"><img class="circle" src="/static/img/food/pancakes.jpg"></a>
+            <a href="/pancakes/"><span class="black-text name">Pancakes</span></a>
+          </div>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      
+          <li>
+          <div class="user-view">
+            <a href="/mustard/"><img class="circle" src="/static/img/food/mustard.jpg"></a>
+            <a href="/mustard/"><span class="black-text name">Mustard</span></a>
+          </div>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      
+          <li>
+          <div class="user-view">
+            <a href="/mayonnaise/"><img class="circle" src="/static/img/food/mayonnaise.jpg"></a>
+            <a href="/mayonnaise/"><span class="black-text name">Mayonnaise</span></a>
+          </div>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+      
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container">
+
+
+
+
+  <!-- Tap Target Structure -->
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+          <a id="menu" class="btn btn-floating btn-large grey darken-1" onclick="toggleTarget();"><i><img src="/static/img/site/help.png" style="padding-top: 16px;" /></i></a>
+        </div>
+  <div class="tap-target teal lighten-1" data-activates="menu">
+    <div class="tap-target-content white-text">
+      
+      {% if found_recipes %}
+      <h5 align="right">Found {{ recipes | length }} recipes</h5>
+<p align="right">
+{% if include_words %}
+Including <em>{{ include_words  }}</em>.<br>
+{% endif %}
+{% if exclude_words %}
+Excluding <em>{{ exclude_words }}</em>.<br>
+{% endif %}
+</p>
+<p>Swipe or press left/right to scroll through the recipes!</p>
+{% else %}
+<h5 align="right">Find a recipe!</h5>
+<p align="right">Enter the ingredients, separated by commas, that you would like to include or exclude in your search results. Then press Go!<p>
+
+{% endif %}
+
+      <br>
+    </div>
+  </div>
+  <!-- END Tap Target Structure -->
+
+{% if found_recipes %}
+    <div class="section">
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- TimeToMakeFoodv2-2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4947875154879707"
+     data-ad-slot="8812124453"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+        <div class="row ">
+          	<div class="your-class" id="recipelist">
+					{% for recipe in recipes %}
+          <div class="col s12 m12">
+	            <div class="card z-depth-1 ">
+	              <div class="card-content  flow-text">
+					<div style="height: auto;">
+					<h2>{{ recipe['name'] }}</h2>
+					<ul>
+					{% for in in recipe['ingredients'] %}
+					<li>{{ in }}</li>
+					{% endfor %}
+					</ul>
+					<ol>
+					{% for in in recipe['instructions'] %}
+					<li>{{ in }}</li>
+					{% endfor %}
+					</ol>
+					</div>
+	              </div>
+	            </div>
+            </div>
+					{% endfor %}
+          </div>
+        </div>
+        
+    </div>
+{% endif %}
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- TimeToMakeFoodv2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4947875154879707"
+     data-ad-slot="7335391250"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+    <!--  Collections Section  -->
+    <div id="basic" class="section">
+
+      <div class="col s12 ">
+
+       <div class="card">
+        <div class="card-content">
+		<h3>Find a recipe</h3>
+		<p style="color:red;">{{ message }}</p>
+		<p style="font-size:30px;">Ingredients to include:</p>
+<input id="includewords" placeholder="eggs, milk" onkeypress="return runScript(event)" {% if include_words %}value="{{ include_words }}"{% endif %} style="font-size:25px;font-style: italic;"/>
+		<p style="font-size:30px;">Ingredients to exclude:</p>
+<input id="excludewords" placeholder="chocolate chips, flour" onkeypress="return runScript(event)" {% if exclude_words %}value="{{ exclude_words }}"{% endif %}  style="font-size:25px;font-style: italic;"/>
+<br>
+<button type="button" onclick="shortenURL()">Go!</button>
+        </div>
+        <div class="card-action">
+
+
+
+<!-- AddToAny BEGIN -->
+<div>
+<a href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Ftimetomakefood.com%2Fenglish-muffin%2F&amp;linkname=Make%20English%20Muffin%20in%203%20hours%20and%2030%20minutes" target="_blank"><img src="https://static.addtoany.com/buttons/facebook.svg" width="32" height="32"></a>
+<a href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Ftimetomakefood.com%2Fenglish-muffin%2F&amp;linkname=Make%20English%20Muffin%20in%203%20hours%20and%2030%20minutes" target="_blank"><img src="https://static.addtoany.com/buttons/twitter.svg" width="32" height="32"></a>
+<a href="https://www.addtoany.com/add_to/pinterest?linkurl=https%3A%2F%2Ftimetomakefood.com%2Fenglish-muffin%2F&amp;linkname=Make%20English%20Muffin%20in%203%20hours%20and%2030%20minutes" target="_blank"><img src="https://static.addtoany.com/buttons/pinterest.svg" width="32" height="32"></a>
+<a href="https://www.addtoany.com/add_to/stumbleupon?linkurl=https%3A%2F%2Ftimetomakefood.com%2Fenglish-muffin%2F&amp;linkname=Make%20English%20Muffin%20in%203%20hours%20and%2030%20minutes" target="_blank"><img src="https://static.addtoany.com/buttons/stumbleupon.svg" width="32" height="32"></a>
+<a href="https://www.addtoany.com/add_to/reddit?linkurl=https%3A%2F%2Ftimetomakefood.com%2Fenglish-muffin%2F&amp;linkname=Make%20English%20Muffin%20in%203%20hours%20and%2030%20minutes" target="_blank"><img src="https://static.addtoany.com/buttons/reddit.svg" width="32" height="32"></a>
+</div>
+<!-- AddToAny END -->
+
+</div>
+      </div>
+
+
+      </div>
+
+    </div>
+    <!-- End collections -->
+
+
+
+  </div>
+
+
+  <footer class="page-footer grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About</h5>
+          <p class="grey-text text-lighten-4"><a href="timetomakefood.com">timetomakefood.com</a> is an educational website to help inform where food comes from and how food is made. The amount of time and effort that goes into modern food is often lost on the consumer, so <a href="timetomakefood.com">timetomakefood.com</a> helps you to explore the food tree to its most central components.</p>
+        </div>
+                <div class="col l6 s12">
+          <h5 class="white-text">&nbsp;</h5>
+
+<p class="grey-text text-lighten-4">Read more about the inspiration for this site at <a href="https://rpiai.com/time-to-make-food/">rpiai.com</a>. </p>
+          <p class="grey-text text-lighten-4">The source code for <a href="timetomakefood.com">timetomakefood.com</a> is available at <a href="https://github.com/schollz/timetomakefood">Github</a>. </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2017 
+        <a class="grey-text text-lighten-4 right" href="#!">timetomakefood@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="/static/jquery-3.2.1.min.js"></script>
+
+  <script src="/static/jquery.timeago.min.js"></script>
+  <script src="/static/prism.js"></script>
+  <script src="/static/lunr.min.js"></script>
+  <script src="/static/search.js"></script>
+  <script src="/static/materialize.js"></script>
+  <script src="/static/init.js"></script>
+
+  <script type="text/javascript" src="http://kenwheeler.github.io/slick/slick/slick.js"></script>
+    <script>
+        function runScript(e) {
+            if (e.keyCode == 13) {
+                shortenURL();
+                return false;
+            }
+        }
+
+        function shortenURL() {
+            var includewords = document.getElementById("includewords");
+            console.log(includewords.value);
+            var excludewords = document.getElementById("excludewords");
+            console.log(excludewords.value);
+            window.location = "/recipe?exclude="+encodeURIComponent(excludewords.value) + "&include="+encodeURIComponent(includewords.value);
+        }
+    </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.your-class').slick({
+		  infinite: true,
+		  speed: 300,
+		  slidesToShow: 1,
+		  adaptiveHeight: true,
+		  mobileFirst: true,
+      });
+
+      $("body").keydown(function(e) {
+		  if(e.keyCode == 37) { // left
+		    $('.your-class').slick('slickPrev');
+		  }
+		  else if(e.keyCode == 39) { // right
+		    $('.your-class').slick('slickNext');
+		  }
+		});
+    });
+  </script>
+
+
+
+
+      <script>
+      $(document).ready(function () {
+
+        $('.button-collapse').sideNav({
+          menuWidth: 200, // Default is 300
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+          draggable: true, // Choose whether you can drag to open on touch screens,
+        });
+
+        $('.modal').modal();
+
+        toggleTarget();
+
+      })
+      tap_target = false
+      function toggleTarget() {
+        if (tap_target == true) {
+          tap_target == false
+           $('.tap-target').tapTarget('close');
+        } else {
+          tap_target == true
+           $('.tap-target').tapTarget('open');
+        }
+
+      }
+  </script>
+
+</body>
+
+</html>

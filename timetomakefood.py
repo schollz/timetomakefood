@@ -2,6 +2,10 @@ import random
 import time
 from os import mkdir
 from os.path import isfile, join
+import json
+import textwrap
+
+import sqlite3
 from flask import Flask
 from flask import render_template, request, redirect
 app = Flask(__name__)
@@ -63,6 +67,101 @@ def hello(path):
         else:
             first_time_user = False
     return render_template('main2.html', recipe=recipe, graphviz=n.generate_graphviz(ingredients), other_recipes=CURRENT_RECIPES,first_time_user=first_time_user,url=path)
+
+
+
+def parse_search_string(s):
+    """
+    Given a string like 
+        +peanut butter -chocolate
+    Returns
+        - list to include
+        - list to exclude
+    """
+
+    ings = (' '+s).replace(' +','zZz').replace(' -','zZz').split('zZz')
+    include = []
+    exclude = []
+    for ing in ings:
+        if len(ing) == 0:
+            continue
+        if '+'+ing in s:
+            include.append(ing)
+        if '-'+ing in s:
+            exclude.append(ing)
+    return include,exclude
+
+def get_recipes(search_string, include_words=[], exclude_words=[]):
+    conn = sqlite3.connect('recipes.sqlite3.db')
+    c = conn.cursor()
+
+    if include_words == [] and exclude_words == []:
+        if len(search_string) < 5:
+            return [], []
+        include_words, exclude_words = parse_search_string(search_string)
+    sql_statements = []
+    for word in include_words:
+        sql_statement = '(instr(ingredients,"{w}") > 0 OR instr(name,"{w}") > 0)'.format(w=word)
+        sql_statements.append(sql_statement)
+    for word in exclude_words:
+        sql_statement = '(instr(ingredients,"{w}") == 0 AND instr(name,"{w}") == 0)'.format(w=word)
+        sql_statements.append(sql_statement)
+
+    recipes = []
+    if len(sql_statements) > 0:
+        sql_statement = "SELECT * FROM recipes WHERE " + " AND ".join(sql_statements)
+        logger.info(sql_statement)
+        recipes = []
+        recipe_datas = []
+        for row in c.execute(sql_statement):
+            source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
+            ingredients = json.loads(ingredients)
+            instructions = json.loads(instructions)
+            recipe_data = {}
+            recipe_data['name'] = name.title()
+            recipe_data['ingredients'] = ingredients
+            recipe_data['instructions'] = instructions
+            recipe_text = ""
+            recipe_text += "-"*70 + "\n"
+            recipe_text += name.title().center(70) + "\n\n"
+            for i,ingredient in enumerate(ingredients):
+                ingredient = "  \n   ".join(textwrap.wrap(ingredient.strip(),65))
+                recipe_text += "   - {}\n".format(ingredient) 
+            recipe_text += "\n"
+            for i,instruction in enumerate(instructions):
+                instruction = "  \n   ".join(textwrap.wrap(instruction.strip(),65))
+                recipe_text += "  {}. {}\n".format(i+1,instruction)
+            recipe_text += "\n"
+            recipes.append(recipe_text)
+            recipe_datas.append(recipe_data)
+    conn.close()
+    return recipes, recipe_datas
+
+
+@app.route('/find')
+def recipelist():
+    message = ""
+    exclude_words = []
+    include_words = []
+    for word in request.args.get('exclude',default='').split(','):
+        word = word.lower().strip()
+        if len(word) > 2:
+            exclude_words.append(word)
+    for word in request.args.get('include',default='').split(','):
+        word = word.lower().strip()
+        if len(word) > 2:
+            include_words.append(word)
+    logger.info(exclude_words)
+    logger.info(include_words)
+    logger.info(len(exclude_words) + len(include_words))
+    if len(exclude_words) + len(include_words) > 2:
+        recipes, recipes_data = get_recipes("", exclude_words=exclude_words, include_words=include_words)
+    else:
+        if len(exclude_words) + len(include_words) > 0:
+            message = "Must include at least three ingredients"
+        recipes, recipes_data = [],[]
+
+    return render_template('recipes2.html', recipes=recipes_data, found_recipes=len(recipes_data)>0,include_words=", ".join(include_words),exclude_words=", ".join(exclude_words), message=message)
 
 if __name__ == "__main__":
     from waitress import serve
