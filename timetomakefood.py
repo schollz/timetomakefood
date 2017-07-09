@@ -159,9 +159,9 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
     return recipes, recipe_datas
 
 # import time
-# t = time.time()
-# get_recipes("",include_words=["cocoa","oat","milk","sugar"],exclude_words=["flour","egg","bread"])
-# print(time.time()-t)
+t = time.time()
+get_recipes("",include_words=["cocoa","oat","milk","sugar"],exclude_words=["flour","egg","bread"])
+print(time.time()-t)
 
 @app.route('/find')
 def recipelist():
