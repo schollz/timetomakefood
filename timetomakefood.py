@@ -130,7 +130,7 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
     t = time.time()
     rows = c.execute(sql_statement)
     logger.debug("exclusive " + str(time.time()-t))
-    t = time.time()
+    t3 = time.time()
     for row in rows:
         t2 = time.time()
         source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
@@ -154,7 +154,7 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
         recipes.append(recipe_text)
         recipe_datas.append(recipe_data)
         logger.debug(time.time()-t2)
-    logger.debug("parsed rows " + str(time.time()-t))
+    logger.debug("parsed rows " + str(time.time()-t3))
     t = time.time()
     conn.close()
     logger.debug("closed " + str(time.time()-t))
