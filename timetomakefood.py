@@ -91,52 +91,71 @@ def parse_search_string(s):
             exclude.append(ing)
     return include,exclude
 
+
 def get_recipes(search_string, include_words=[], exclude_words=[]):
     conn = sqlite3.connect('recipes.sqlite3.db')
     c = conn.cursor()
 
     if include_words == [] and exclude_words == []:
         if len(search_string) < 5:
+            conn.close()
             return [], []
         include_words, exclude_words = parse_search_string(search_string)
     sql_statements = []
-    for word in include_words:
-        sql_statement = '(instr(ingredients,"{w}") > 0 OR instr(name,"{w}") > 0)'.format(w=word)
-        sql_statements.append(sql_statement)
+
+
+    recipes = []
+    if len(include_words)+len(exclude_words) == 0:
+        conn.close()
+        return [],[]
+
+    logger.debug("finding inclusive")
+    sources_to_include = set()
+    for row in c.execute("SELECT source FROM recipesearch WHERE ingredients MATCH '*%s*'" % "*".join(include_words)):
+        sources_to_include.add(row[0])
+    sources_to_include = list(sources_to_include)
+
+    sources_to_exclude = set()
     for word in exclude_words:
         sql_statement = '(instr(ingredients,"{w}") == 0 AND instr(name,"{w}") == 0)'.format(w=word)
         sql_statements.append(sql_statement)
 
+    if len(sources_to_include) > 100:
+        sources_to_include = sources_to_include[:100]
+        random.shuffle(sources_to_include)
+    sql_statement = "SELECT * FROM (SELECT * FROM recipes WHERE source=='{}') WHERE ".format("' OR source=='".join(sources_to_include)) + " AND ".join(sql_statements)
     recipes = []
-    if len(sql_statements) > 0:
-        sql_statement = "SELECT * FROM recipes WHERE " + " AND ".join(sql_statements)
-        logger.info(sql_statement)
-        recipes = []
-        recipe_datas = []
-        for row in c.execute(sql_statement):
-            source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
-            ingredients = json.loads(ingredients)
-            instructions = json.loads(instructions)
-            recipe_data = {}
-            recipe_data['name'] = name.title()
-            recipe_data['ingredients'] = ingredients
-            recipe_data['instructions'] = instructions
-            recipe_text = ""
-            recipe_text += "-"*70 + "\n"
-            recipe_text += name.title().center(70) + "\n\n"
-            for i,ingredient in enumerate(ingredients):
-                ingredient = "  \n   ".join(textwrap.wrap(ingredient.strip(),65))
-                recipe_text += "   - {}\n".format(ingredient) 
-            recipe_text += "\n"
-            for i,instruction in enumerate(instructions):
-                instruction = "  \n   ".join(textwrap.wrap(instruction.strip(),65))
-                recipe_text += "  {}. {}\n".format(i+1,instruction)
-            recipe_text += "\n"
-            recipes.append(recipe_text)
-            recipe_datas.append(recipe_data)
+    recipe_datas = []
+    logger.debug("finding exclusive")
+    for row in c.execute(sql_statement):
+        source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
+        ingredients = json.loads(ingredients)
+        instructions = json.loads(instructions)
+        recipe_data = {}
+        recipe_data['name'] = name.title()
+        recipe_data['ingredients'] = ingredients
+        recipe_data['instructions'] = instructions
+        recipe_text = ""
+        recipe_text += "-"*70 + "\n"
+        recipe_text += name.title().center(70) + "\n\n"
+        for i,ingredient in enumerate(ingredients):
+            ingredient = "  \n   ".join(textwrap.wrap(ingredient.strip(),65))
+            recipe_text += "   - {}\n".format(ingredient) 
+        recipe_text += "\n"
+        for i,instruction in enumerate(instructions):
+            instruction = "  \n   ".join(textwrap.wrap(instruction.strip(),65))
+            recipe_text += "  {}. {}\n".format(i+1,instruction)
+        recipe_text += "\n"
+        recipes.append(recipe_text)
+        recipe_datas.append(recipe_data)
+    logger.debug("closing")
     conn.close()
     return recipes, recipe_datas
 
+# import time
+# t = time.time()
+# print(get_recipes("",include_words=["cocoa","oat","milk","sugar"],exclude_words=["flour","egg","bread"]))
+# print(time.time()-t)
 
 @app.route('/find')
 def recipelist():
