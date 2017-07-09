@@ -109,11 +109,12 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
         conn.close()
         return [],[]
 
-    logger.debug("finding inclusive")
     sources_to_include = set()
+    t = time.time()
     for row in c.execute("SELECT source FROM recipesearch WHERE ingredients MATCH '*%s*'" % "*".join(include_words)):
         sources_to_include.add(row[0])
     sources_to_include = list(sources_to_include)
+    logger.debug("inclusive " + str(time.time()-t))
 
     sources_to_exclude = set()
     for word in exclude_words:
@@ -126,8 +127,9 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
     sql_statement = "SELECT * FROM (SELECT * FROM recipes WHERE source=='{}') WHERE ".format("' OR source=='".join(sources_to_include)) + " AND ".join(sql_statements)
     recipes = []
     recipe_datas = []
-    logger.debug("finding exclusive")
-    for row in c.execute(sql_statement):
+    rows = c.execute(sql_statement)
+    logger.debug("exclusive " + str(time.time()-t))
+    for row in rows:
         source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
         ingredients = json.loads(ingredients)
         instructions = json.loads(instructions)
@@ -154,7 +156,7 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
 
 # import time
 # t = time.time()
-# print(get_recipes("",include_words=["cocoa","oat","milk","sugar"],exclude_words=["flour","egg","bread"]))
+# get_recipes("",include_words=["cocoa","oat","milk","sugar"],exclude_words=["flour","egg","bread"])
 # print(time.time()-t)
 
 @app.route('/find')
