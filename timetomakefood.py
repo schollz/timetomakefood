@@ -200,13 +200,16 @@ def recipelist():
         if len(word) > 2:
             include_words.append(word)
     max_ingredients = request.args.get('max_ingredients',default='12')
+    max_ingredients = int(max_ingredients)
     try:
-        max_ingredients = int(n)
+        max_ingredients = int(max_ingredients)
     except:
+        logger.error("Problem getting max_ingredients")
         max_ingredients = 12
     logger.info(exclude_words)
     logger.info(include_words)
     logger.info(len(exclude_words) + len(include_words))
+    logger.info(max_ingredients)
     if len(exclude_words) + len(include_words) > 2:
         cache_file = join("cache","find-" + md5(json.dumps({"exclude":sorted(exclude_words),"include":sorted(include_words),"max":max_ingredients})) + ".json")
         if isfile(cache_file) and True:
