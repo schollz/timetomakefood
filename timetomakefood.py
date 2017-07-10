@@ -125,7 +125,6 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
         sources_to_include = sources_to_include[:100]
         random.shuffle(sources_to_include)
     sql_statement = "SELECT * FROM (SELECT * FROM recipes WHERE source=='{}') WHERE ".format("' OR source=='".join(sources_to_include)) + " AND ".join(sql_statements)
-    logger.info(sql_statement)
     recipes = []
     recipe_datas = []
     t = time.time()
