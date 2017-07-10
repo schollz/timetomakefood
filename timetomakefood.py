@@ -1,3 +1,4 @@
+import sys
 import random
 import time
 from os import mkdir
@@ -23,6 +24,7 @@ logger = logging.getLogger('timetomakefood')
 
 CURRENT_RECIPES = ['tortilla', 'refried beans', 'grilled cheese sandwich','cookies', 'noodles', 'white sauce','loaf of bread','eggs benedict','english muffin', 'pancakes', 'mustard', 'mayonnaise']
 n = RecipeNetwork()
+USE_MEMORY = False
 
 try:
     mkdir("cache")
@@ -111,17 +113,18 @@ def init_sqlite_db(app):
     app.sqlite.commit()
     app.sqlite.row_factory = sqlite3.Row
 
-init_sqlite_db(app)
-
 
 def get_recipes(search_string, include_words=[], exclude_words=[], max_ingredients=20):
-    c = app.sqlite.cursor()
-    # conn = sqlite3.connect('recipes.sqlite3.db')
-    # c = conn.cursor()
+    if USE_MEMORY:
+        c = app.sqlite.cursor()
+    else:
+        conn = sqlite3.connect('recipes.sqlite3.db')
+        c = conn.cursor()
 
     if include_words == [] and exclude_words == []:
         if len(search_string) < 5:
-            # conn.close()
+            if not USE_MEMORY:
+                conn.close()
             return [], []
         include_words, exclude_words = parse_search_string(search_string)
     sql_statements = []
@@ -129,7 +132,8 @@ def get_recipes(search_string, include_words=[], exclude_words=[], max_ingredien
 
     recipes = []
     if len(include_words)+len(exclude_words) == 0:
-        # conn.close()
+        if not USE_MEMORY:
+            conn.close()
         return [],[]
 
 
@@ -200,7 +204,8 @@ def get_recipes(search_string, include_words=[], exclude_words=[], max_ingredien
         recipe_text += "\n"
         recipes.append(recipe_text)
         recipe_datas.append(recipe_data)
-    # conn.close()
+    if not USE_MEMORY:
+        conn.close()
     return recipes, recipe_datas
 
 # import time
@@ -253,5 +258,8 @@ def recipelist():
     return render_template('recipes2.html', recipes=recipes_data, found_recipes=len(recipes_data)>0,include_words=", ".join(include_words),exclude_words=", ".join(exclude_words), message=message, share_url=share_url, share_title=share_title)
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "memory":
+        init_sqlite_db(app)
+        USE_MEMORY = True
     from waitress import serve
     serve(app, listen='*:6375')
