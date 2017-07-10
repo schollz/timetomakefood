@@ -125,14 +125,13 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
         sources_to_include = sources_to_include[:100]
         random.shuffle(sources_to_include)
     sql_statement = "SELECT * FROM (SELECT * FROM recipes WHERE source=='{}') WHERE ".format("' OR source=='".join(sources_to_include)) + " AND ".join(sql_statements)
+    logger.info(sql_statement)
     recipes = []
     recipe_datas = []
     t = time.time()
     rows = list(c.execute(sql_statement))
     logger.debug("execute " + str(time.time()-t))
-    t3 = time.time()
     for row in rows:
-        t2 = time.time()
         source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
         ingredients = json.loads(ingredients)
         instructions = json.loads(instructions)
@@ -153,11 +152,7 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
         recipe_text += "\n"
         recipes.append(recipe_text)
         recipe_datas.append(recipe_data)
-        logger.debug(time.time()-t2)
-    logger.debug(str(time.time()-t3))
-    t = time.time()
     conn.close()
-    logger.debug("closed " + str(time.time()-t))
     return recipes, recipe_datas
 
 # import time
