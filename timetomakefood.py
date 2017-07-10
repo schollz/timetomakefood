@@ -93,7 +93,7 @@ def parse_search_string(s):
     return include,exclude
 
 
-def get_recipes(search_string, include_words=[], exclude_words=[]):
+def get_recipes(search_string, include_words=[], exclude_words=[], max_ingredients=20):
     conn = sqlite3.connect('recipes.sqlite3.db')
     c = conn.cursor()
 
@@ -151,7 +151,8 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
     recipes = []
     recipe_datas = []
     t = time.time()
-    sql_statement = "SELECT * FROM recipes WHERE " + " AND ".join(sql_statements)
+    sql_statement = "SELECT * FROM (select * from recipes where num_ingredients < {}) WHERE ".format(max_ingredients) + " AND ".join(sql_statements)
+    logger.info(sql_statement)
     rows = list(c.execute(sql_statement))
     logger.debug("execute " + str(time.time()-t))
     for i,row in enumerate(rows):
@@ -182,7 +183,7 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
 
 # import time
 # t4 = time.time()
-# get_recipes("",include_words=["cocoa","oat","milk","sugar"],exclude_words=["flour","egg","bread"])
+# get_recipes("",include_words=["cocoa","oat","milk","sugar"],exclude_words=["flour","egg","bread"],max_ingredients=8)
 # print(time.time()-t4)
 
 @app.route('/find')
@@ -198,17 +199,22 @@ def recipelist():
         word = word.lower().strip()
         if len(word) > 2:
             include_words.append(word)
+    max_ingredients = request.args.get('max_ingredients',default='12')
+    try:
+        max_ingredients = int(n)
+    except:
+        max_ingredients = 12
     logger.info(exclude_words)
     logger.info(include_words)
     logger.info(len(exclude_words) + len(include_words))
     if len(exclude_words) + len(include_words) > 2:
-        cache_file = join("cache","find-" + md5(json.dumps({"exclude":sorted(exclude_words),"include":sorted(include_words)})) + ".json")
+        cache_file = join("cache","find-" + md5(json.dumps({"exclude":sorted(exclude_words),"include":sorted(include_words),"max":max_ingredients})) + ".json")
         if isfile(cache_file) and True:
             logger.debug("Using cache {}".format(cache_file))
             recipes_data = json.load(open(cache_file))
             recipes = []
         else:
-            recipes, recipes_data = get_recipes("", exclude_words=exclude_words, include_words=include_words)
+            recipes, recipes_data = get_recipes("", exclude_words=exclude_words, include_words=include_words, max_ingredients=max_ingredients)
             with open(cache_file,'w') as f:
                 f.write(json.dumps(recipes_data))
     else:
@@ -216,7 +222,7 @@ def recipelist():
             message = "Must include at least three ingredients"
         recipes, recipes_data = [],[]
 
-    share_url = "https://timetomakefood.com/find?" + urllib.parse.urlencode({'exclude':','.join(exclude_words),'include':','.join(include_words)})
+    share_url = "https://timetomakefood.com/find?" + urllib.parse.urlencode({'exclude':','.join(exclude_words),'include':','.join(include_words),'max_ingredients':max_ingredients})
     share_url = urllib.parse.quote_plus(share_url)
     share_title = urllib.parse.quote_plus("Recipe with " + ", ".join(include_words))
     return render_template('recipes2.html', recipes=recipes_data, found_recipes=len(recipes_data)>0,include_words=", ".join(include_words),exclude_words=", ".join(exclude_words), message=message, share_url=share_url, share_title=share_title)

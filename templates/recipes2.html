@@ -433,7 +433,7 @@ Excluding <em>{{ exclude_words }}</em>.<br>
             console.log(includewords.value);
             var excludewords = document.getElementById("excludewords");
             console.log(excludewords.value);
-            window.location = "/find?exclude="+encodeURIComponent(excludewords.value) + "&include="+encodeURIComponent(includewords.value);
+            window.location = "/find?exclude="+encodeURIComponent(excludewords.value) + "&include="+encodeURIComponent(includewords.value) + "&max_ingredients=20";
         }
     </script>
   <script type="text/javascript">
