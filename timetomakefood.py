@@ -109,27 +109,48 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
         conn.close()
         return [],[]
 
-    sources_to_include = set()
-    t = time.time()
-    for row in c.execute("SELECT source FROM recipesearch WHERE name MATCH '*%s*'" % "*".join(include_words)):
-        sources_to_include.add(row[0])
-    for row in c.execute("SELECT source FROM recipesearch WHERE ingredients MATCH '*%s*'" % "*".join(include_words)):
-        sources_to_include.add(row[0])
-    sources_to_include = list(sources_to_include)
-    logger.debug("inclusive " + str(time.time()-t))
 
-    sources_to_exclude = set()
+
+    # sources_to_include = set()
+    # t = time.time()
+    # for i,word in enumerate(include_words):
+    #     foo = set()
+    #     for row in c.execute("SELECT source FROM recipes WHERE name like '%%%s%%'" % word):
+    #         foo.add(row[0])
+    #     for row in c.execute("SELECT source FROM recipes WHERE ingredients like '%%%s%%'" % word):
+    #         foo.add(row[0])
+    #     if i == 0:
+    #         sources_to_include = foo
+    #     else:
+    #         sources_to_include = sources_to_include & foo
+    # sources_to_include = list(sources_to_include)
+    # logger.debug("inclusive " + str(time.time()-t))
+
+    # sources_to_exclude = set()
+    # for word in exclude_words:
+    #     sql_statement = '(instr(ingredients,"{w}") == 0 AND instr(name,"{w}") == 0)'.format(w=word)
+    #     sql_statements.append(sql_statement)
+
+    # if len(sources_to_include) > 100:
+    #     sources_to_include = sources_to_include[:100]
+    #     random.shuffle(sources_to_include)
+    # if len(sources_to_exclude) == 0:
+    #     sql_statement = "SELECT * FROM recipes WHERE (source=='{}') AND num_ingredients < 600".format("' OR source=='".join(sources_to_include))
+    # else:
+    #     sql_statement = "SELECT * FROM (SELECT * FROM recipes WHERE (source=='{}') AND num_ingredients < 600) WHERE ".format("' OR source=='".join(sources_to_include)) + " AND ".join(sql_statements)
+
+    sql_statements = []
+    for word in include_words:
+        sql_statement = '(instr(ingredients,"{w}") > 0 OR instr(name,"{w}") > 0)'.format(w=word)
+        sql_statements.append(sql_statement)
     for word in exclude_words:
         sql_statement = '(instr(ingredients,"{w}") == 0 AND instr(name,"{w}") == 0)'.format(w=word)
         sql_statements.append(sql_statement)
-
-    if len(sources_to_include) > 100:
-        sources_to_include = sources_to_include[:100]
-        random.shuffle(sources_to_include)
-    sql_statement = "SELECT * FROM (SELECT * FROM recipes WHERE source=='{}') WHERE ".format("' OR source=='".join(sources_to_include)) + " AND ".join(sql_statements)
+        
     recipes = []
     recipe_datas = []
     t = time.time()
+    sql_statement = "SELECT * FROM recipes WHERE " + " AND ".join(sql_statements)
     rows = list(c.execute(sql_statement))
     logger.debug("execute " + str(time.time()-t))
     for row in rows:
@@ -176,10 +197,8 @@ def recipelist():
             include_words.append(word)
     logger.info(exclude_words)
     logger.info(include_words)
-    if len(exclude_words) == 0: 
-        exclude_words.append("aslkdjfalsjkdf")
     logger.info(len(exclude_words) + len(include_words))
-    if len(exclude_words) + len(include_words) > 3:
+    if len(exclude_words) + len(include_words) > 2:
         recipes, recipes_data = get_recipes("", exclude_words=exclude_words, include_words=include_words)
     else:
         if len(exclude_words) + len(include_words) > 0:
