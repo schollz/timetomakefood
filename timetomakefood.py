@@ -111,6 +111,8 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
 
     sources_to_include = set()
     t = time.time()
+    for row in c.execute("SELECT source FROM recipesearch WHERE name MATCH '*%s*'" % "*".join(include_words)):
+        sources_to_include.add(row[0])
     for row in c.execute("SELECT source FROM recipesearch WHERE ingredients MATCH '*%s*'" % "*".join(include_words)):
         sources_to_include.add(row[0])
     sources_to_include = list(sources_to_include)
@@ -174,8 +176,10 @@ def recipelist():
             include_words.append(word)
     logger.info(exclude_words)
     logger.info(include_words)
+    if len(exclude_words) == 0: 
+        exclude_words.append("aslkdjfalsjkdf")
     logger.info(len(exclude_words) + len(include_words))
-    if len(exclude_words) + len(include_words) > 2:
+    if len(exclude_words) + len(include_words) > 3:
         recipes, recipes_data = get_recipes("", exclude_words=exclude_words, include_words=include_words)
     else:
         if len(exclude_words) + len(include_words) > 0:
