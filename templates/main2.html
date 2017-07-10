@@ -39,6 +39,32 @@
   <link rel="stylesheet" href="/static/materialize.min.css">
 
 
+<!-- COMMON TAGS -->
+<meta charset="utf-8">
+<!-- Search Engine -->
+<meta name="description" content="Make {{ recipe['name'] }} in only {{ recipe['time'] }}!">
+<meta name="image" content="https://timetomakefood.com/static/img/food/{{ recipe['name'] | replace(" ","_") }}.jpg">
+<!-- Schema.org for Google -->
+<meta itemprop="name" content="{{ recipe['name'] | title }}">
+<meta itemprop="description" content="Make {{ recipe['name'] }} in only {{ recipe['time'] }}!">
+<meta itemprop="image" content="https://timetomakefood.com/static/img/food/{{ recipe['name'] | replace(" ","_") }}.jpg">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ recipe['name'] | title }}">
+<meta name="twitter:description" content="Make {{ recipe['name'] }} in only {{ recipe['time'] }}!">
+<meta name="twitter:site" content="@timetomakefood">
+<meta name="twitter:creator" content="@timetomakefood">
+<meta name="twitter:image:src" content="https://timetomakefood.com/static/img/food/{{ recipe['name'] | replace(" ","_") }}.jpg">
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta name="og:title" content="{{ recipe['name'] | title }}">
+<meta name="og:description" content="Make {{ recipe['name'] }} in only {{ recipe['time'] }}!">
+<meta name="og:image" content="https://timetomakefood.com/static/img/food/{{ recipe['name'] | replace(" ","_") }}.jpg">
+<meta name="og:url" content="https://timetomakefood.com/{{ recipe['name'] | replace(" ","-") }}/">
+<meta name="og:site_name" content="Time To Make Food">
+<meta name="fb:admins" content="timetomakefood">
+<meta name="og:type" content="website">
+
+
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>

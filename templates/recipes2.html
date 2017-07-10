@@ -11,7 +11,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Time to make food!">
+  <meta name="description" content="Find a recipe by searching the ingredients you want and by excluding the ingredients you don't want!">
   <link rel="apple-touch-icon" sizes="57x57" href="https://timetomakefood.com/assets/img/icons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="https://timetomakefood.com/assets/img/icons/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="https://timetomakefood.com/assets/img/icons/apple-icon-72x72.png">
@@ -40,6 +40,31 @@
   <link rel="stylesheet" href="/static/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="/static/slick.css"/>
   <link rel="stylesheet" type="text/css" href="/static/slick-theme.css"/>
+
+
+<!-- COMMON TAGS -->
+<meta charset="utf-8">
+<!-- Search Engine -->
+<meta name="image" content="https://timetomakefood.com/static/img/food/noodles.jpg">
+<!-- Schema.org for Google -->
+<meta itemprop="name" content="Find a recipe by filtering ingredients">
+<meta itemprop="image" content="https://timetomakefood.com/static/img/food/noodles.jpg">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Refried Beans">
+<meta name="twitter:description" content="Make refried beans in only 14 hours and 15 minutes!">
+<meta name="twitter:site" content="@timetomakefood">
+<meta name="twitter:creator" content="@timetomakefood">
+<meta name="twitter:image:src" content="https://timetomakefood.com/static/img/food/noodles.jpg">
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta name="og:title" content="Refried Beans">
+<meta name="og:description" content="Make refried beans in only 14 hours and 15 minutes!">
+<meta name="og:image" content="https://timetomakefood.com/static/img/food/noodles.jpg">
+<meta name="og:url" content="https://timetomakefood.com/find">
+<meta name="og:site_name" content="Time To Make Food">
+<meta name="fb:admins" content="timetomakefood">
+<meta name="og:type" content="website">
+
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -339,11 +364,11 @@ Excluding <em>{{ exclude_words }}</em>.<br>
 
 <!-- AddToAny BEGIN -->
 <div>
-<a href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Ftimetomakefood.com%2Fenglish-muffin%2F&amp;linkname=Make%20English%20Muffin%20in%203%20hours%20and%2030%20minutes" target="_blank"><img src="https://static.addtoany.com/buttons/facebook.svg" width="32" height="32"></a>
-<a href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Ftimetomakefood.com%2Fenglish-muffin%2F&amp;linkname=Make%20English%20Muffin%20in%203%20hours%20and%2030%20minutes" target="_blank"><img src="https://static.addtoany.com/buttons/twitter.svg" width="32" height="32"></a>
-<a href="https://www.addtoany.com/add_to/pinterest?linkurl=https%3A%2F%2Ftimetomakefood.com%2Fenglish-muffin%2F&amp;linkname=Make%20English%20Muffin%20in%203%20hours%20and%2030%20minutes" target="_blank"><img src="https://static.addtoany.com/buttons/pinterest.svg" width="32" height="32"></a>
-<a href="https://www.addtoany.com/add_to/stumbleupon?linkurl=https%3A%2F%2Ftimetomakefood.com%2Fenglish-muffin%2F&amp;linkname=Make%20English%20Muffin%20in%203%20hours%20and%2030%20minutes" target="_blank"><img src="https://static.addtoany.com/buttons/stumbleupon.svg" width="32" height="32"></a>
-<a href="https://www.addtoany.com/add_to/reddit?linkurl=https%3A%2F%2Ftimetomakefood.com%2Fenglish-muffin%2F&amp;linkname=Make%20English%20Muffin%20in%203%20hours%20and%2030%20minutes" target="_blank"><img src="https://static.addtoany.com/buttons/reddit.svg" width="32" height="32"></a>
+<a href="https://www.addtoany.com/add_to/facebook?linkurl={{ share_url }}&amp;linkname={{ share_title }}" target="_blank"><img src="https://static.addtoany.com/buttons/facebook.svg" width="32" height="32"></a>
+<a href="https://www.addtoany.com/add_to/twitter?linkurl={{ share_url }}&amp;linkname={{ share_title }}" target="_blank"><img src="https://static.addtoany.com/buttons/twitter.svg" width="32" height="32"></a>
+<a href="https://www.addtoany.com/add_to/pinterest?linkurl={{ share_url }}&amp;linkname={{ share_title }}" target="_blank"><img src="https://static.addtoany.com/buttons/pinterest.svg" width="32" height="32"></a>
+<a href="https://www.addtoany.com/add_to/stumbleupon?linkurl={{ share_url }}&amp;linkname={{ share_title }}" target="_blank"><img src="https://static.addtoany.com/buttons/stumbleupon.svg" width="32" height="32"></a>
+<a href="https://www.addtoany.com/add_to/reddit?linkurl={{ share_url }}&amp;linkname={{ share_title }}" target="_blank"><img src="https://static.addtoany.com/buttons/reddit.svg" width="32" height="32"></a>
 </div>
 <!-- AddToAny END -->
 

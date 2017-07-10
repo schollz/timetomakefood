@@ -4,6 +4,7 @@ from os import mkdir
 from os.path import isfile, join
 import json
 import textwrap
+import urllib.parse
 
 import sqlite3
 from flask import Flask
@@ -153,12 +154,14 @@ def get_recipes(search_string, include_words=[], exclude_words=[]):
     sql_statement = "SELECT * FROM recipes WHERE " + " AND ".join(sql_statements)
     rows = list(c.execute(sql_statement))
     logger.debug("execute " + str(time.time()-t))
-    for row in rows:
+    for i,row in enumerate(rows):
+        if i > 100:
+            break
         source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
         ingredients = json.loads(ingredients)
         instructions = json.loads(instructions)
         recipe_data = {}
-        recipe_data['name'] = name.title()
+        recipe_data['name'] = name.title().replace("'S","'s")
         recipe_data['ingredients'] = ingredients
         recipe_data['instructions'] = instructions
         recipe_text = ""
@@ -199,13 +202,24 @@ def recipelist():
     logger.info(include_words)
     logger.info(len(exclude_words) + len(include_words))
     if len(exclude_words) + len(include_words) > 2:
-        recipes, recipes_data = get_recipes("", exclude_words=exclude_words, include_words=include_words)
+        cache_file = join("cache",md5(json.dumps({"exclude":sorted(exclude_words),"include":sorted(include_words)})) + ".json")
+        if isfile(cache_file) and True:
+            logger.debug("Using cache {}".format(cache_file))
+            recipes_data = json.load(open(cache_file))
+            recipes = []
+        else:
+            recipes, recipes_data = get_recipes("", exclude_words=exclude_words, include_words=include_words)
+            with open(cache_file,'w') as f:
+                f.write(json.dumps(recipes_data))
     else:
         if len(exclude_words) + len(include_words) > 0:
             message = "Must include at least three ingredients"
         recipes, recipes_data = [],[]
 
-    return render_template('recipes2.html', recipes=recipes_data, found_recipes=len(recipes_data)>0,include_words=", ".join(include_words),exclude_words=", ".join(exclude_words), message=message)
+    share_url = "https://timetomakefood.com/find?" + urllib.parse.urlencode({'exclude':','.join(exclude_words),'include':','.join(include_words)})
+    share_url = urllib.parse.quote_plus(share_url)
+    share_title = urllib.parse.quote_plus("Recipe with " + ", ".join(include_words))
+    return render_template('recipes2.html', recipes=recipes_data, found_recipes=len(recipes_data)>0,include_words=", ".join(include_words),exclude_words=", ".join(exclude_words), message=message, share_url=share_url, share_title=share_title)
 
 if __name__ == "__main__":
     from waitress import serve
