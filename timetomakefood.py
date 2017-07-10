@@ -92,14 +92,36 @@ def parse_search_string(s):
             exclude.append(ing)
     return include,exclude
 
+from io import StringIO
+
+def init_sqlite_db(app):
+    # Read database to tempfile
+    logger.info("Saving")
+    con = sqlite3.connect('recipes.sqlite3.db')
+    tempfile = StringIO()
+    for line in con.iterdump():
+        tempfile.write('%s\n' % line)
+    con.close()
+    tempfile.seek(0)
+
+    # Create a database in memory and import from tempfile
+    logger.info("loading into memory")
+    app.sqlite = sqlite3.connect(":memory:", check_same_thread=False)
+    app.sqlite.cursor().executescript(tempfile.read())
+    app.sqlite.commit()
+    app.sqlite.row_factory = sqlite3.Row
+
+init_sqlite_db(app)
+
 
 def get_recipes(search_string, include_words=[], exclude_words=[], max_ingredients=20):
-    conn = sqlite3.connect('recipes.sqlite3.db')
-    c = conn.cursor()
+    c = app.sqlite.cursor()
+    # conn = sqlite3.connect('recipes.sqlite3.db')
+    # c = conn.cursor()
 
     if include_words == [] and exclude_words == []:
         if len(search_string) < 5:
-            conn.close()
+            # conn.close()
             return [], []
         include_words, exclude_words = parse_search_string(search_string)
     sql_statements = []
@@ -107,7 +129,7 @@ def get_recipes(search_string, include_words=[], exclude_words=[], max_ingredien
 
     recipes = []
     if len(include_words)+len(exclude_words) == 0:
-        conn.close()
+        # conn.close()
         return [],[]
 
 
@@ -178,7 +200,7 @@ def get_recipes(search_string, include_words=[], exclude_words=[], max_ingredien
         recipe_text += "\n"
         recipes.append(recipe_text)
         recipe_datas.append(recipe_data)
-    conn.close()
+    # conn.close()
     return recipes, recipe_datas
 
 # import time
