@@ -177,13 +177,11 @@ def get_recipes(search_string, include_words=[], exclude_words=[], max_ingredien
     recipes = []
     recipe_datas = []
     t = time.time()
-    sql_statement = "SELECT * FROM (select * from recipes where num_ingredients < {}) WHERE ".format(max_ingredients) + " AND ".join(sql_statements)
+    sql_statement = "SELECT * FROM (select * from recipes where num_ingredients < {}) WHERE ".format(max_ingredients) + " AND ".join(sql_statements) + " LIMIT 100"
     logger.info(sql_statement)
     rows = list(c.execute(sql_statement))
     logger.debug("execute " + str(time.time()-t))
     for i,row in enumerate(rows):
-        if i == 100:
-            break
         source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
         ingredients = json.loads(ingredients)
         instructions = json.loads(instructions)
