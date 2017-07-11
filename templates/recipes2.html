@@ -421,6 +421,16 @@ Excluding <em>{{ exclude_words }}</em>.<br>
 
   <script type="text/javascript" src="/static/slick.js"></script>
     <script>
+
+    if(typeof(String.prototype.trim) === "undefined")
+{
+    String.prototype.trim = function() 
+    {
+        return String(this).replace(/^\s+|\s+$/g, '');
+    };
+}
+
+
         function runScript(e) {
             if (e.keyCode == 13) {
                 shortenURL();
@@ -429,11 +439,31 @@ Excluding <em>{{ exclude_words }}</em>.<br>
         }
 
         function shortenURL() {
-            var includewords = document.getElementById("includewords");
-            console.log(includewords.value);
-            var excludewords = document.getElementById("excludewords");
-            console.log(excludewords.value);
-            window.location = "/find?exclude="+encodeURIComponent(excludewords.value) + "&include="+encodeURIComponent(includewords.value) + "&max_ingredients=20";
+            var includewords = [];
+            var excludewords = [];
+            var words = document.getElementById("includewords");
+            console.log(words.value);
+            ara = words.value.split(",");
+            for(i = 0; i < ara.length; i++){
+              ing = ara[i].trim();
+              if (ara.length > 0) {
+                includewords.push(ing);
+              }
+            }
+            var words = document.getElementById("excludewords");
+            console.log(words.value);
+            ara = words.value.split(",");
+            for(i = 0; i < ara.length; i++){
+              ing = ara[i].trim();
+              if (ara.length > 0) {
+                excludewords.push(ing);
+              }
+            }
+            console.log("includewords");
+            console.log(includewords);
+            console.log("excludewords");
+            console.log(excludewords);
+            window.location = "/find?include="+includewords.join("+") + "&exclude="+excludewords.join("+")  + "&max_ingredients=20";
         }
     </script>
   <script type="text/javascript">

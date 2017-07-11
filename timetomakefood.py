@@ -216,11 +216,11 @@ def recipelist():
     message = ""
     exclude_words = []
     include_words = []
-    for word in request.args.get('exclude',default='').split(','):
+    for word in request.args.get('exclude',default='').split():
         word = word.lower().strip()
         if len(word) > 2:
             exclude_words.append(word)
-    for word in request.args.get('include',default='').split(','):
+    for word in request.args.get('include',default='').split():
         word = word.lower().strip()
         if len(word) > 2:
             include_words.append(word)
@@ -250,8 +250,7 @@ def recipelist():
             message = "Must include at least three ingredients"
         recipes, recipes_data = [],[]
 
-    share_url = "https://timetomakefood.com/find?" + urllib.parse.urlencode({'exclude':','.join(exclude_words),'include':','.join(include_words),'max_ingredients':max_ingredients})
-    share_url = urllib.parse.quote_plus(share_url)
+    share_url = "https://timetomakefood.com/find?include={}&exclude={}&max_ingredients={}".format("+".join(include_words),"+".join(exclude_words),max_ingredients) 
     share_title = urllib.parse.quote_plus("Recipe with " + ", ".join(include_words))
     return render_template('recipes2.html', recipes=recipes_data, found_recipes=len(recipes_data)>0,include_words=", ".join(include_words),exclude_words=", ".join(exclude_words), message=message, share_url=share_url, share_title=share_title)
 
