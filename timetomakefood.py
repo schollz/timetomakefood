@@ -182,7 +182,7 @@ def get_recipes(search_string, include_words=[], exclude_words=[], max_ingredien
     rows = list(c.execute(sql_statement))
     logger.debug("execute " + str(time.time()-t))
     for i,row in enumerate(rows):
-        if i > 100:
+        if i == 100:
             break
         source, name, ingredients, num_ingredients, instructions, ratingValue, ratingCount = row
         ingredients = json.loads(ingredients)
