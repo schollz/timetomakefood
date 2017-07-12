@@ -315,7 +315,7 @@ Excluding <em>{{ exclude_words }}</em>.<br>
 					</ul>
 					<ol>
 					{% for in in recipe['instructions'] %}
-					<li>{{ in }}</li>
+					<li>{{ in|replace("..","") }}</li>
 					{% endfor %}
 					</ol>
 					</div>
