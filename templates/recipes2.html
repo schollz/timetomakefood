@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>Find a recipe</title>
+  <title>Find a recipe by ingredients</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="HandheldFriendly" content="True">
@@ -118,7 +118,7 @@ nav .brand-logo {
 
           <li>
           <div class="user-view">
-            <a href="/find"><span class="black-text name">Find a recipe!</span></a>
+            <a href="/find"><span class="black-text name">Find a recipe by ingredients</span></a>
           </div>
         </li>
         <li>
@@ -349,12 +349,31 @@ Excluding <em>{{ exclude_words }}</em>.<br>
 
        <div class="card">
         <div class="card-content">
-		<h3>Find a recipe</h3>
+		<h3>Find a recipe by ingredients</h3>
 		<p style="color:red;">{{ message }}</p>
 		<p style="font-size:30px;">Ingredients to include:</p>
-<input id="includewords" placeholder="eggs, milk" onkeypress="return runScript(event)" {% if include_words %}value="{{ include_words }}"{% endif %} style="font-size:25px;font-style: italic;"/>
+<input id="includewords" placeholder="cocoa, sugar, milk, coconut, oats" onkeypress="return runScript(event)" {% if include_words %}value="{{ include_words }}"{% endif %} style="font-size:25px;font-style: italic;"/>
 		<p style="font-size:30px;">Ingredients to exclude:</p>
-<input id="excludewords" placeholder="chocolate chips, flour" onkeypress="return runScript(event)" {% if exclude_words %}value="{{ exclude_words }}"{% endif %}  style="font-size:25px;font-style: italic;"/>
+<input id="excludewords" placeholder="egg, flour" onkeypress="return runScript(event)" {% if exclude_words %}value="{{ exclude_words }}"{% endif %}  style="font-size:25px;font-style: italic;"/>
+    <p style="font-size:30px;">Maximum number of ingredients:</p>
+<select id="max_ingredients" style="font-size:25px;font-style: italic;">
+  <option value="{{ max_ingredients }}">{{ max_ingredients }}</option>
+  <option value="none">none</option>
+  <option value="10">10</option>
+  <option value="8">8</option>
+  <option value="6">6</option>
+  <option value="4">4</option>
+  <option value="none" style="font-size:25px;font-style: italic;">none</option>
+</select>    
+<p style="font-size:30px;">Minimum number of ingredients:</p>
+<select id="min_ingredients" style="font-size:30px;">
+  <option value="min_ingredients">{{ min_ingredients }}</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="4">4</option>
+  <option value="8">8</option>
+  <option value="16">16</option>
+</select>
 <br>
 <button type="button" onclick="shortenURL()">Go!</button>
         </div>
@@ -364,6 +383,7 @@ Excluding <em>{{ exclude_words }}</em>.<br>
 
 <!-- AddToAny BEGIN -->
 <div>
+<a href="https://www.addtoany.com/add_to/copy_link?linkurl={{ share_url }}&amp;linkname={{ share_title }}" target="_blank"><img src="https://static.addtoany.com/buttons/link.svg" width="32" height="32"></a>
 <a href="https://www.addtoany.com/add_to/facebook?linkurl={{ share_url }}&amp;linkname={{ share_title }}" target="_blank"><img src="https://static.addtoany.com/buttons/facebook.svg" width="32" height="32"></a>
 <a href="https://www.addtoany.com/add_to/twitter?linkurl={{ share_url }}&amp;linkname={{ share_title }}" target="_blank"><img src="https://static.addtoany.com/buttons/twitter.svg" width="32" height="32"></a>
 <a href="https://www.addtoany.com/add_to/pinterest?linkurl={{ share_url }}&amp;linkname={{ share_title }}" target="_blank"><img src="https://static.addtoany.com/buttons/pinterest.svg" width="32" height="32"></a>
@@ -463,7 +483,14 @@ Excluding <em>{{ exclude_words }}</em>.<br>
             console.log(includewords);
             console.log("excludewords");
             console.log(excludewords);
-            window.location = "/find?include="+includewords.join("+") + "&exclude="+excludewords.join("+")  + "&max_ingredients=20";
+            a = document.getElementById("max_ingredients");
+            if (a.value == "none") {
+              max_ingredients = "200";
+            } else {
+              max_ingredients = a.value;
+            }
+            min_ingredients = document.getElementById("min_ingredients").value;
+            window.location = "/find?include="+includewords.join("+") + "&exclude="+excludewords.join("+") + "&min_ingredients=" + min_ingredients  + "&max_ingredients=" + max_ingredients;
         }
     </script>
   <script type="text/javascript">

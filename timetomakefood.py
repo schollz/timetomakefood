@@ -114,7 +114,7 @@ def init_sqlite_db(app):
     app.sqlite.row_factory = sqlite3.Row
 
 
-def get_recipes(search_string, include_words=[], exclude_words=[], max_ingredients=20):
+def get_recipes(search_string, include_words=[], exclude_words=[], max_ingredients=20, min_ingredients=1):
     if USE_MEMORY:
         c = app.sqlite.cursor()
     else:
@@ -177,7 +177,7 @@ def get_recipes(search_string, include_words=[], exclude_words=[], max_ingredien
     recipes = []
     recipe_datas = []
     t = time.time()
-    sql_statement = "SELECT * FROM (select * from recipes where num_ingredients < {}) WHERE ".format(max_ingredients) + " AND ".join(sql_statements) + " LIMIT 100"
+    sql_statement = "SELECT * FROM (select * from recipes where num_ingredients <= {} AND num_ingredients >={}) WHERE ".format(max_ingredients, min_ingredients) + " AND ".join(sql_statements) + " LIMIT 100"
     logger.info(sql_statement)
     rows = list(c.execute(sql_statement))
     logger.debug("execute " + str(time.time()-t))
@@ -225,12 +225,17 @@ def recipelist():
         if len(word) > 2:
             include_words.append(word)
     max_ingredients = request.args.get('max_ingredients',default='12')
-    max_ingredients = int(max_ingredients)
     try:
         max_ingredients = int(max_ingredients)
     except:
         logger.error("Problem getting max_ingredients")
         max_ingredients = 12
+    min_ingredients = request.args.get('min_ingredients',default='1')
+    try:
+        min_ingredients = int(min_ingredients)
+    except:
+        logger.error("Problem getting min_ingredients")
+        min_ingredients = 1
     logger.info(exclude_words)
     logger.info(include_words)
     logger.info(len(exclude_words) + len(include_words))
@@ -242,7 +247,7 @@ def recipelist():
             recipes_data = json.load(open(cache_file))
             recipes = []
         else:
-            recipes, recipes_data = get_recipes("", exclude_words=exclude_words, include_words=include_words, max_ingredients=max_ingredients)
+            recipes, recipes_data = get_recipes("", exclude_words=exclude_words, include_words=include_words, max_ingredients=max_ingredients,min_ingredients=min_ingredients)
             with open(cache_file,'w') as f:
                 f.write(json.dumps(recipes_data))
     else:
@@ -250,9 +255,9 @@ def recipelist():
             message = "Must include at least three ingredients"
         recipes, recipes_data = [],[]
 
-    share_url = "https://timetomakefood.com/find?include={}&exclude={}&max_ingredients={}".format("+".join(include_words),"+".join(exclude_words),max_ingredients) 
+    share_url = urllib.parse.quote_plus("https://timetomakefood.com/find?include={}&exclude={}&min_ingredients={}&max_ingredients={}".format("+".join(include_words),"+".join(exclude_words),min_ingredients,max_ingredients))
     share_title = urllib.parse.quote_plus("Recipe with " + ", ".join(include_words))
-    return render_template('recipes2.html', recipes=recipes_data, found_recipes=len(recipes_data)>0,include_words=", ".join(include_words),exclude_words=", ".join(exclude_words), message=message, share_url=share_url, share_title=share_title)
+    return render_template('recipes2.html', recipes=recipes_data, found_recipes=len(recipes_data)>0,include_words=", ".join(include_words),exclude_words=", ".join(exclude_words), message=message, share_url=share_url, share_title=share_title, max_ingredients = max_ingredients, min_ingredients = min_ingredients)
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "memory":
