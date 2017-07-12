@@ -315,7 +315,7 @@ Excluding <em>{{ exclude_words }}</em>.<br>
 					</ul>
 					<ol>
 					{% for in in recipe['instructions'] %}
-					<li>{{ in|replace("..","") }}</li>
+					<li>{{ in|replace("..",".") }}</li>
 					{% endfor %}
 					</ol>
 					</div>
@@ -367,7 +367,7 @@ Excluding <em>{{ exclude_words }}</em>.<br>
 </select>    
 <p style="font-size:30px;">Minimum number of ingredients:</p>
 <select id="min_ingredients" style="font-size:30px;">
-  <option value="min_ingredients">{{ min_ingredients }}</option>
+  <option value="{{min_ingredients}}">{{ min_ingredients }}</option>
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="4">4</option>
@@ -411,13 +411,13 @@ Excluding <em>{{ exclude_words }}</em>.<br>
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">About</h5>
-          <p class="grey-text text-lighten-4"><a href="timetomakefood.com">timetomakefood.com</a> is an educational website to help inform where food comes from and how food is made. The amount of time and effort that goes into modern food is often lost on the consumer, so <a href="timetomakefood.com">timetomakefood.com</a> helps you to explore the food tree to its most central components.</p>
+          <p class="grey-text text-lighten-4"><a href="/">timetomakefood.com</a> is an educational website to help inform where food comes from and how food is made. The amount of time and effort that goes into modern food is often lost on the consumer, so <a href="/">timetomakefood.com</a> helps you to explore the food tree to its most central components.</p>
         </div>
                 <div class="col l6 s12">
           <h5 class="white-text">&nbsp;</h5>
 
 <p class="grey-text text-lighten-4">Read more about the inspiration for this site at <a href="https://rpiai.com/time-to-make-food/">rpiai.com</a>. </p>
-          <p class="grey-text text-lighten-4">The source code for <a href="timetomakefood.com">timetomakefood.com</a> is available at <a href="https://github.com/schollz/timetomakefood">Github</a>. </p>
+          <p class="grey-text text-lighten-4">The source code for <a href="/">timetomakefood.com</a> is available at <a href="https://github.com/schollz/timetomakefood">Github</a>. </p>
         </div>
       </div>
     </div>

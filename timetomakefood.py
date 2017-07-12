@@ -241,7 +241,7 @@ def recipelist():
     logger.info(len(exclude_words) + len(include_words))
     logger.info(max_ingredients)
     if len(exclude_words) + len(include_words) > 2:
-        cache_file = join("cache","find-" + md5(json.dumps({"exclude":sorted(exclude_words),"include":sorted(include_words),"max":max_ingredients})) + ".json")
+        cache_file = join("cache","find-" + md5(json.dumps({"exclude":sorted(exclude_words),"include":sorted(include_words),"max":max_ingredients,"min":min_ingredients})) + ".json")
         if isfile(cache_file) and True:
             logger.debug("Using cache {}".format(cache_file))
             recipes_data = json.load(open(cache_file))
