@@ -52,7 +52,7 @@ class RecipeNetwork(object):
                 if product['name'] in recipes:
                     all_recipes.append(recipe)
 
-        graphviz = ["digraph G { \ngraph [ dpi = 300 ];\nbgcolor=transparent;\ntruecolor=true; \n"]
+        graphviz = ["digraph G { \ngraph [ dpi = 60 ];\nbgcolor=transparent;\ntruecolor=true; \n"]
         all_reactants = []
         all_products = []
         for recipe in all_recipes:
@@ -85,7 +85,6 @@ class RecipeNetwork(object):
             f.write("".join(graphviz))
 
         os.system("dot -O -Tpng temp-%s" % name)
-        os.remove("temp-%s" % name)
         try:
             os.rename("./temp-%s.png" %
                       name, "./static/img/graph/%s.png" % name)
